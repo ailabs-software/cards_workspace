@@ -4,8 +4,6 @@ const pretty = require("pretty");
 
 var cards = 
   ["default_card",
-   "carousel_card",
-   "color_carousel_card",
    "gallery_card",
    "profile_card",
    "alternate_card",
