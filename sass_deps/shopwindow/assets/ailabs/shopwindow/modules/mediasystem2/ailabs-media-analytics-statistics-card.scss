@@ -1,0 +1,35 @@
+@import "assets/ailabs/jclosure/mixins/respond-to.scss";
+
+.ailabs-media-analytics-statistics-card {
+
+  font-family: Arial;
+
+  .goog-flex-layout {
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  @include respond-to($max: $medium) {
+    .layout-metric-boxes-container {
+      flex-wrap: wrap;
+    }
+  }
+
+  .goog-progressbar {
+    width: 100%;
+  }
+
+  .conversion-rate-legend {
+    font-size: 10px;
+    line-height: 11px;
+    text-transform: uppercase;
+    text-align: right;
+  }
+
+  .conversion-rate-value {
+    margin-left: 20px;
+    font-size: 26px;
+    line-height: 100%;
+    font-weight: bold;
+  }
+}

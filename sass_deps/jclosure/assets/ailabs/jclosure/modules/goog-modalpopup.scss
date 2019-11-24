@@ -1,0 +1,52 @@
+
+.goog-modalpopup-bg
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  opacity: 0.50;
+}
+
+.goog-modalpopup
+{
+  display: flex;
+  flex-direction: column;
+}
+
+.goog-modalpopup-title
+{
+  background: #fff;
+
+  min-height: 20px;
+  padding: 8px 31px 8px 8px;
+  position: relative;
+}
+
+.goog-modalpopup-dragger
+{
+  color: #000;
+  font-size: 120%;
+  font-weight: bold;
+  height: 20px;
+}
+
+.goog-modalpopup-title-close
+{
+  background: #e0edfe url(/modular/jclosure/src/main/scss/assets/goog-editortoolbar.png) no-repeat -528px 0;
+  cursor: pointer;
+  height: 15px;
+  position: absolute;
+  right: 10px;
+  top: 8px;
+  width: 15px;
+  vertical-align: middle;
+}
+
+.goog-modalpopup-content
+{
+  flex-grow: 1;
+  padding: 8px;
+}

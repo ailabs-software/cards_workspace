@@ -1,0 +1,109 @@
+@import "assets/ailabs/jclosure/mixins/respond-to.scss";
+
+body.authn-screen
+{
+  min-height: 100%;
+  text-align: center;
+  background-color: rgba(41, 70, 97, 0.02);
+  font-family: Arial, sans-serif;
+}
+
+.authn-modal
+{
+  position: relative;
+  display: table;
+
+  vertical-align: top;
+  background-color: #fff;
+  box-shadow: 2px 2px 6px 0 rgba(41, 70, 97, 0.1);
+
+  margin: auto;
+  margin-top: 5%;
+
+  box-sizing: border-box;
+
+  padding: 15px 20px;
+  
+  width: 92%;
+}
+
+.authn-modal-inside
+{
+  display: table-cell;
+  vertical-align: middle;
+}
+
+body.authn-screen div.modal-dialog-buttons
+{
+  padding-top: 50px;
+}
+
+/* Form */
+form.authn-form
+{
+  padding: 0 0 50px 0;
+} 
+
+/** Spacer around domain logo, used by some subclasses like Community */
+.authn-modal .domain-logo-standalone-box
+{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* Mobilize */
+@include respond-to($min: $medium) {
+  .authn-modal
+  {
+    width: 480px;
+    padding: 30px 40px;
+  }
+
+  .authn-modal .domain-logo-standalone-box
+  {
+    padding-bottom: 20px;
+  }
+
+  /* Form */
+  form.authn-form
+  {
+    padding: 0 60px 10px 60px;
+  } 
+}
+
+/* Application logo */
+div.authn-model-applogo-container
+{
+  margin: 50px 0;
+}
+
+img.authn-modal-applogo
+{
+  width: 70%;
+  height: auto;
+}
+
+/* Label */
+body.authn-screen label
+{
+  text-align: left;
+  display: block;
+  padding: 4px 0;
+  font-size: 13px;
+}
+
+/* Input fields */
+input.authn-field
+{
+  font-size: 16px;
+  padding: 12px 8px;
+  width: 100%;
+  box-sizing: border-box;
+  outline: 0;
+  border: 1px solid #d9d9d9;
+}
+
+input.authn-field:focus, input.authn-field:hover
+{
+  border-color: rgba(82,168,236,.8);
+}

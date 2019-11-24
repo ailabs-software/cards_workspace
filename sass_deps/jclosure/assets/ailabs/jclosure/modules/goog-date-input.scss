@@ -1,0 +1,20 @@
+
+.goog-date-input {
+  > label {
+    position: relative;
+  }
+
+  button {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    right: 26px;
+    width: 16px;
+    height: 16px;
+  }
+
+  svg path {
+    fill: black !important;
+  }
+}
+

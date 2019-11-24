@@ -1,0 +1,17 @@
+
+/** When in a container mode (has overlay), a cell node's block content no longer determines height. */
+div.ailabs-layoutcell-node.is-container-layoutcell-node > .lordekit-blockcontent
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/** For error display */
+.lordekit-blockcontent code {
+  display: block;
+  padding: 10px;
+}

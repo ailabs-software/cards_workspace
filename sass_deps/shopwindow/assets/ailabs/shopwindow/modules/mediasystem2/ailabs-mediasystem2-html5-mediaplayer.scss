@@ -1,0 +1,15 @@
+
+.ailabs-mediasystem2-html5-mediaplayer {
+  
+  & {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /** Media player full height. */
+  .goog-mediaplayer {
+    width: 100%;
+    height: 100%;
+  }
+}

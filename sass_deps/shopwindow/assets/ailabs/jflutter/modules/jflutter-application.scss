@@ -1,0 +1,7 @@
+
+/** @fileoverview The purpose of this file is to display the application once css has loaded to avoid flash of unstyled. */
+
+.jflutter-application {
+  transition: opacity 1000ms linear;
+  opacity: 1 !important;
+}

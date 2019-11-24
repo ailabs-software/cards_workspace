@@ -1,0 +1,160 @@
+@import "assets/ailabs/shopwindow/mixins/translate.scss";
+@import "../../mixins/pipeline-cards/elementquery-last-card.scss";
+@import "../../mixins/pipeline-cards/templates/content-card.scss";
+
+/* Module. */
+.gallery-card-template {
+  @include content-card;
+
+  div.gallery-card-box {
+    margin: 0 0 15px 0;
+    padding: 0 0 80% 0;
+    height: 0 !important;
+
+    .decoration-ailabs-touch-hover-decorator {
+      height: initial !important;
+    }
+
+    figure.zooming-image {
+      margin: 0;
+    }
+
+    position: relative;
+
+    div.gallery-text-cover {
+      pointer-events: none;
+
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+
+      padding: 0 15%;
+
+      /* Text buddy */
+      text-align: center;
+      color: #fff;
+    }
+  }
+
+  /** Content card */
+  .content-card-headline {
+    color: #fff;
+  }
+
+  /* Background buddy */
+  div.gallery-text-cover {
+    background-color: rgba(0, 0, 0, 0.38);
+  }
+
+  > .has-touch-hover div.gallery-text-cover {
+    animation: gallery-cover-animation 1.4s;
+  }
+
+  /* Button buddy */
+  div.button-area {
+    position: absolute;
+    left: 50%;
+    bottom: 24%;
+
+    @include translate(-50%, 0);
+  }
+
+  /* Social buddy */
+  div.gallery-social-area {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    @include translate(-50%, 50%);
+
+    transition: opacity 700ms;
+    opacity: 0;
+  }
+
+  .has-touch-hover div.gallery-social-area {
+    opacity: 1;
+  }
+
+  /** Sass class */
+  $LOW_OPACITY: 0;
+
+  div.gallery-content-roller {
+    height: 50%;
+    overflow: hidden;
+
+    div.gallery-content-panel {
+      height: 100%;
+      overflow: hidden;
+      position: relative;
+      transition: 800ms linear;
+      opacity: 1;
+    }
+
+    // Second buddy has no opacity
+    div.gallery-content-panel:nth-child(2) {
+      opacity: $LOW_OPACITY;
+    }
+
+    div.gallery-content-inside {
+      top: 50%;
+      position: absolute;
+      @include translate(0, -50%);
+      text-align: center;
+      width: 100%;
+
+      padding: 8px;
+      box-sizing: border-box;
+
+      // Lineclamping
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+
+      & > * {
+        overflow: hidden;
+      }
+    }
+  }
+
+  > .has-touch-hover {
+    div.gallery-content-panel {
+      @include translate(0, -100%);
+    }
+
+    div.gallery-content-panel:nth-child(1) {
+      opacity: $LOW_OPACITY;
+    }
+
+    div.gallery-content-panel:nth-child(2) {
+      opacity: 1 !important;
+    }
+  }
+}
+
+/* Animation */
+@keyframes gallery-cover-animation
+{
+  0% {
+    background-color: rgba(0, 0, 0, 0.38);
+  }
+
+  50% {
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  100% {
+    background-color: rgba(0, 0, 0, 0.38);
+  }
+}
+
+
+// When appearing in a 3-column layout, we must change media ratio responsively.
+// EXPLAIN: Only matches last child if it is the only one on the row, in a 3 column layout.
+@include elementquery-last-card(3) {
+  .gallery-card-box,
+  .gallery-card-box figure.zooming-image {
+    padding-bottom: 30% !important;
+  }
+}

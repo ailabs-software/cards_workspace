@@ -1,0 +1,10 @@
+
+.goog-checkbox-group > * {
+  margin: 0 !important;
+  padding: 4px 4px;
+}
+
+/** Zebra stripes */
+.goog-checkbox-group.zebra-stripes > *:nth-child(odd) {
+  background-color: rgba(173, 216, 230, 0.19);
+}

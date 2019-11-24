@@ -1,0 +1,17 @@
+$APPLICATION_BAR_HEIGHT: 52px;
+
+.jflutter-application-menu-root-component {
+  /** Give application bar a fixed position */
+  > .jflutter-application-bar-component {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+  }
+
+  /** Spacer to push down flowing content */
+  > .jflutter-application-menu-root-component-application-bar-spacer {
+    height: $APPLICATION_BAR_HEIGHT;
+  }
+}

@@ -1,0 +1,18 @@
+
+/** DOCUMENTATION: 
+    The DOM structure @responsive-card is applied to is as follows:
+    Match element -- Used for spacing and size, should have no visible border.
+    Inner element with actual visible border -- referred to as `card-box` */
+@mixin generic-card
+{
+  /* margin & padding */
+  margin: 30px 0 0 0;
+  padding: 0 15px;
+
+  div.card-box
+  {
+    /* box sizing border-box */
+    box-sizing: border-box;
+    padding: 20px;
+  }
+}

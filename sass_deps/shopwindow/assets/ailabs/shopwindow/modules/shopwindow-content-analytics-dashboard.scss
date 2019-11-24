@@ -1,0 +1,72 @@
+
+.shopwindow-content-analytics-dashboard {
+  /** Specific view */
+  .shopwindow-content-analytics-dashboard-specific {
+    max-width: 960px;
+    margin: auto;
+
+    .goog-flex-layout > * {
+      padding: 10px;
+
+      .highcharts-yaxis-grid .highcharts-grid-line {
+        display: none;
+      }
+    }
+  }
+
+  /** Gauges well sized */
+  .ailabs-highcharts-solid-gauge {
+    width: 320px;
+    height: 170px;
+    /** Centre gauges */
+    margin: auto;
+  }
+
+  /** Tables go full size */
+  table {
+    width: 100%;
+
+    th {
+      text-align: left;
+    }
+  }
+
+  /** Within the specific view -- The send analytic */
+  .send-analytic-row-component .send-status-bar {
+    height: 6px;
+    width: 50px;
+    border: 1px solid silver;
+    background-color: #fff;
+    margin: 2px;
+
+    &.active {
+      background-color: #7dc53b;
+    }
+  }
+
+  /** Media item report */
+  .media-item-report {
+    .goog-flex-layout {
+      align-items: center;
+    }
+
+    .ailabs-media-interaction-heatmapper-with-media {
+      width: 100%;
+    }
+  }
+
+  .footer-container {
+    padding: 0px 0px 20px 22px;
+  }
+}
+
+/** Overall stats dialog */
+.shopwindow-content-analytics-overallstats-dialog {
+  .goog-modalpopup-content {
+    padding: 24px 44px;
+  }
+
+  td {
+    min-width: 82px;
+  }
+}

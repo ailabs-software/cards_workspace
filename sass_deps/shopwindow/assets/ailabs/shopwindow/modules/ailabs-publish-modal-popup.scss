@@ -1,0 +1,24 @@
+
+/** @fileoverview Stylesheet for publish modal popup */
+
+.ailabs-publish-modal-popup {
+  // Preview step
+  .ailabs-publish-preview-wizard-step {
+    .ailabs-content-preview-frame {
+      width: 70vw;
+      max-width: 700px;
+      height: 70vh;
+    }
+  }
+
+  // Confirm step
+  .ailabs-publish-confirm-wizard-step > .goog-wizard-step-content {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 14px;
+
+    .right-column {
+      padding: 30px;
+    }
+  }
+}

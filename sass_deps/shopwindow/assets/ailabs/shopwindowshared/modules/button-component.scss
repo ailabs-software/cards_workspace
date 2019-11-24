@@ -1,0 +1,8 @@
+@import "assets/ailabs/shopwindowshared/mixins/button-component-chrome-mixin.scss";
+
+/** @fileoverview Class for a standalone button */
+
+.button-component
+{
+  @include button-component-chrome-mixin();
+}

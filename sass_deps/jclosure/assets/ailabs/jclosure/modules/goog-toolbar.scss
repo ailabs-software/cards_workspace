@@ -1,0 +1,24 @@
+
+.goog-toolbar {
+
+  > .goog-flex-layout {
+
+   align-items: center;
+
+   height: 36px;
+   > * {
+     margin: 3px;
+   }
+ }
+
+  .goog-toolbar-button {
+    width: 22px;
+    padding: 2px 3px;
+  }
+}
+
+/** Styling */
+.goog-toolbar {
+  border-radius: 3px;
+  padding: 4px;
+}

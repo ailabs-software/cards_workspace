@@ -1,0 +1,11 @@
+@import "../mixins/goog-texteditor-content.scss";
+
+.goog-editorfield
+{
+  @include goog-texteditor-content;
+  cursor: text;
+  outline: none;
+
+  /** Do not let editor to get too smaller for user to click in, when running in inline mode. */
+  min-width: 4px;
+}

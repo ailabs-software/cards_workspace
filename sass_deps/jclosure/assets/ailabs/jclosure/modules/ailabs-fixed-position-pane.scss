@@ -1,0 +1,9 @@
+
+.ailabs-fixed-position-pane.active > .ailabs-fixed-position-pane-content-element {
+  // Positioning of content element.
+  position: fixed;
+  box-sizing: border-box;
+ 
+  width: 100%;
+  top: 0;
+}

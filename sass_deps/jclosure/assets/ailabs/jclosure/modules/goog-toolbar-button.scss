@@ -1,0 +1,25 @@
+
+.goog-toolbar-button
+{
+  width: 16px;
+  border-radius: 3px;
+  padding: 3px 3px 1px 3px;
+  border: 1px solid transparent;
+}
+
+.goog-toolbar-button:disabled
+{
+  opacity: 0.50;
+}
+
+
+.goog-toolbar-button:hover
+{
+  border-color: #e2e2e2;
+}
+
+.goog-toolbar-button.goog-control-active
+{
+  border-color: #e2e2e2;
+  background-color: #fff;
+}

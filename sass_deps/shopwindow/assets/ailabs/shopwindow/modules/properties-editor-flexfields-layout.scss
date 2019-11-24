@@ -1,0 +1,19 @@
+@import "assets/ailabs/jclosure/mixins/respond-to.scss";
+
+.properties-editor-flexfields-layout {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.properties-editor-flexfields-layout > .ailabs-property-editor-container {
+  margin: 5px;
+  flex-basis: 30%;
+  flex-grow: 1; 
+}
+
+@include respond-to($max: $large) {
+  .properties-editor-flexfields-layout > .ailabs-property-editor-container {
+    flex-basis: 50%;
+  }
+}

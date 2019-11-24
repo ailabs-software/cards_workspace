@@ -1,0 +1,70 @@
+@import "assets/ailabs/shopwindowshared/mixins/raised-object-mixin.scss";
+@import "assets/ailabs/shopwindowshared/mixins/shopwindow-button-icon-glow-mixin.scss";
+
+/** @fileoverview Use on GlyphButton */
+
+// Common mixin. Not directly used.
+@mixin melodrama-button-mixin {
+  @include raised-object-mixin();
+
+  @include shopwindow-button-icon-glow-mixin();
+
+  &.goog-control-active {
+    background-color: #cbd6e2;
+  }
+
+  box-sizing: border-box;
+
+  // Centre content in view
+  text-align: center;
+
+  // Display grid
+  display: flex;
+  align-items: center;
+
+  // Cusror
+  cursor: pointer;
+
+  // Font styling
+  .goog-glyphbutton-content {
+    flex-basis: auto !important;
+    flex-grow: 1 !important;
+    margin: 0 !important;
+    white-space: normal !important;
+    font-family: "Open Sans" !important;
+    font-weight: 700 !important;
+    font-size: 10px !important;
+    line-height: 12px !important;
+    color: #333333 !important;
+  }
+}
+
+// Layout of button as rectangle
+@mixin melodrama-rectangular-button-mixin {
+  @include melodrama-button-mixin();
+
+  flex-direction: row;
+
+  // Glyph size
+  .goog-svgview {
+    width: 16px !important;
+  }
+
+  // Content spacing
+  .goog-glyphbutton-content {
+    margin-left: 6px !important;
+  }
+}
+
+// Layout of button as square
+@mixin melodrama-square-button-mixin {
+  @include melodrama-button-mixin();
+
+  flex-direction: column;
+
+  // Glyph size
+  // Larger icon in this orientation.
+  .goog-svgview {
+    width: 60% !important;
+  }
+}

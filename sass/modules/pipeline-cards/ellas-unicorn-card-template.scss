@@ -1,0 +1,42 @@
+@import "../../mixins/pipeline-cards/templates/content-card.scss";
+
+.ellas-unicorn-card-template {
+  @include content-card;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2vw !important;
+
+  /** When not stacked */
+  &.alignment-text-right {
+    flex-direction: row;
+  }
+
+  &.alignment-text-left {
+    flex-direction: row-reverse;
+  }
+
+  /** When stacked */
+  &.stacked-alignment-text-bottom {
+    flex-wrap: wrap;
+  }
+
+  &.stacked-alignment-text-top {
+    flex-wrap: wrap-reverse;
+  }
+
+  > div {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 1vw 2vw;
+    flex-grow: 1;
+    // Responsive flex
+    flex-basis: 500px;
+  }
+
+  .content-card-headline {
+    color: #ff69b4;
+  }
+}

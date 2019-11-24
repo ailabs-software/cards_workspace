@@ -1,0 +1,96 @@
+.cms-page-semantics-panel
+{
+  /* Scrollable box height */
+  .goog-scrollablebox
+  {
+    height: calc(100% - 72px);
+  }
+}
+
+.cms-page-semantics-panel
+{
+  background-color: #fafbfc;
+}
+
+.cms-page-semantics-panel
+{
+  width: 100%;
+}
+
+.cms-page-semantics-panel-inner
+{
+  width: 100%;
+  padding-right: 10px;
+  box-sizing: border-box;
+  padding-bottom: 110px;
+}
+
+.cms-page-semantics-panel .cmspanel-heading
+{
+  margin: 0 16px;
+  font-family: "Open Sans";
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #58646d;
+  width: 100%;
+}
+
+.cms-page-semantics-panel .cms-page-semantics-editor .goog-control
+{
+  width: 100%;
+  font-family: "Graphik Web", sans-serif !important;
+  font-size: 14px !important;
+  height: 90px !important;
+}
+
+.cms-page-semantics-panel .modular-item-component
+{
+  display: inline-block !important;
+  margin: 0 0 14px 8px !important;
+  padding: 12px !important;
+  width: 100% !important;
+  box-sizing: border-box;
+}
+
+.cms-page-semantics-panel .modular-item-component .goog-text-label,
+.cms-page-semantics-panel .modular-item-component
+{
+  font-family: "Graphik Web", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: #212835;
+}
+
+.cms-page-semantics-panel .cms-content-analysis-meter .goog-progressbar
+{
+  margin: 12px auto;
+}
+
+.cms-page-semantics-panel table.modular-item-component
+{
+  table-layout: fixed;
+  display: table !important;
+}
+
+.cms-page-semantics-panel table.modular-item-component tr > td:last-child
+{
+  word-wrap: break-word;
+}
+
+
+/* modifyy .modular-item-component theme */
+.cms-page-semantics-panel .modular-item-component
+{
+  border-radius: 8px !important;
+  transition: all ease .3s !important;
+  background-color: #fff !important;
+  box-shadow: 0 0 15px 0 rgba(0,0,0,.1);
+}
+
+.cms-page-semantics-panel .modular-item-component:hover
+{
+  box-shadow: 0 15px 45px 0 rgba(0,0,0,.2);
+}

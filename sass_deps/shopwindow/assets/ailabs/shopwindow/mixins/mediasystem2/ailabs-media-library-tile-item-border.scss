@@ -1,0 +1,14 @@
+
+@mixin ailabs-media-library-tile-item-border
+{
+  transition-duration: 300ms;
+  transition-property: box-shadow, transform;
+  transform: translateZ(0);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  box-sizing: border-box;
+
+  &:hover {
+    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+  }
+}

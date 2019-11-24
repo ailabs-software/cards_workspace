@@ -1,0 +1,44 @@
+
+.ailabs-systempanel {
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 3% 4%;
+  background-color: #f0f0f0;
+}
+
+.ailabs-systempanel-module-box {
+  max-width: 700px;
+  margin: 0 auto 3%;
+  padding: 15px;
+  border-radius: 3px;
+  background: #fff;
+  box-shadow: 1px 1px 0 #e2e2e2;
+  color: #556;
+  font-family: "Open Sans", Helvetica,Arial, sans-serif;
+
+  // Style text areas specially
+  > *,
+  > .ailabs-persisting-systempanel-module-frontend > * {
+    > .goog-text-label {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 23px;
+      margin-top: 10px;
+    }
+  }
+}
+
+/** For AbstractPersistingSystemPanelModuleFrontEnd class */
+.ailabs-persisting-systempanel-module-frontend {
+  .saving-controls-container {
+    text-align: right;
+    overflow: hidden;
+    height: 0;
+    transition: height 350ms ease-in-out;
+  }
+
+  &.show-saving-controls .saving-controls-container {
+    height: 38px;
+  }
+}
+

@@ -1,0 +1,57 @@
+@import "assets/ailabs/shopwindowshared/mixins/article-card.scss";
+@import "../../mixins/pipeline-cards/elementquery-last-card.scss";
+@import "../../mixins/pipeline-cards/templates/content-card.scss";
+
+/** Specific to default-card: Line up buttons with flex box. */
+@mixin default-card-template {
+  @include article-card;
+  @include content-card; // So content-card can override article-card
+}
+
+.htmlweb-default-card-template {
+  @include default-card-template;
+
+  display: flex;
+
+  .card-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .decoration-ailabs-touch-hover-decorator {
+    display: flex;
+    flex-grow: 1;
+  }
+
+  a.blogpost-card-anchor {
+    flex-grow: 1;
+  }
+
+  figure {
+    margin-bottom: 10px;
+  }
+
+  // Specific to default-card:
+  // When appearing in a 3-column layout, we must change media ratio responsively.
+  // EXPLAIN: Only matches last child if it is the only one on the row, in a 3 column layout.
+  @include elementquery-last-card(3) {
+    & figure {
+      padding-bottom: 30% !important;
+    }
+  }
+}
+
+.htmlemail-default-card-template {
+  @include default-card-template;
+
+  table.card-box {
+    border-radius: 3px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+    border: 1px solid #e8e8e8;
+    box-sizing: border-box;
+    // Prevent gap.
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+}

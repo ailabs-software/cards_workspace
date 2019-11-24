@@ -1,0 +1,32 @@
+
+/** @fileoverview Style for builder's placeholder used instead of loading video player in builder */
+
+.builder-media-player-placeholder-component {
+  position: relative;
+  background-size: cover;
+  // Vignette effect
+  box-shadow: inset 0 0 120px #000000;
+
+  .decoration-ailabs-shopwindow-media-display-caption-decorator {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px;
+    color: #ffffff;
+    // Overflow ellipsis
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .player-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90px;
+    height: 64px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(/dg5_platform/static/assets/ailabs/shopwindowshared/assets/youtube-player-icon.svg);
+  }
+}

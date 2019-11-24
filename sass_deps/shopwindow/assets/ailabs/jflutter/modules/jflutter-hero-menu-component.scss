@@ -1,0 +1,37 @@
+@import "assets/ailabs/jclosure/mixins/respond-to.scss";
+@import "assets/ailabs/shopwindow/mixins/shadowed-box-border-mixin.scss";
+@import "./jflutter-constants.scss";
+
+.jflutter-hero-menu-component {
+  @include shadowed-box-border-mixin;
+  background-color: $PANEL_COLOUR;
+}
+
+.jflutter-hero-menu-component-content {
+  // Grid layout
+  display: grid;
+  grid-template-columns: auto auto auto;
+
+  // Stack to 1 column layout on small devices.
+  @include respond-to($max: $medium) {
+    grid-template-columns: auto;
+  }
+
+  grid-column-gap: 22px;
+  grid-row-gap: 22px;
+  // Other css
+  max-width: 1200px;
+  margin: auto;
+  padding: 30px 100px;
+}
+
+.jflutter-hero-menu-component-content {
+  /** Menu items within */
+  > .jflutter-menu-item-component {
+    padding-bottom: 20px;
+
+    .jflutter-menu-item-title {
+      margin-bottom: 10px;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@import "assets/ailabs/jclosure/mixins/goog-texteditor-content.scss";
+@import "assets/ailabs/shopwindowshared/mixins/button-component-chrome-mixin.scss";
+
+.ailabs-layoutcell-node.blocktype-ButtonBlock
+{
+  @include goog-texteditor-content(); // In case a text variable in used within a button, it will be properly styled so it is a symbolised to the user.
+  @include button-component-chrome-mixin();
+
+  // Centre content within button block in web.
+  .lordekit-presentation-htmlweb & {
+    .lordekit-blockcontent-component {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

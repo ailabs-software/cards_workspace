@@ -1,0 +1,84 @@
+
+@mixin ailabs-shopwindow-cms-pageshop-navigation-icon-mixin {
+  transition: all 0.4s ease-in-out;
+  transform: scale(1.0);
+  fill: #000000;
+  // Increase size of icons
+  width: 22px;
+  height: 22px;
+}
+
+.ailabs-shopwindow-cms-pageshop {
+  width: 100%;
+  height: calc(100vh - 52px);
+  box-sizing: border-box;
+  /** Space away from top menu bar */
+  padding-top: 3px;
+
+  .ailabs-shopwindow-pageshop-tab-layout {
+    padding: 16px 4px 0 4px;
+
+    .goog-tab .goog-svgview {
+      @include ailabs-shopwindow-cms-pageshop-navigation-icon-mixin();
+    }
+
+    /** Color on hover or selected */
+    .goog-tab:hover .goog-svgview,
+    .goog-tab.goog-tab-selected .goog-svgview {
+      fill: #ff9933;
+    }
+
+    /** Bigger only on hover */
+    .goog-tab:hover .goog-svgview {
+      transform: scale(1.8);
+    }
+  }
+
+  .ailabs-collapsible-side-panel-bar .goog-svgview {
+    @include ailabs-shopwindow-cms-pageshop-navigation-icon-mixin();
+  }
+
+  .ailabs-shopwindow-pageshop-left {
+    display: flex;
+  }
+
+  /** Contains builder & publishing */
+  .ailabs-shopwindow-pageshop-right {
+    display: flex;
+    flex-grow: 1;
+  }
+
+  /** Empty session container. */
+  .ailabs-shopwindow-pageshop-empty-session-container {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: #ccc;
+  }
+
+  /** Normal session container */
+  .ailabs-shopwindow-pageshop-session-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  /** During an open session. */
+  .ailabs-shopwindow-pageshop-session-container-column-flex-layout {
+    flex-direction: column;
+    flex-grow: 1;
+    box-shadow: 0 0 28px rgba(0,0,0,.22);
+
+    .lordekit-pageeditor {
+      flex-grow: 1;
+    }
+  }
+
+  /** Bottom controls height. **/
+  .ailabs-shopwindow-cms-pageshop-bottom-controls {
+    height: 44px;
+    align-items: center;
+  }
+}

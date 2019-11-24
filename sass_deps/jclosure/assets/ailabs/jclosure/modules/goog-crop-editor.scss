@@ -1,0 +1,24 @@
+
+.goog-crop-editor-cropmask-container
+{
+  position: relative;
+  height: 100%;
+}
+
+.goog-crop-editor-cropmask-guard
+{
+  position: absolute;
+  background-color: #fff;
+  opacity: 0.5;
+}
+
+.goog-crop-editor-cropmask-resizable
+{
+  position: absolute;
+}
+
+/** Crop mask cropper has special border  */
+.goog-crop-editor-cropmask-resizable
+{
+  border-color: #ffa500;
+}

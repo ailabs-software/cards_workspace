@@ -1,0 +1,124 @@
+@import "assets/ailabs/jclosure/mixins/respond-to.scss";
+
+$MEDIA_PLAYER_CONTROLS_HEIGHT: 32px;
+$MEDIA_PLAYER_MINWIDTH: 242px;
+
+.goog-mediaplayer {
+  min-width: $MEDIA_PLAYER_MINWIDTH;
+  min-height: $MEDIA_PLAYER_CONTROLS_HEIGHT;
+  position: relative;
+}
+
+.goog-mediaplayer > .goog-mediaplayer-controls
+{
+  display: flex;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  transition: height linear 400ms;
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  flex-direction: row;
+  background-color: #fafafa;
+}
+
+/** Controls shown on mouseover (or always when on touch device) */
+.goog-mediaplayer.show-controls-always,
+.goog-mediaplayer.show-controls:hover {
+  & > .goog-mediaplayer-controls {
+     height: $MEDIA_PLAYER_CONTROLS_HEIGHT;
+  }
+}
+
+.goog-mediaplayer > .goog-mediaplayer-controls > *
+{
+  display: inline-block;
+  line-height: 32px;
+  vertical-align: top;
+}
+
+.goog-mediaplayer > .goog-mediaplayer-controls > .goog-player-time
+{
+  cursor: default;
+  min-width: 6.4em;
+  text-align: center;
+}
+
+.goog-mediaplayer > .goog-mediaplayer-controls > .goog-slider
+{
+  flex-grow: 1;
+  width: 0;
+  margin: 4px 10px;
+}
+
+.goog-mediaplayer > .goog-mediaplayer-container
+{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/** If mouse activated is disabled, bar is always seen, so need to accomodate in video display size. */
+.goog-mediaplayer.mousemove-activate-disabled.show-controls > .goog-mediaplayer-container
+{
+  height: calc(100% - #{$MEDIA_PLAYER_CONTROLS_HEIGHT});
+}
+
+/** Play button (overlaid) */
+.goog-media-player-overlaid-play-button {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/** Play button theme */
+.goog-media-player-overlaid-play-button {
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background-color: rgba(64,64,64,.7);
+  transition: background-color .3s ease;
+  width: 50px;
+  height: 50px;
+}
+
+/** Play button theme: Inside */
+.goog-media-player-overlaid-play-button-inner {
+  border-top: 12.8px solid transparent;
+  border-bottom: 12.8px solid transparent;
+  border-left: 23px solid #fff;
+  margin: 13px 0 0px 17px;
+}
+
+.goog-mediaplayer:hover .goog-media-player-overlaid-play-button {
+  background-color: rgba(64,64,64,.9) !important;
+}
+
+@include respond-to($min: $extra-small) {
+  .goog-media-player-overlaid-play-button {
+    width: 76px;
+    height: 76px;
+  }
+
+  .goog-media-player-overlaid-play-button-inner {
+    border-top: 16.8px solid transparent;
+    border-bottom: 16.8px solid transparent;
+    border-left: 33px solid #fff;
+    margin: 22px 0 0 26px;
+  }
+}
+
+/** For video player only. */
+.goog-mediaplayer > .goog-mediaplayer-container > iframe.goog-rotatable-video-container
+{
+  width: 100%;
+  height: 100%;
+  /** Don't steal pointer events */
+  pointer-events: none;
+}

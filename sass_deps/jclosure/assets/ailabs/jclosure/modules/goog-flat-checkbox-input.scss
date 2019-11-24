@@ -1,0 +1,14 @@
+
+.goog-flat-checkbox-layout {
+  display: flex;
+  flex-direction: row;
+  user-select: none;
+  cursor: pointer;
+  padding: 4px;
+  margin: 2px 0;
+}
+
+.goog-flat-checkbox-input.goog-flat-checkbox-input-ischecked {
+  background-color: #CBD6E2;
+}
+

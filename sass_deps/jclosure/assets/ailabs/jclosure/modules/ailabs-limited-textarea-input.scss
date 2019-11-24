@@ -1,0 +1,33 @@
+@import "assets/ailabs/jclosure/mixins/input-width-mixin.scss";
+
+.ailabs-limited-textarea-input {
+  @include input-width-mixin();
+
+  display: inline-flex;
+  flex-direction: column;
+
+  textarea {
+    width: 100% !important;
+  }
+
+  .count-label {
+    align-self: flex-end;
+
+    margin-top: 4px;
+
+    font-size: 11px;
+    padding: 2px 7px;
+    cursor: default;
+    background-color: #59626a;
+    color: #fff;
+    border-radius: 3px;
+  }
+
+  &.warning .count-label {
+    background-color: #f89406;
+  }
+
+  &.exceeded .count-label {
+    background-color: #b94a48;
+  }
+}

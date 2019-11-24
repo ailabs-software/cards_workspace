@@ -1,0 +1,9 @@
+
+.goog-tab-layout {
+  display: flex;
+
+  > .goog-tab-pane {
+    display: flex;
+    flex-grow: 1;
+  }
+}

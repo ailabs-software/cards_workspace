@@ -1,0 +1,77 @@
+
+.offer-options-editor {
+
+  width: 90vw;
+  padding: 8px;
+  background-color: #fafafa;
+  font-family: "Proxima Nova";
+
+  .goog-flex-layout {
+    align-items: center;
+    > * {
+      padding: 4px;
+    }
+  }
+
+  /** Section styling */
+  .section {
+    margin: 3px 0;
+    border: 1px solid #eee;
+    padding: 3px;
+  }
+}
+
+.offer-option-editor {
+
+  /** ella-grid-container requires that the card configures its minimum width. */
+  flex-basis: 350px;
+
+  .option-text-input-heading {
+    font-size: 14px;
+  }
+
+  .offer-option-heading {
+    font-size: 18px;
+    font-weight: 700;
+    color: #f9690e;
+  }
+
+  .delete-button {
+    float: right;
+  }
+
+  textarea {
+    width: 100%;
+  }
+
+  .offer-option-price {
+    display: flex;
+    flex-direction: column;
+    padding: 4px;
+  }
+
+  /** Class to use to make inputs a smaller size. */
+  .small-input {
+    width: 70px;
+  }
+
+  /** Text component with reset button */
+  .option-text-input-component {
+    .button-container {
+      text-align: right;
+    }
+  }
+
+  /** Inventory editor table header */
+  .inventory-table-header {
+    font-weight: 700;
+  }
+
+  /** Collapsible styling */
+  .ailabs-collapsible-header {
+    color: #f9690e;
+  }
+  .ailabs-collapsible-icon {
+    background-color: #f9690e !important;
+  }
+}

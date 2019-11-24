@@ -1,0 +1,13 @@
+
+/** @fileoverview Makes content preview frame half its normal size */
+
+.ailabs-content-preview-frame-miniature {
+  width: 300px;
+
+  > iframe {
+    width: 600px;
+    transform: scale(0.5);
+    transform-origin: left top;
+    height: 200%;
+  }
+}

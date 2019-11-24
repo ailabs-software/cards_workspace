@@ -1,0 +1,6 @@
+@import "../mixins/goog-jack-box";
+
+.goog-jack-box
+{
+  @include goog-jack-box;
+}

@@ -1,0 +1,115 @@
+
+/** Chooser dialog */
+.ailabs-global-theme-chooser-dialog {
+  .outer-layout {
+    display: flex;
+    flex-direction: row;
+    max-height: 100%;
+
+    /** Left and write wrapping columns have flex-grow: 1*/
+    & > .outer-layout-column {
+      flex-grow: 1;
+    }
+    & > .outer-layout-column-right {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .goog-checkbox-group {
+    overflow-y: auto;
+  }
+
+  /** Custom checkbox input */
+  .ailabs-theme-item-checkbox-input {
+    .goog-flat-checkbox-layout {
+      flex-direction: column;
+    }
+    .ailabs-theme-item-checkbox-card-layout {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 4px 4px 0 4px;
+    }
+    .ailabs-theme-item-checkbox-card-left-layout {
+      flex-grow: 1;
+    }
+  }
+
+  /** Create button */
+  .create-button-container {
+    display: flex;
+    flex-direction: column;
+
+    svg {
+      width: 50px;
+      height: 50px;
+    }
+  }
+}
+
+/** Editor dialog */
+.ailabs-global-theme-editor-dialog {
+  .outer-flex-layout {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+  }
+
+  .left-flex-layout {
+    flex-direction: column;
+    min-width: 500px;
+    box-sizing: border-box;
+    padding: 10px;
+    overflow-y: scroll;
+
+    // Theme name input
+    & > .goog-material-ui-input {
+      margin-bottom: 10px;
+    }
+
+    /** Styling of accordion chid on left */
+    .ailabs-global-theme-editor-accordion-child {
+      border: 2px solid #F58220;
+      border-radius: 4px;
+      padding: 3px;
+      margin: 3px 0;
+
+      &.ailabs-global-theme-editor-highlight .ailabs-collapsible-header {
+        background-color: #ffff00;
+      }
+    }
+  }
+
+  .ailabs-workspace {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+
+  .goog-iframebox {
+    height: 100%;
+    box-sizing: border-box;
+    margin: auto;
+    background-color: #ffffff;
+  }
+
+  // Action buttons container
+  .action-buttons-container {
+    text-align: right;
+    padding: 3px;
+    background-color: #fafafa;
+  }
+}
+
+/** Preview content */
+.ailabs-global-theme-editor-preview-component {
+  background-color: #eeeeee;
+}
+
+/** Shown to indicate as highlighted. */
+.ailabs-global-theme-editor-highlight {
+  background-color: lightyellow;
+}

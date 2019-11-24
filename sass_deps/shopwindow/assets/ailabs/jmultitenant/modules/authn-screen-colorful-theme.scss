@@ -1,0 +1,17 @@
+
+body.authn-screen-colorful-theme
+{
+  & {
+    background-image: url(/www/swassets/authn-screen-colorful-theme-bg.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: initial;
+
+    color: #fff;
+  }
+
+  .authn-modal {
+    background-color: rgba(0, 0, 0, 0.40);
+  }
+}

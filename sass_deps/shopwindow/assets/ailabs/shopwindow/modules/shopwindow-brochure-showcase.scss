@@ -1,0 +1,150 @@
+@import "assets/ailabs/jclosure/mixins/respond-to.scss";
+
+/** Common mixin for style common between email and web */
+@mixin shopwindow-brochure-showcase {
+  .brochure-showcase-header,
+  .shopwindow-brochure-showcase-footer {
+    a {
+      color: #348eda;
+      padding-left: 5px;
+      padding-right: 5px;
+      text-decoration: none;
+    }
+  }
+}
+
+/** Common mixin for footer */
+@mixin shopwindow-brochure-showcase-footer {
+  text-align: center;
+  color: #294661;
+  font-size: 0.8em; // Makes fonts smaller
+
+  p.business-name {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 1.25em;
+  }
+
+  p {
+    margin-top: 0px;
+    margin-bottom: 5px;
+  }
+}
+
+/** Style for footer, a shared component */
+.shopwindow-brochure-showcase-footer {
+  @include shopwindow-brochure-showcase-footer;
+}
+
+/** Style for HTMLWeb */
+.htmlweb-shopwindow-brochure-showcase {
+
+  @include shopwindow-brochure-showcase;
+
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+
+  > header {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    // Style for click to call bar
+    .clicktocall-bar {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      flex-grow: 1;
+
+      .clicktocall-bar-section-left {
+        flex-grow: 1;
+      }
+    }
+  }
+
+  > header, > footer {
+    background-color: #ffffff;
+  }
+
+  .footer-spacer {
+    height: 54px;
+  }
+
+  footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  @include respond-to($min: $small) {
+    .shopwindow-brochure-showcase-inner {
+      width: 630px;
+      padding: 15px;
+      margin: 16px auto 0 auto;
+      box-shadow: 0 1px 2px 0 #b9bdc6;
+    }
+  }
+
+  /** Theme */
+  > header, > footer {
+    box-shadow: 0 0 12px rgba(0, 0, 0, .4);
+    padding: 4px;
+    box-sizing: border-box;
+  }
+
+  /** Make business social wrap */
+  .shopwindow-brochure-showcase-footer p.business-social {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .slogo-webshowcase {
+    margin-right: 3px;
+  }
+
+  /** Subscribe icon */
+  .subscriber-prefs-open-button {
+    margin: 0 10px 0 16px;
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background-image: url(/dg5_platform/static/assets/ailabs/shopwindowshared/assets/info-icon.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  /** Centre social icons */
+  .social-widget {
+    position: relative;
+    top: 2px;
+  }
+}
+
+/** Style for HTMLEmail */
+.htmlemail-shopwindow-brochure-showcase {
+
+  @include shopwindow-brochure-showcase;
+
+  .brochure-showcase-root-table {
+    width: 100%;
+    background-color: #fafafa;
+  }
+
+  .brochure-showcase-header {
+    padding: 5px;
+    text-align: right;
+  }
+
+  .brochure-showcase-wrapper {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #f0f0f0;
+    padding: 5px;
+    background-color: #ffffff;
+  }
+}

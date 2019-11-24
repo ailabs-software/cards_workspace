@@ -1,0 +1,27 @@
+
+/** @fileoverview Menu item component */
+
+.jflutter-menu-item-component {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  column-gap: 6px;
+
+  padding: 4px;
+  cursor: pointer;
+
+  .jflutter-menu-item-component-content {
+    height: 100%;
+  }
+
+  .jflutter-menu-item-title {
+    font-size: 17px;
+    font-weight: 600;
+    color: #143C6B;
+  }
+
+  .jflutter-menu-item-description {
+    font-size: 15px;
+    color: #7888A3;
+  }
+}

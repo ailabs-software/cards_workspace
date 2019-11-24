@@ -1,0 +1,47 @@
+
+
+.ailabs-resizable-frame
+{
+  position: relative;
+
+  border-color: transparent;
+  border-width: 2px;
+  border-style: solid;
+
+  transition: border-color 500ms ease-out;
+
+  box-sizing: border-box;
+}
+
+.ailabs-resizable-frame-handle
+{
+  z-index: 1;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+
+  width: 100px;
+  height: 100px;
+  background-image: url(assets/ailabs/jclosure/assets/ailabs-resizable-frame-handle.svg);
+  background-size: 32px 32px;
+  background-position: bottom right;
+  background-repeat: no-repeat;
+
+  cursor: move;
+
+  transition: opacity 500ms ease-out;
+}
+
+/* Show handle on hover */
+.ailabs-resizable-frame:hover div.ailabs-resizable-frame-handle
+{
+  opacity: 1;
+}
+
+/* Border on hover */
+.ailabs-resizable-frame:hover
+{
+  border-color: #0088cc;
+}
+

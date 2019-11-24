@@ -1,0 +1,16 @@
+@import "../mixins/ella-mixin.scss";
+
+// Button theme that loves Ella
+button.goog-button.ella-button {
+  @include ella-mixin();
+}
+
+button.goog-button.goog-glyphbutton.ella-button {
+
+  padding: 3px 12px;
+
+  .goog-glyphbutton-glyph {
+    width: 18px;
+    height: 18px;
+  }
+}

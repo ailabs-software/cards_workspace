@@ -1,0 +1,17 @@
+
+button.ailabs-kebab-button {
+  display: inline-flex;
+  border-radius: 8px;
+  padding: 0 6px;
+  background-color: rgba(14,19,24,.7);
+  transition: background-color .15s ease-in-out;
+
+  svg {
+    fill: #ffffff;
+  }
+
+  &:hover {
+    background-color: #f58220;
+  }
+}
+

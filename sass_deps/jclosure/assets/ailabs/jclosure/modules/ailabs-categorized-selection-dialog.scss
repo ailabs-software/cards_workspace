@@ -1,0 +1,20 @@
+@import "assets/ailabs/jclosure/mixins/respond-to.scss";
+
+.ailabs-categorized-selection-dialog {
+  .goog-scrollablebox.right-options-box {
+    margin-top: 4px;
+  }
+
+  @include respond-to($min: $extra-small) {
+    .goog-scrollablebox.right-options-box {
+      width: 30vw;
+    }
+  }
+
+  @include respond-to($max: $extra-small) {
+    .goog-inline-block-layout > div {
+      width: 100%;
+    }
+  }
+}
+

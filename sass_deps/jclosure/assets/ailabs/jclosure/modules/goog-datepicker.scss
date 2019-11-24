@@ -1,0 +1,147 @@
+
+.goog-datepicker {
+  z-index: 9999;
+  display: block;
+  position: relative;
+  color: #333;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-bottom-color: #bbb;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.goog-datepicker:before,
+.goog-datepicker:after {
+  content: ' ';
+  display: table;
+}
+
+.goog-datepicker:after {
+  clear: both;
+}
+
+.goog-datepicker {
+  *zoom: 1;
+}
+
+.goog-datepicker-lendar {
+  float: left;
+  width: 240px;
+  margin: 8px;
+}
+.goog-datepicker-title {
+  position: relative;
+  text-align: center;
+}
+
+.goog-datepicker-title select {
+  width: auto !important;
+  padding: 0 !important;
+  border: 0 !important;
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  -webkit-appearance: none !important;
+  background-color: transparent !important;
+}
+
+.goog-datepicker-prev,
+.goog-datepicker-next {
+  display: block;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  border: 0;
+  padding: 0;
+  width: 20px;
+  height: 30px;
+  text-indent: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  background-color: transparent;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 75% 75%;
+  opacity: .5;
+  *position: absolute;
+  *top: 0;
+}
+
+.goog-datepicker-prev:hover,
+.goog-datepicker-next:hover {
+  opacity: 1;
+}
+
+.goog-datepicker-prev {
+  float: left;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAAUklEQVR42u3VMQoAIBADQf8Pgj+OD9hG2CtONJB2ymQkKe0HbwAP0xucDiQWARITIDEBEnMgMQ8S8+AqBIl6kKgHiXqQqAeJepBo/z38J/U0uAHlaBkBl9I4GwAAAABJRU5ErkJggg==);
+  *left: 0;
+}
+
+.goog-datepicker-next {
+  float: right;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAAU0lEQVR42u3VOwoAMAgE0dwfAnNjU26bYkBCFGwfiL9VVWoO+BJ4Gf3gtsEKKoFBNTCoCAYVwaAiGNQGMUHMkjGbgjk2mIONuXo0nC8XnCf1JXgArVIZAQh5TKYAAAAASUVORK5CYII=);
+  *right: 0;
+}
+
+.goog-datepicker-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 0;
+}
+
+.goog-datepicker-table th,
+.goog-datepicker-table td {
+  width: 14.285714285714286%;
+  padding: 0;
+}
+
+.goog-datepicker-table th {
+  color: #999;
+  font-size: 12px;
+  line-height: 25px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.goog-datepicker-button {
+  cursor: pointer;
+  display: block;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  outline: none;
+  border: 0;
+  margin: 0;
+  width: 100%;
+  padding: 5px;
+  color: #666;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: right;
+  background: #f5f5f5;
+}
+
+.goog-datepicker-is-today .goog-datepicker-button {
+  color: #33aaff;
+  font-weight: bold;
+}
+
+.goog-datepicker-is-selected .goog-datepicker-button {
+  color: #fff;
+  font-weight: bold;
+  background: #33aaff;
+  box-shadow: inset 0 1px 3px #178fe5;
+  border-radius: 3px;
+}
+
+.goog-datepicker-button:hover {
+  color: #fff !important;
+  background: #ff8000 !important;
+  box-shadow: none !important;
+  border-radius: 3px !important;
+}
+
+.goog-datepicker-table abbr {
+  border-bottom: none;
+  cursor: help;
+}

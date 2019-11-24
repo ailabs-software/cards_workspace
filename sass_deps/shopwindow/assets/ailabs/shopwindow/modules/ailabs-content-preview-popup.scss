@@ -1,0 +1,22 @@
+
+.ailabs-content-preview-popup {
+
+  .goog-fullsize-dialog-topbar-content {
+    > .goog-link-button {
+      margin-left: 22px;
+      width: 126px;
+    }
+  }
+
+  .ailabs-workspace {
+    display: flex;
+    height: 100%;
+    text-align: center;
+
+    > .ailabs-content-preview-frame {
+      margin: auto;
+      height: 100%;
+    }
+  }
+}
+

@@ -1,0 +1,11 @@
+
+/** @fileoverview Style for docuemnt media contextual selector */
+
+.ailabs-document-media-contextual-selector {
+  > .goog-grid-layout {
+    button.goog-button {
+      margin: 0 !important;
+      width: 100%;
+    }
+  }
+}

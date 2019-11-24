@@ -1,0 +1,13 @@
+
+.ms2-gallery-client-preview-component {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  > .ailabs-media-graphicview-ui-component {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+  }
+}
+

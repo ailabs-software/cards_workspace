@@ -1,0 +1,13 @@
+
+/** @fileoverview Menu bar component */
+
+.jflutter-menu-bar-component {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  > .jflutter-menu-item-component {
+    padding: 16px;
+    font-weight: 500;
+  }
+}

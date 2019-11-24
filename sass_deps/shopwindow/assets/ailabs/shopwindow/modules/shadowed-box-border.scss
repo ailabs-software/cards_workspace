@@ -1,0 +1,6 @@
+@import "../mixins/shadowed-box-border-mixin.scss";
+
+.shadowed-box-border
+{
+  @include shadowed-box-border-mixin;
+}

@@ -1,0 +1,27 @@
+@import "../mixins/zooming-image.scss";
+
+// Renamed to zooming-image avoid css conflict.
+figure.zooming-image
+{
+  @include zooming-image;
+
+  /* Any ancestor which is a data-hover-target will cause animation to run */
+  .has-touch-hover &.zooming-image-enabled
+  {
+    @include zooming-image-active;
+  }
+
+  /* Any ancestor which is a data-hover-target will cause animation to run */
+  &.zooming-image-enabled:hover
+  {
+    @include zooming-image-active;
+  }
+
+  // No margin on <figure>
+  margin: 0;
+
+  // media component height 100%
+  > .zooming-image-inner > * {
+    height: 100%;
+  }
+}

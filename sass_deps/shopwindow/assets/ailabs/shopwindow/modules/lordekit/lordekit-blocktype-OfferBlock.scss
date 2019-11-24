@@ -1,0 +1,156 @@
+
+
+.ailabs-layoutcell-node.blocktype-OfferBlock
+{
+  padding: 14px;
+
+  color: #141414;
+
+  hr {
+    border-top: 1px solid #dbdbdb !important
+  }
+
+  /** Configure image */
+  .media-component {
+    height: 0;
+    padding-bottom: 40%;
+  }
+
+  /** Full width in email */
+  .htmlemail-mediacomponent-image {
+    width: 100%;
+  }
+
+  /** Offer css */
+  .offer-brochure-card-title
+  {
+    margin: 0 0 0.4em 0;
+  }
+
+  .offer-brochure-card-description {
+    padding: 10px 0;
+  }
+
+  label.label-offer-text {
+    display: -webkit-box;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: -o-flex;
+    display: flex;
+    flex-direction: row;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  label.label-offer-text > input {
+    min-width: 13px;
+    margin: 4px 3px 0px 5px;
+  }
+
+  .offer-option-details {
+    flex-grow: 1;
+    padding-left: 5px;
+  }
+
+  /* Offer option, option pricing */
+  .price
+  {
+
+  }
+
+  .canonical-price
+  {
+    color: #6d9f2d;
+    font-weight: bold;
+  }
+
+  .regular-price
+  {
+    text-decoration: line-through;
+    padding-right: 10px;
+  }
+
+  .offer-title
+  {
+    color: inherit;
+    font-weight: 400;
+  }
+
+  .offer-description
+  {
+    color: inherit;
+    padding: 20px 0 0 0;
+  }
+
+  .offer-mid-headline
+  {
+    color: inherit;
+  }
+
+  .offer-subheading {
+    color: inherit;
+    margin: 10px 0;
+    margin-bottom: 0;
+    font-weight: 400;
+    padding: 10px 0;
+  }
+
+  .offer-option > * {
+    margin: 5px 0;
+  }
+
+  .offer-option-title {
+
+  }
+
+  .low-stock-msg, .remaining-stock-msg {
+    text-align: right;
+  }
+
+  .low-stock-msg {
+    color: red;
+  }
+
+  .countdown-component {
+    font-size: 30px !important;
+    line-height: 46px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .button-component {
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 100%;
+  }
+}
+
+/** CSS3 checkbox class */
+label.offer-option-css3-radioinput > input[type=radio] {
+  position: absolute;
+  opacity: 0;
+}
+
+label.offer-option-css3-radioinput span.offer-option-css3-checkbox {
+  display: block;
+  cursor: pointer;
+  width: 14px;
+  height: 14px;
+  margin-right: 8px;
+  border: 1px solid #a5a8ab;
+  border-radius: 50%;
+}
+
+label.offer-option-css3-radioinput span.offer-option-css3-checkmark {
+  display: block;
+  transform: scale(0);
+  transition: transform .1s ease-in;
+  margin: 2px;
+  width: 10px;
+  height: 10px;
+  background-color: #629cff;
+  border-radius: 50%;
+}
+
+label.offer-option-css3-radioinput input[type=radio]:checked + .offer-option-css3-checkbox > .offer-option-css3-checkmark {
+  transform: scale(1);
+}

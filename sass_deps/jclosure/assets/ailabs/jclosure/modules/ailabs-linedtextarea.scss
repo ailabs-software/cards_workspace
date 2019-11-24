@@ -1,0 +1,39 @@
+
+
+.ailabs-linedtextarea
+{
+  min-width: 500px;
+  background: #ddd;
+}
+
+.ailabs-linedtextarea-ruler
+{
+  width: 40px;
+  float: left;
+  padding: 6px 2px 0 2px;
+
+  color: #999;
+}
+
+.ailabs-linedtextarea-ruler-line
+{
+  padding: 0 0.5em 0 0.5em;
+  text-align: right;
+  white-space: nowrap;
+
+  font-size: 12px;
+  font-family: monospace;
+  line-height: normal !important;
+}
+
+.ailabs-linedtextarea textarea
+{
+  width: calc(100% - 44px);
+
+  font-size: 12px;
+  font-family: monospace;
+  line-height: normal !important;
+
+  border-radius: 0;
+  margin: 0;
+}

@@ -1,0 +1,22 @@
+
+.ailabs-ms2-image-editor {
+  // Common to both subeditors
+  .goog-image-editor-container {
+    margin: 6px;
+  }
+
+  // Home subeditor
+  .ailabs-ms2-home-subeditor {
+    /** Image always uses all available space. */
+    .goog-image {
+      width: 100%;
+      height: 100%;
+    }
+
+    /** Style of rotate icon */
+    .ailabs-rotate-button svg {
+      background: rgba(255, 255, 255, 0.20);
+      padding: 2px;
+    }
+  }
+}

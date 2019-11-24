@@ -1,0 +1,6 @@
+/** @fileoverview This is added when an element which is a drop target is in a drag operation so that children don't mess with dragleave event. */
+
+.goog-html5-target-dragover > * {
+  pointer-events: none;
+}
+

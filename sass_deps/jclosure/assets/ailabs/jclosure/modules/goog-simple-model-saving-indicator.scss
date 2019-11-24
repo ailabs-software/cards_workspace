@@ -1,0 +1,15 @@
+
+.goog-simple-model-saving-indicator {
+  width: 150px;
+  text-align: center;
+
+  color: #ff0000;
+  font-weight: 700;
+  font-size: 22px;
+  font-style: italic;
+
+  &.goog-simple-model-saving-indicator-is-persisted {
+    color: inherit;
+    font-style: normal;
+  }
+}

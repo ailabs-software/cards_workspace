@@ -1,0 +1,23 @@
+
+.goog-task-item-monitor {
+  overflow: hidden;
+}
+
+.goog-task-item-monitor {
+
+  .goog-flex-layout {
+    align-items: center;
+  }
+
+  .goog-flex-layout > * {
+    margin: 4px;
+  }
+
+  .task-name-label {
+    width: 160px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+

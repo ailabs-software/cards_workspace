@@ -1,0 +1,17 @@
+
+.ailabs-collapsible-side-panel {
+  display: flex;
+
+  .ailabs-collapsible-side-panel-bar {
+    padding: 4px;
+  }
+
+  .ailabs-collapsible-side-panel-bar .goog-iconbutton {
+    margin: 12px;
+  }
+
+  .ailabs-collapsible-side-panel-content {
+    overflow: hidden;
+    transition: width cubic-bezier(0.075, 0.82, 0.165, 1) 500ms;
+  }
+}

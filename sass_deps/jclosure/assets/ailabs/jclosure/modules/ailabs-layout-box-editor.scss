@@ -1,0 +1,137 @@
+
+$DIMENSION_EDITOR_MIN_WIDTH: 44px;
+$DIMENSION_NUMBER_INPUT_WIDTH: 32px;
+$BACKGROUND_COLOUR: #ebebeb;
+$BACKGROUND_COLOUR_PRIMARY: #cbd6e2;
+
+.ailabs-layout-box-editor
+{
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: auto;
+}
+
+// Lock checkbox in centre
+.ailabs-layout-box-editor .goog-lock-checkbox-input {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// Dimension editor style
+.ailabs-layout-boxdimension-editor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+
+  // Minimum size of dimension editor
+  min-width: $DIMENSION_EDITOR_MIN_WIDTH;
+  min-height: $DIMENSION_EDITOR_MIN_WIDTH;
+
+  // Colour of dimension editor
+  background-color: $BACKGROUND_COLOUR;
+}
+
+.ailabs-layout-boxdimension-editor-text {
+  padding: 0 3px;
+  font-size: 10px;
+}
+
+// Number input style
+.ailabs-layout-boxdimension-editor .goog-input {
+  width: $DIMENSION_NUMBER_INPUT_WIDTH;
+  box-sizing: border-box;
+  // Hidden until shown
+  display: none !important;
+
+  // No spin control on number input
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+// Show number input on hover instead of display
+.ailabs-layout-boxdimension-editor {
+  &:hover,
+  &.has-focus {
+    background-color: $BACKGROUND_COLOUR_PRIMARY;
+
+    .goog-input {
+      display: inline-block !important;
+    }
+
+    .ailabs-layout-boxdimension-editor-text {
+      display: none !important;
+    }
+  }
+}
+
+// North
+.ailabs-layout-box-editor > .ailabs-layout-boxdimension-editor:nth-child(1) {
+  // Layout
+  flex-direction: column;
+
+  // Positioning
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%, 0%);
+
+  // Northland
+  width: 100%;
+
+  // Picture Frame edge
+  clip-path: polygon(0 0, 100% 0, 70% 100%, 30% 100%);
+  z-index: 1;
+}
+
+// East
+.ailabs-layout-box-editor > .ailabs-layout-boxdimension-editor:nth-child(2) {
+  // Layout
+  flex-direction: row-reverse;
+
+  // Positioning
+  right: 0%;
+  top: 50%;
+  transform: translate(0%, -50%);
+
+  // Hawke's Bay
+  height: 100%;
+}
+
+// South
+.ailabs-layout-box-editor > .ailabs-layout-boxdimension-editor:nth-child(3) {
+  // Layout
+  flex-direction: column-reverse;
+
+  // Positioning
+  left: 50%;
+  bottom: 0%;
+  transform: translate(-50%, 0%);
+
+  // Dunedin
+  width: 100%;
+
+  // Picture Frame edge
+  clip-path: polygon(30% 0, 70% 0, 100% 100%, 0 100%);
+  z-index: 1;
+}
+
+// West
+.ailabs-layout-box-editor > .ailabs-layout-boxdimension-editor:nth-child(4) {
+  // Layout
+  flex-direction: row;
+
+  // Positioning
+  left: 0%;
+  top: 50%;
+  transform: translate(0%, -50%);
+
+  // Auckland
+  height: 100%;
+}
+

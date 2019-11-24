@@ -1,0 +1,74 @@
+
+// breakpoint constants
+
+$extra-extra-small: 360px;
+$extra-small: 480px;
+$small: 600px;
+$medium: 960px;
+$large: 1024px;
+$extra-large: 1200px;
+
+// responsive manager
+// @define                {mixin} used to provide cleaner method of accessing breakpoints
+// @param @required $args {map}                ($min: _, $max: _, $media-type: _)
+// @param $media-type     {String}             (all | print | screen | speech)
+// @param $min           {String, cssValue}   min-width
+// @param $max             {String, cssValue}   max-width
+// @example
+//    #myElement {
+//       width: 500px // default
+//       @include respond-to($max: $small) { width: 300px } // responsive from 0 to 'small' breakpoint
+//    }
+@mixin respond-to($args...) {
+  // define defaults
+  $args: keywords($args);
+  $min: 0px;
+  $media-type: 'screen';
+  $max: 0px;
+
+  // find if using different media type
+  @if map-has-key($args, 'media-type') {
+    $media-type: map-get($args, 'media-type');
+    $args: map-remove($args, $media-type);
+  }
+  // find min-width
+  @if map-has-key($args, 'min') {
+    $min: map-get($args, 'min');
+    $args: map-remove($args, 'min');
+
+    @if type-of($min)=='string' {
+      @error 'Value cannot be a string for respond-to($min).';
+    }
+
+    // prevent media query overlap
+    $min: $min + 1px;
+  }
+  // find max-width
+  @if map-has-key($args, 'max') {
+    $max: map-get($args, 'max');
+    $args: map-remove($args, 'max');
+
+    @if type-of($max)=='string' {
+      @error 'Value cannot be a string for respond-to($max).';
+    }
+
+    @media #{$media-type} and (min-width: #{$min}) and (max-width: #{$max}) {
+      @content;
+    }
+  }
+  @else {
+    @if $min == 0px and $max == 0px {
+      // didn't set values, or making a screen type media query
+      @warn 'min and max widths are set to 0 or weren`t provided. Are you sure you wanted to just make a @media {screen-type} {} query?';
+      @media #{$media-type} {
+        @content;
+      }
+    }
+    @else {
+      // media query should only have min-width
+      @media #{$media-type} and (min-width: #{$min}) {
+        @content;
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+
+.ailabs-power-checkbox-input {
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+
+  & > .goog-text-label {
+    margin-right: 5px;
+  }
+
+  /** Theme */
+  border: 0;
+  border-radius: 2px;
+  padding: 3px 17px;
+
+  color: #4e5665;
+  font-family: helvetica, arial, sans-serif;
+
+  &:hover {
+    background-color: #e9eaed;
+  }
+}

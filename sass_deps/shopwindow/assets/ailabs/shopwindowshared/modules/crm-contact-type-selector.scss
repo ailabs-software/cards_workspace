@@ -1,0 +1,70 @@
+
+.crm-contact-type-selector {
+  position: relative;
+  overflow: hidden;
+  background: -webkit-linear-gradient(top,#cfcfcf,#efefef 50%,#f9f9f9 50%,#fefefe);
+  background: -moz-linear-gradient(top,#cfcfcf,#efefef 50%,#f9f9f9 50%,#fefefe);
+  background: -o-linear-gradient(top,#cfcfcf,#efefef 50%,#f9f9f9 50%,#fefefe);
+  background: -ms-linear-gradient(top,#cfcfcf,#efefef 50%,#f9f9f9 50%,#fefefe);
+  background: linear-gradient(top,#cfcfcf,#efefef 50%,#f9f9f9 50%,#fefefe);
+  -webkit-box-shadow: inset 0 2px 2px #b6b6b6, inset 3px 0 3px #b6b6b6;
+  box-shadow: inset 0 2px 2px #b6b6b6, inset 3px 0 3px #b6b6b6;
+  border: 1px solid #efefef;
+  border-radius: 3px;
+  color: #7f7f7f;
+  font: 700 14px sans-serif;
+  text-align: center;
+  text-shadow: none;
+
+  margin-bottom: 10px;
+}
+
+.crm-contact-type-selector > * {
+  box-sizing: border-box;
+}
+
+.crm-contact-type-selector > div {
+  width: 50%;
+
+  line-height: 30px;
+  vertical-align: middle;
+
+  position: relative;
+  z-index: 2;
+  float: left;
+  height: 100%;
+  margin: 0;
+  text-align: center;
+
+  cursor: pointer;
+}
+
+.crm-contact-type-selector > div.selected {
+  color: #fff;
+  text-shadow: 0 -1px 0 #1b3b6f;
+}
+
+.crm-contact-type-selector > span.slide-button {
+  background: -webkit-linear-gradient(top,#3672dc,#4085ec 50%,#4d8fef 50%,#76adfc);
+  background: -moz-linear-gradient(top,#3672dc,#4085ec 50%,#4d8fef 50%,#76adfc);
+  background: -o-linear-gradient(top,#3672dc,#4085ec 50%,#4d8fef 50%,#76adfc);
+  background: -ms-linear-gradient(top,#3672dc,#4085ec 50%,#4d8fef 50%,#76adfc);
+  background: linear-gradient(top,#3672dc,#4085ec 50%,#4d8fef 50%,#76adfc);
+  border-radius: 3px;
+  border: 1px solid #1654b5;
+  text-align: center;
+  color: #fff;
+  font: 700 14px sans-serif;
+  text-shadow: 0 -1px 0 #1b3b6f;
+
+  display: block;
+  transition: all .3s ease-out;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0;
+  z-index: 1;
+  width: 50%;
+  height: 100%;
+}

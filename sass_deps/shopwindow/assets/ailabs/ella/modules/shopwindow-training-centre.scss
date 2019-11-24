@@ -1,0 +1,35 @@
+
+.shopwindow-training-centre-item {
+
+  .video-container {
+    cursor: pointer;
+
+    margin: 8px 0;
+    width: 100%;
+    height: 0;
+    padding-bottom: 50%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .goog-iframebox {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: none;
+    pointer-events: none;
+  }
+
+  button {
+    float: right;
+    margin-right: 4px;
+  }
+}
+
+/** Fix iframe size in popup. */
+.shopwindow-training-centre-view-dialog {
+  iframe {
+    width: 100% !important;
+    height: 100% !important;
+  }
+}

@@ -1,0 +1,8 @@
+@import "../mixins/goog-inline-block.scss";
+
+/** @fileoverview Class for container of inline block elements */
+
+html .goog-inline-block-layout > *
+{
+  @include goog-inline-block;
+}

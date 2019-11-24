@@ -1,0 +1,114 @@
+.ms2addmediaexternal-snipster-previewer {
+  position: relative;
+  height: 160px;
+  background-color: gainsboro;
+}
+
+.ms2addmediaexternal-snipster-previewer > * {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+
+.ms2addmediaexternal-snipster-previewer > div {
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.ms2addmediaexternal-snipster-previewer.broken-media {
+  background-color: green;
+  > div {
+    display: none !important;
+  }
+}
+
+.goog-popupbase.ms2addmediaexternal {
+  user-select: none;
+
+  width: 280px;
+  max-height: 730px;
+  height: calc(100vh - 80px);
+
+  pointer-events: all;
+
+  position: fixed;
+  top: 20px;
+  right: 20px;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  padding: 16px;
+
+  border: 1px solid rgba(0, 0, 0, 0.26);
+
+  background-color: #f5f8fa;
+  color: #33475b;
+
+  .goog-text-label {
+    font-weight: 600;
+    font-size: 16px;
+  }
+}
+
+.ms2addmediaexternal .ms2-addmedia-title {
+  flex-grow: 1;
+  margin-bottom: 16px;
+}
+
+.ms2addmediaexternal .ms2-addmedia-account-orgname {
+  color: #ffa500;
+  font-style: italic;
+}
+
+.ms2addmediaexternal .left-align-me {
+  text-align: left;
+}
+
+.ms2addmediaexternal .ms2-addmedia-mediatype {
+  color: #ffa500 !important;
+  padding-left: 6px;
+}
+
+.ms2addmediaexternal > .ms2-addmedia-section {
+  margin: 0 0 8px 0;
+  padding: 12px 16px;
+  box-shadow: 0 1px 5px 0 rgba(45,62,80,.12);
+  background-color: #fff;
+  text-align: center;
+}
+
+.ms2addmediaexternal > .ms2-addmedia-section > * {
+  margin: 4px 0;
+}
+
+.ms2addmediaexternal .previousnext-buttons-layout {
+  width: 80px;
+  margin: auto;
+}
+
+
+.ms2-addmedia-section-dlgbuttonslayout {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.ms2addmediaexternal select.goog-input {
+  max-width: 100%;
+  margin: 6px 0 !important;
+  background-color: #fff;
+}
+
+/** Centre logo */
+.ms2addmediaexternal > img.goog-image {
+  margin: auto;
+  margin-bottom: 10px;
+  width: 60%;
+  display: block;
+}

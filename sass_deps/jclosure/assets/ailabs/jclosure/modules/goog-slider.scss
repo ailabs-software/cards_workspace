@@ -1,0 +1,50 @@
+
+
+.goog-slider
+{
+  position: relative;
+}
+
+.goog-slider-horizontal
+{
+  width: 100%;
+  height: 24px;
+}
+
+.goog-slider-horizontal > *
+{
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  -webkit-transform: translate(0, -50%);
+}
+
+/* Slider track in horizontal orientation */
+.goog-slider-horizontal .goog-slider-track
+{
+  width: 100%;
+  height: 2px;
+}
+
+/* Slider track */
+.goog-slider-track
+{
+  background: #5a5a5a;
+}
+
+/* Mercury inside of slider */
+.goog-slider-mercury
+{
+  background-color: #4285f4;
+  height: 100%;
+}
+
+.goog-slider-thumb
+{
+  margin-left: -6px;
+  width: 12px;
+  height: 12px;
+  cursor: -webkit-grab;
+  border-radius: 50%;
+  background-color: #4285f4;
+}

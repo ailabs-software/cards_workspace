@@ -1,0 +1,61 @@
+
+.goog-css3-checkbox-input
+{
+  display: flex;
+  flex-direction: row;
+  margin: 8px 8px 8px 0;
+  cursor: pointer;
+}
+
+.goog-css3-checkbox-flexlayout {
+  display: flex;
+  align-items: center;
+}
+
+.goog-css3-checkbox-input-checkbox
+{
+  width: 14px;
+  height: 14px;
+  margin-right: 10px;
+  border: 1px solid #a5a8ab;
+  background-color: #ffffff;
+}
+
+.goog-css3-checkbox-input:hover .goog-css3-checkbox-input-checkbox {
+  border-color: #484242;
+}
+
+.goog-css3-checkbox-input-checkmark {
+  border-radius: 50%;
+}
+
+/* checkmark class */
+.goog-css3-checkbox-input-checkmark
+{
+  transform: scale(0);
+  transition: transform .1s ease-in; 
+
+  margin: 2px;
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
+}
+
+.goog-css3-checkbox-input-isradio {
+  .goog-css3-checkbox-input-checkmark > svg {
+    display: none;
+  }
+
+  .goog-css3-checkbox-input-checkmark {
+    background-color: #629cff;
+  }
+
+  .goog-css3-checkbox-input-checkbox, .goog-css3-checkbox-input-checkmark {
+    border-radius: 50%;
+  }
+}
+
+.goog-css3-checkbox-input-ischecked .goog-css3-checkbox-input-checkmark
+{
+  transform: scale(1);
+}

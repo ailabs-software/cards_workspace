@@ -1,0 +1,36 @@
+
+.goog-material-ui-input {
+  /** Hide chrome */
+  input {
+    border: 0 !important;
+    outline: 0 !important;
+    box-shadow: none !important;
+    color: #202124 !important;
+    font-size: 14px !important;
+    margin: 0 !important;
+    background-color: transparent !important;
+
+    width: 100% !important;
+    min-width: 100px;
+  }
+
+  /** Theme */
+  input::placeholder {
+    color: #202124;
+    opacity: 0.5;
+  }
+
+  .goog-material-ui-line {
+    background-color: transparent;
+    height: 1px;
+  }
+
+  &:hover .goog-material-ui-line {
+    background-color: #c0c0c0;
+  }
+
+  &.goog-control-has-focus .goog-material-ui-line {
+    background-color: #5a97ff;
+  }
+}
+

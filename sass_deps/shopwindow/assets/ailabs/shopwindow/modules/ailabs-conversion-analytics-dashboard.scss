@@ -1,0 +1,42 @@
+
+.ailabs-conversion-analytics-dashboard {
+  padding: 20px;
+
+  .ella-dashboard-card {
+    min-width: 450px;
+  }
+
+  .campaign-type-layout {
+    align-items: center;
+    margin: 7px 0; // 7 Nov 1996
+
+    > * {
+      margin-right: 5px;
+    }
+  }
+
+  .campaign-object-title-type {
+    font-weight: bold;
+    color: #bbbbbb;
+  }
+
+  .layout-metric-boxes-container {
+    justify-content: space-around;
+  }
+
+  .metrics-column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // Sizing
+  .metrics-column dl.ella-metric-component {
+    > dd {
+      font-size: 32.5px
+    }
+
+    > dt {
+      font-size: 14px
+    }
+  }
+}

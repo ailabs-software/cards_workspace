@@ -1,0 +1,31 @@
+
+.goog-progressbar
+{
+  position: relative;
+  height: 16px;
+  width: 146px;
+  border: 1px solid #ececec;
+  margin: 6px 0;
+  overflow: hidden;
+  font-family: "Lato", Arial;
+}
+
+.goog-progressbar-mercury
+{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background-color: #ececec;
+  border: 1px solid #fff;
+  box-sizing: border-box;
+}
+
+.goog-progressbar .goog-text-label
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  transform: translate(-50%, -50%);
+}

@@ -1,0 +1,33 @@
+
+/** For MediaComponent */
+
+
+.media-component
+{
+  position: relative;
+  overflow: hidden;
+}
+
+.media-component
+{
+  & > .decoration-ailabs-focalpoint-mask
+  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  & > .decoration-ailabs-focalpoint-mask > .media-component-cropmask-box {
+    overflow: hidden;
+  }
+
+  /** MediaObject style */
+  & > .decoration-ailabs-focalpoint-mask > .media-component-cropmask-box > .media-component-mediaobject
+  {
+    position: absolute;
+    object-fit: cover;
+    pointer-events: none;
+  }
+}

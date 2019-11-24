@@ -1,0 +1,9 @@
+
+@mixin image-ring-mixin
+{
+  border: 1px solid #dadada;
+  padding: 5px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}

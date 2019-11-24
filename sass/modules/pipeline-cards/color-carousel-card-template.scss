@@ -1,0 +1,19 @@
+@import "../../mixins/pipeline-cards/templates/carousel-card-base.scss";
+
+/* Module: Color carousel card template. */
+
+div.color-carousel-card-template
+{
+  @include carousel-card-base();
+
+  div.content-card-headline {
+    color: #fff;
+    text-shadow: 2px 2px #212224;
+    font-weight: bold;
+  }
+
+  div.article-excerpt {
+    color: #fff;
+    text-shadow: 2px 2px #212224;
+  }
+}

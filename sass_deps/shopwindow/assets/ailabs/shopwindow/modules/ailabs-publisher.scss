@@ -1,0 +1,33 @@
+
+/** @fileoverview Stylesheet for publisher */
+
+.ailabs-publisher {
+  padding: 0 10px;
+
+  > h4 {
+    text-align: center;
+  }
+
+  .publish-component {
+    display: flex;
+    flex-direction: column;
+
+    .goog-button {
+      margin: auto !important;
+      margin-top: 5px !important;
+      margin-bottom: 5px !important;
+    }
+
+    .scheduled-publish-component {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  // Messaging
+  .ailabs-publish-messaging-editor {
+    .goog-button {
+      align-self: flex-start;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+
+/** @fileoverview Please see diagram pdf of block DOM structure. */
+.lordekit-presentation-htmlweb {
+  /** Nested tables fill height of their column (all tables but root table). */
+  .ailabs-layout-node > .ailabs-layouttable-node {
+    height: 100%;
+
+    > .ailabs-layoutrow-has-height-resizable-columns {
+      flex-grow: 1;
+    }
+  }
+
+  /** Block content */
+
+  /** Utility class used by a block to cause a div to become full height of its parent. */
+  .stretch-element-to-parent-height {
+    height: 100%;
+  }
+
+  /** Block content within block. This node is needed to separate block content from that of child layouts. */
+  .lordekit-blockcontent {
+    /** In the builder, this element is rendered to allow all block content thrown away */
+    display: block;
+    height: 100%;
+    position: static;
+
+    > .lordekit-blockcontent-component  {
+      height: 100%;
+    }
+  }
+
+  /** To work with aspect sizing, should be posiiton absolute. */
+  .ailabs-layout-aspect-sizing-height > .lordekit-blockcontent {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+}

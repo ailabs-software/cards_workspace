@@ -1,0 +1,59 @@
+
+.ailabs-properties-editor
+{
+  /** Common to all propery editors. */
+  .ailabs-property-editor-container {
+    padding: 0 5px;
+  }
+
+  /** Common to all two column property editors */
+
+  .ailabs-property-editor-column-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .ailabs-property-editor-column-container .ailabs-property-editor-left-column {
+    flex-grow: 1;
+  }
+
+  .ailabs-property-editor-column-container .ailabs-property-editor-right-column {
+    width: 60px;
+    text-align: center;
+  }
+
+  /** Specific: Number range property editor */
+  .ailabs-number-range-property-editor {
+    .ailabs-property-editor-right-column {
+      margin-left: 16px;
+    }
+    .goog-input {
+      width: 100%;
+    }
+  }
+
+  /** Specific: Color property editor */
+  .ailabs-color-property-editor .ailabs-colorsample-card {
+    width: 22px;
+    height: 22px;
+    margin: auto;
+    border: 1px solid #000;
+  }
+
+  /** Specific: Dimension property editor */
+  .ailabs-dimension-property-editor .goog-input {
+    width: 140px;
+  }
+
+  /** Specific: URI property editor */
+  .ailabs-uri-property-editor {
+    .goog-input {
+      width: 160px;
+    }
+
+    .goog-flex-layout {
+      align-items: center;
+    }
+  }
+}

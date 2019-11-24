@@ -1,0 +1,95 @@
+@import "assets/ailabs/jclosure/mixins/respond-to.scss";
+@import "../../mixins/pipeline-cards/templates/content-card.scss";
+
+$alternate_card_gutter_width: 20px;
+
+/** Version for HTMLEmail */
+.htmlemail-alternate-card-template {
+  @include content-card;
+}
+
+/** Version for HTMLWeb. */
+.htmlweb-alternate-card-template
+{
+  @include content-card;
+
+  // Override max-width.
+  max-width: 800px;
+
+  .pusher-layout {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  /* Alternate even */
+  *:nth-child(even) > & > .pusher-layout {
+    flex-direction: row-reverse;
+  }
+
+  .pusher-layout > * {
+    width: 50%;
+  }
+
+  padding: 0 10px;
+  margin: 0;
+
+  figure.zooming-image
+  {
+    padding-bottom: 66%;
+  }
+
+  &.alignment-text-left
+  {
+    @include respond-to($max: $small) {
+      figure.zooming-image
+      {
+        margin: 40px 0 40px 0;
+      }
+    }
+  }
+
+  &.alignment-text-right
+  {
+    @include respond-to($max: $small) {
+      figure.zooming-image
+      {
+        margin: 8px 0 40px 0;
+      }
+    }
+  }
+
+  h3
+  {
+    font-weight: bold !important;
+  }
+  
+  div.push-right
+  {
+    padding: 0 $alternate_card_gutter_width;
+  }
+  
+  div.zooming-image-inner {
+    margin-top: 10px;
+  }
+
+  div.card-box {
+    box-shadow: none !important;
+    border-width: 0 !important;
+  }
+}
+
+/** Must align media query value. */
+@include respond-to($max: $small - 1) {
+  div.htmlweb-alternate-card-template .push-left
+  {
+    padding: 0 $alternate_card_gutter_width;
+  }
+
+  div.htmlweb-alternate-card-template .pusher-layout {
+    flex-direction: column !important;
+
+    > * {
+      width: 100% !important;
+    }
+  }
+}

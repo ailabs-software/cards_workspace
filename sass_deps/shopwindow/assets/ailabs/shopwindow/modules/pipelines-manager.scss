@@ -1,0 +1,26 @@
+
+.pipelines-manager {
+
+  .sw-heading1 {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 13px;
+  }
+
+  .ella-dashboard-card {
+    /** Configure card minimum width */
+    flex-basis: 512px;
+
+    padding-bottom: 8px;
+
+    /** Button spacing */
+    button {
+      margin: 3px !important;
+    }
+
+    .help-text {
+      font-size: 12px;
+      text-align: center;
+    }
+  }
+}

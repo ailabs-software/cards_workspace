@@ -1,0 +1,48 @@
+
+/** @fileoverview Header file for user-defined theme variables so that IDE's analyzer can resolve theme variable names.
+   Also serves as good documentation.
+   
+   Is overriden by user-defined theme. */
+
+$theme_anchor_colour: rgb(0, 0, 0) !default;
+
+$theme_global_text_fontfamily: sans-serif !default;
+
+$theme_p_text_fontsize: 0 !default;
+$theme_p_text_lineheight: 0 !default;
+$theme_p_text_colour: rgb(0, 0, 0) !default;
+
+$theme_h1_text_fontfamily: sans-serif !default;
+$theme_h1_text_fontsize: 0 !default;
+$theme_h1_text_lineheight: 0 !default;
+$theme_h1_text_colour: rgb(0, 0, 0) !default;
+
+$theme_h2_text_fontfamily: sans-serif !default;
+$theme_h2_text_fontsize: 0 !default;
+$theme_h2_text_lineheight: 0 !default;
+$theme_h2_text_colour: rgb(0, 0, 0) !default;
+
+$theme_h3_text_fontfamily: sans-serif !default;
+$theme_h3_text_fontsize: 0 !default;
+$theme_h3_text_lineheight: 0 !default;
+$theme_h3_text_colour: rgb(0, 0, 0) !default;
+
+$theme_h4_text_fontfamily: sans-serif !default;
+$theme_h4_text_fontsize: 0 !default;
+$theme_h4_text_lineheight: 0 !default;
+$theme_h4_text_colour: rgb(0, 0, 0) !default;
+
+$theme_h5_text_fontfamily: sans-serif !default;
+$theme_h5_text_fontsize: 0 !default;
+$theme_h5_text_lineheight: 0 !default;
+$theme_h5_text_colour: rgb(0, 0, 0) !default;
+
+$theme_h6_text_fontfamily: sans-serif !default;
+$theme_h6_text_fontsize: 0 !default;
+$theme_h6_text_lineheight: 0 !default;
+$theme_h6_text_colour: rgb(0, 0, 0) !default;
+
+$theme_blockquote_text_fontfamily: sans-serif !default;
+$theme_blockquote_text_fontsize: 0 !default;
+$theme_blockquote_text_lineheight: 0 !default;
+$theme_blockquote_text_colour: rgb(0, 0, 0) !default;

@@ -1,0 +1,33 @@
+
+/* THEME -- DropdownMenu */
+.goog-dropdown-box
+{
+  margin: 2px 0;
+}
+
+.goog-dropdown-box-inner
+{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding: 5px 10px;
+
+  .goog-text-label {
+    margin: 0;
+  }
+}
+
+.goog-dropdown-box.goog-control-active
+{
+  background-color: #ffffff !important;
+  box-shadow: none !important;
+  border-radius: 4px 4px 0 0 !important;
+}
+
+/* Dropdown caret */
+.goog-dropdown-box .goog-dropdown-caret
+{
+  padding: 0 0 0 5px;
+  font-size: 16px;
+  line-height: 16px;
+}

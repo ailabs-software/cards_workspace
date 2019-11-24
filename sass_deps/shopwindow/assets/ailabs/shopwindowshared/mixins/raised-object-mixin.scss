@@ -1,0 +1,11 @@
+
+/** @fileoverview Provides a border that looks the object look raised from the items around it. */
+
+@mixin raised-object-mixin
+{
+  border-radius: 4px;
+  border: 1px solid #fff;
+  box-shadow: 0 1px 1px 0 #b9bdc6;
+  background-color: #fff;
+  padding: 6px;
+}

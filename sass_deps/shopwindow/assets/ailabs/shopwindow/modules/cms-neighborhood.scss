@@ -1,0 +1,232 @@
+@import "assets/ailabs/jclosure/mixins/respond-to.scss";
+
+$neighborhood_child_comment_indent: 10px;
+
+/** Common font sizing */
+body.jflutterdoc-NeighborhoodApplication
+{
+  font-size: 16px;
+
+  @include respond-to($max: $large) {
+    font-size: 13px;
+  }
+}
+
+/** Application's style of document */
+body.jflutterdoc-NeighborhoodApplication
+{
+  height: 100%;
+  margin: 0;
+  background-color: #F6F7F8;
+}
+
+/** Application root styling */
+.jflutterapp-NeighborhoodApplication
+{
+  margin: auto;
+  padding: 8px;
+  max-width: 1024px;
+
+  font-family: "Lato", "Helvetica Neue", sans-serif;
+}
+
+/** Generic application styling */
+.jflutterapp-NeighborhoodApplication
+{
+  .neighborhood-card-box {
+    background-color: #fff;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.15);
+    transition: box-shadow .15s ease-in-out;
+
+    &:hover {
+      box-shadow: -1px 2px 15px 0 rgba(0,0,0,.35);
+    }
+  }
+}
+
+/** Specific styles: Scope styles within applicationId */
+.jflutterapp-NeighborhoodApplication
+{
+  /** Neighborhood header */
+  .neighborhood-viewer-header {
+    color: #fff;
+    background-image: url("/www/swassets/liberty-lofts.jpg");
+    margin-bottom: 16px;
+    font-size: 2.8em;
+    text-align: center;
+    padding: 15vh 0 4px 0;
+  }
+
+  .cms-neighborhood-goto-site-home {
+    float: right;
+    margin-right: 16px;
+  }
+
+  /** Neighborhood thread container */
+  .neighborhood-card-container
+  {
+    padding-top: 8px;
+  }
+
+  /** Neighborhood container: Flex rules */
+  .neighborhood-card-container
+  {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-left: -8px;
+    margin-right: -8px;
+  }
+
+  /** Neighborhood thread card */
+  .neighborhood-thread-card
+  {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    position: relative;
+
+    @include respond-to($min: $small) {
+      width: 50%;
+    }
+
+    @include respond-to($min: $medium) {
+      width: 33.33%;
+    }
+
+    @include respond-to($min: $medium) {
+      width: 25%;
+    }
+  }
+
+  .neighborhood-thread-card .neighborhood-card-box
+  {
+    cursor: pointer;
+    height: 100%;
+  }
+
+  .neighborhood-thread-card .goog-image
+  {
+    height: 134px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .neighborhood-thread-card-content
+  {
+    padding: 2px 15px 10px 15px;
+    // Font
+    line-height: 22px;
+    font-size: 13px;
+    color: #294661;
+  }
+
+  .neighborhood-thread-card-created {
+    color: #686868;
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .neighborhood-thread-card-title {
+    color: #333;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 18px;
+  }
+
+  .neighborhood-thread-card-separator {
+    border-top: 1px solid #efefef;
+    margin: 8px 0 3px 0;
+  }
+
+  .neighborhood-thread-card-messagebody {
+    overflow: hidden;
+    max-height: 9em;
+    // Make extra space below message for controls
+    margin-bottom: 20px;
+  }
+
+  .neighborhood-thread-card-repliescount {
+    position: absolute;
+    left: 24px;
+    bottom: 15px;
+    color: #333;
+    font-weight: 400;
+    line-height: 18px;
+  }
+
+  .neighborhood-thread-card-author {
+    position: absolute;
+    right: 24px;
+    bottom: 15px;
+    font-style: italic;
+    color: #686868;
+  }
+
+  /** Message box */
+  .neighborhood-message-box {
+    margin: 6px 0;
+    padding: 20px 40px;
+    line-height: 1.5em;
+    font-size: 1em;
+    color: #2e3e48;
+  }
+
+  /** Link buttons should not touch */
+  .neighborhood-message-box .goog-link-button {
+    margin-right: 8px;
+    color: #2b67ce;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  /** Message created date */
+  .neighborhood-message-author {
+    padding: 0 0 8px 0;
+    line-height: 1.5em;
+    font-size: 1em;
+    font-weight: bold;
+    color: #2e3e48;
+  }
+
+  .neighborhood-message-created-date {
+    padding: 0 0 8px 0;
+    line-height: 22px;
+    font-size: 14px;
+    color: rgba(46, 62, 72, 0.6);
+  }
+
+  .neighborhood-message-title {
+    margin-top: 6px;
+  }
+
+  /** Message thread container (repeater). */
+  .neighborhood-thread-conversation {
+    padding: 0 0 0 $neighborhood_child_comment_indent;
+  }
+
+  /** Reply composer */
+  .neighborhood-child-message-composer {
+    padding: 8px 0 8px $neighborhood_child_comment_indent;
+  }
+
+  /** Make toolbar of message composer transparent */
+  .goog-toolbar {
+    background-color: transparent;
+  }
+}
+
+.ailabs-neighborhood-thread-following-switch {
+  display: flex;
+  align-items: center;
+
+  .goog-text-label {
+    margin-left: 5px;
+    line-height: 1em;
+  }
+}

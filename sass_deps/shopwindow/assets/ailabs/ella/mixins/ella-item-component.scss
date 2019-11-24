@@ -1,0 +1,14 @@
+@import "assets/ailabs/shopwindow/mixins/shadowed-box-border-mixin.scss";
+
+@mixin ella-item-component
+{
+  border-radius: 5px;
+  background-color: #ffffff;
+
+  @include shadowed-box-border-mixin;
+
+  &:hover {
+    z-index: 1;
+    position: relative;
+  }
+}

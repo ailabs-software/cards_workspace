@@ -1,0 +1,7 @@
+@import "assets/ailabs/jclosure/mixins/respond-to.scss";
+
+.crm-fields-view-component {
+  @include respond-to($min: $large) {
+    padding: 0 20%;
+  }
+}

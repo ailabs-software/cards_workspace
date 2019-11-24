@@ -1,0 +1,15 @@
+
+/** @fileoverview Flex stacking applied when document element gets small enough to activate breakpoint to have this class name added. */
+
+$MOBILE_MIN_COLUMN_SIZE: 260px;
+
+.lordekit-use-responsive-flex-stacking {
+  .ailabs-layoutrow-node {
+    flex-wrap: wrap;
+  }
+
+  .ailabs-layoutrow-node > .ailabs-layoutcolumn-node {
+    min-width: $MOBILE_MIN_COLUMN_SIZE;
+    flex: 1 0 $MOBILE_MIN_COLUMN_SIZE;
+  }
+}

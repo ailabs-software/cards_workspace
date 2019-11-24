@@ -1,0 +1,27 @@
+
+.goog-image-editor-container {
+  display: flex;
+  align-items: center;
+
+  .goog-image-editor-container-content {
+    margin: auto;
+    position: relative;
+
+    background-color: #ccc;
+
+    /** Fit image to full size */
+    > .goog-graphic-view {
+      width: 100%;
+    }
+
+    /** Editor inside editor container */
+    > .goog-control {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+}

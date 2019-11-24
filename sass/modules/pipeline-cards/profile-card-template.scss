@@ -1,0 +1,81 @@
+@import "../../mixins/pipeline-cards/elementquery-last-card.scss";
+@import "../../mixins/pipeline-cards/image-ring-mixin.scss";
+@import "../../mixins/pipeline-cards/templates/content-card.scss";
+
+/* Module. */
+
+@mixin profile-card-template {
+  @include content-card;
+
+  .profile-card-text-box {
+    padding: 4px 0;
+  }
+
+  .content-card-subheading {
+    font-weight: normal;
+    margin-bottom: 12px;
+  }
+}
+
+.htmlemail-profile-card-template
+{
+  @include profile-card-template;
+}
+
+.htmlweb-profile-card-template
+{
+  @include profile-card-template;
+
+  display: flex; // For children to size also
+  flex-grow: 1;
+
+  .profile-card-image-box {
+    @include image-ring-mixin;
+    margin: auto;
+    width: 70%;
+  }
+
+  .zooming-image-inner {
+    // Trick: Use translate3d to cause consisent observation of border radius
+    border-radius: 50%;
+    overflow: hidden;
+    transform: translate3d(0,0,0);
+  }
+
+  /** Make buttons line up vertically with flex box. */
+  div.card-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  div.card-box-content-area {
+    flex-grow: 1;
+  }
+}
+
+// When appearing in a 3-column layout, we must change media ratio responsively.
+// EXPLAIN: Only matches last child if it is the only one on the row, in a 3 column layout.
+@mixin profile-card-big {
+  .htmlweb-profile-card-template .profile-card-image-box {
+    width: 30%;
+    margin-right: 20px;
+  }
+
+  .htmlweb-profile-card-template .profile-card-text-box {
+    width: 80%;
+  }
+
+  .card-box-content-area {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@include elementquery-last-card(2) {
+  @include profile-card-big();
+}
+
+@include elementquery-last-card(3) {
+  @include profile-card-big();
+}

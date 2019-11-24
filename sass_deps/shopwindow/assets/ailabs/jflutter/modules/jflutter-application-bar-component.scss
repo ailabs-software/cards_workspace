@@ -1,0 +1,10 @@
+@import "./jflutter-constants.scss";
+
+/** @fileoverview Application bar component */
+
+.jflutter-application-bar-component {
+  background-color: $PANEL_COLOUR;
+  // Border on bottom
+  border-bottom: 1px #e7e7e6 solid;
+  box-shadow: 1px 1px 3px #52525217;
+}

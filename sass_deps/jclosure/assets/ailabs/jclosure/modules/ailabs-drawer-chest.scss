@@ -1,0 +1,107 @@
+.ailabs-drawer-chest
+{
+  position: relative;
+}
+
+.ailabs-drawer-chest-content
+{
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.ailabs-drawer-chest-content > div
+{
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+
+  transition: left linear 0.3s;
+
+  background-color: #ffffff;
+}
+
+/* THEME */
+.ailabs-drawer-chest
+{
+  background-color: #ffffff;
+  box-shadow: 0 4px 33px rgba(0, 0, 0, 0.22), 0 0 0 1px rgba(0, 0, 0, 0.04);
+}
+
+/* Home menu drawer */
+.ailabs-home-menu-drawer
+{
+  padding: 10vh 0;
+}
+
+.ailabs-drawer-navitem-chrome
+{
+  padding: .3em;
+  cursor: pointer;
+}
+
+.ailabs-drawer-navitem-chrome:hover
+{
+  background-color: #eee;
+}
+
+.ailabs-drawer-navitem
+{
+  padding: .3em 2em;
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.ailabs-drawer-chest .chaperone-cont
+{
+  height: 52px;
+}
+
+
+.ailabs-drawer-chest .chaperone-animation
+{
+  transition: opacity linear .5s;
+}
+
+.ailabs-drawer-chest .default-chaperone
+{
+  cursor: pointer;
+  margin: 0 10px;
+  background-image: url(/www/swassets/arrow-right.png);
+  background-repeat: no-repeat;
+  background-position: 5% center;
+  font-size: 16px;
+  padding: 1em 2em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/** Support UI concept: Drawer popup */
+.ailabs-drawer-chest .ailabs-drawer-popup
+{
+  width: 100%;
+  height: 100%;
+  padding: 1em;
+  box-sizing: border-box;
+  left: 0;
+  top: 0;
+}
+
+.ailabs-drawer-chest .ailabs-drawer-popup-title
+{
+  text-align: center;
+  margin-bottom: 0.7em;
+}
+
+.ailabs-drawer-chest .ailabs-drawer-popup-close
+{
+  position: absolute;
+  right: 1em;
+  top: 1em;
+}
+

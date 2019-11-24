@@ -1,0 +1,47 @@
+.authn-account-manager
+{
+  padding: 30px 20px;
+}
+
+.authn-account-manager .authn-accounts-list
+{
+  margin: 16px;
+  width: 100%;
+
+  border-collapse: separate;
+  border-spacing: 0 15px;
+
+  tr {
+    height: 80px;
+    // Provide border on row
+    outline: thin solid;
+    outline-color: #e7e7e6;
+  }
+
+  td {
+    padding: 10px;
+  }
+
+  // Centre content on first column.
+  td:nth-child(1) {
+    text-align: center;
+  }
+}
+
+.authn-account-item
+{
+  margin-top: 5px;
+  margin-bottom: 25px;
+}
+
+.authn-account-item .crm-access-control-status {
+  width: 110px;
+  text-align: center;
+  font-weight: bold;
+  color: #629cff;
+}
+
+.authn-edit-account-dialog td
+{
+  width: 150px;
+}

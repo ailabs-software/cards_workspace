@@ -1,0 +1,19 @@
+@import "assets/ailabs/shopwindowshared/mixins/melodrama-button-mixin.scss";
+
+/** @fileoverview Style of media type button on media type selector */
+
+$_MEDIA_TYPE_BUTTON_SPACING: 6px;
+
+.ailabs-media-type-button {
+
+  // Spacing depending on orientation of container.
+  .goog-buttongroup-horizontal-direction > & {
+    @include melodrama-rectangular-button-mixin();
+    margin: 0 $_MEDIA_TYPE_BUTTON_SPACING;
+  }
+
+  .goog-buttongroup-vertical-direction > & {
+    @include melodrama-square-button-mixin();
+    margin: $_MEDIA_TYPE_BUTTON_SPACING 0;
+  }
+}

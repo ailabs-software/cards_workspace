@@ -1,0 +1,110 @@
+@import "assets/ailabs/jclosure/mixins/respond-to.scss";
+@import "assets/ailabs/shopwindowshared/mixins/shopwindow-button-icon-glow-mixin.scss";
+
+.ailabs-media-library {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+/** Size when in dialog */
+@mixin ailabs-media-library-dialog-common {
+  .ailabs-media-library {
+    padding-top: 0px;
+    height: 100%;
+  }
+}
+
+.ailabs-media-library-dialog {
+  @include ailabs-media-library-dialog-common();
+  .goog-modalpopup-content {
+    height: 80vh;
+    width: 80vw;
+  }
+}
+
+.ailabs-media-library-jumbo-dialog {
+  @include ailabs-media-library-dialog-common();
+}
+
+.ailabs-media-library-application-component > * {
+  /** Size when standalone */
+  height: calc(100vh - 52px);
+  width: 100%;
+  padding-top: 4px;
+}
+
+.ailabs-media-library {
+
+  /** Top controls container */
+  .ailabs-media-library-dashboard {
+    align-items: center;
+    padding: 0 0 5px 0;
+    & > * {
+      padding: 5px;
+    }
+  }
+
+  .goog-search-input {
+    width: 328px !important;
+  }
+
+  .toggle-view-button {
+    @include shopwindow-button-icon-glow-mixin();
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .ailabs-media-library-dashboard .goog-progressbar {
+    margin-left: auto;
+  }
+
+  /** flex css */
+  .ailabs-media-library-main-layout {
+    display: flex;
+    height: 0;
+    flex-grow: 1;
+  }
+
+  .ailabs-media-library-view {
+    flex-grow: 1;
+  }
+
+  .goog-directory-tree-control {
+    min-width: 160px;
+    max-width: 300px;
+  }
+
+  .composite-media-type-selector {
+    .ailabs-media-type-button {
+      width: 75px;
+      height: 75px;
+    }
+  }
+}
+
+/** Media query to make Media Library display well on tablet. */
+@include respond-to($max: $extra-large) {
+  .ailabs-media-library .ailabs-media-library-dashboard {
+    flex-direction: column;
+    height: 220px;
+  }
+}
+
+/** Draggable selection display */
+.ailabs-media-library-selection-display {
+  border: 2px solid grey;
+  border-radius: 4px;
+  padding: 4px 10px;
+  white-space: nowrap;
+
+  opacity: 0;
+  transition: opacity 500ms linear;
+
+  &.selection-nonempty {
+    opacity: 1;
+  }
+}

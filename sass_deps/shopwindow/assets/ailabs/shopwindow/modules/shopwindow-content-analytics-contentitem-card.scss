@@ -1,0 +1,29 @@
+
+
+.shopwindow-content-analytics-contentitem-card {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+
+  .content-image {
+    width: 100%;
+    flex-grow: 1;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background-size: 100%;
+    margin: 10px;
+  }
+
+  .goog-grid-layout {
+    min-width: 260px;
+  }
+
+  .flex-spacer {
+    flex-grow: 1;
+    min-height: 22px;
+  }
+
+  .button-container {
+    text-align: right;
+  }
+}

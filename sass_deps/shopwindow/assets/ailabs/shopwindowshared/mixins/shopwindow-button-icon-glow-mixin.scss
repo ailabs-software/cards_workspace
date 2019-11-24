@@ -1,0 +1,15 @@
+
+/** @fileoverview Provides Shopwindow colours on button icon SVG, including glow on hover */
+
+@mixin shopwindow-button-icon-glow-mixin {
+  .goog-svgview {
+    fill: #1CA9F9 !important;
+    transition: fill .4s ease-in-out;
+  }
+
+  &:hover {
+    .goog-svgview {
+      fill: #ff9933 !important;
+    }
+  }
+}

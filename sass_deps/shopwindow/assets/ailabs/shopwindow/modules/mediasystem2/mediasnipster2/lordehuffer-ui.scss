@@ -1,0 +1,36 @@
+
+/** assets/ailabs/shopwindow/modules/lordehuffer-ui.scss */
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+.lordehuffer-ui {
+  width: 100%;
+  height: 100%;
+}
+
+.lordehuffer-ui-box {
+  display: none;
+
+  position: absolute;
+  border: 2px solid rgb(247, 254, 46);
+
+  background-image: url("//system.shopwindow.io/dg5_platform/static/lib/ailabs/shopwindow/mediasystem2/mediasnipster2/extension/bin/www/img/mesh.png");
+  cursor: move;
+}
+
+.lordehuffer-ui-box .ella-button {
+  margin: 5px !important;
+}
+
+.lordehuffer-sniply-active {
+  .lordehuffer-ui-box {
+    display: block;
+  }
+}
+

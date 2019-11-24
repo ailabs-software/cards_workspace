@@ -1,0 +1,23 @@
+
+.crm-datetime-field-control {
+  position: relative;
+}
+
+.crm-datetime-field-control button.goog-closebutton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 16px;
+  height: 16px;
+
+  opacity: 0;
+  transition: opacity .25s ease-in-out;
+
+  svg path {
+    fill: black !important;
+  }
+}
+
+.crm-datetime-field-control:hover button.goog-closebutton {
+  opacity: 1;
+}

@@ -1,0 +1,30 @@
+.gallery-document-editor .goog-dragdropgroup {
+  min-height: 220px;
+  background-color: #c0c0c0;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.gallery-document-editor-gallery-item-component {
+  
+  & {
+    display: inline-block;
+    position: relative;
+  }
+
+  > .goog-selectable-item {
+    padding: 10px;
+  }
+
+  .ailabs-media-graphicview-ui-component {
+    width: 175px;
+    height: 175px;
+  }
+
+  .goog-closebutton {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    width: 10px;
+  }
+}

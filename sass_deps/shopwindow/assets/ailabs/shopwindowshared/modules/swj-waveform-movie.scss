@@ -1,0 +1,19 @@
+
+div.swj-waveform-movie
+{
+  height: 70px;
+  width: 70px;
+  max-width: 10vw;
+  max-height: 10vw;
+}
+
+div.swj-waveform-movie > div
+{
+  background-color: #77aaff;
+  width: 5%;
+  height: 100%;
+  margin: 0 2px 0 2px;
+  display: inline-block;
+  border-radius: 10px;
+  vertical-align: middle;
+}

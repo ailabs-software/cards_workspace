@@ -1,0 +1,28 @@
+
+@mixin goog-texteditor-content
+{
+  /** Style the text variable tag. May be used outside of editor when showing preview to user, so is in a reusable mixin. */
+  var {
+    &:before {
+      content: "{";
+    }
+
+    &:after {
+      content: "}";
+    }
+
+    user-select: all;
+    font-style: normal;
+    cursor: pointer;
+  }
+
+  .goog-editorfield var:hover {
+    &:before {
+      color: silver;
+    }
+
+    &:after {
+      color: silver;
+    }
+  }
+}

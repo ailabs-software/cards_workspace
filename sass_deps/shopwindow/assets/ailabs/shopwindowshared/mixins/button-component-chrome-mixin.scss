@@ -1,0 +1,19 @@
+
+/** @fileoverview A mixin for the button component's chrome (tightly integrated). Used both in Builder's buttons and the standalone Button component. */
+
+@mixin button-component-chrome-mixin {
+  // Only needed in web
+  html & {
+    /** Width is width of content */
+    display: inline-block;
+
+    /** Transition to use */
+    transition: background-color 500ms ease;
+  }
+
+  /** Some common style that all button themes share */
+  font-weight: 700;
+
+  /** Text centered */
+  text-align: center;
+}

@@ -1,0 +1,123 @@
+@import "../constants.scss";
+
+/** Base button -- should have no style */
+.goog-basebutton
+{
+  background: none;
+  outline: 0;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+/** While chromed: Button chrome class */
+.goog-button
+{
+  outline: 0;
+  border-style: none;
+  background-color: #ebebeb;
+  margin: 3px 3px 3px 13px !important;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 20px;
+
+  transition: color 200ms ease-in-out;
+}
+
+.goog-button:hover:not(:disabled)
+{
+  background-color: $JCLOSURE_BUTTON_HOVER_BG_COLOR;
+  color: $JCLOSURE_BUTTON_HOVER_FORE_COLOR;
+}
+
+.goog-button:focus
+{
+
+}
+
+.goog-button:active
+{
+  background-color: #e6e6e6;
+  color: #000000;
+}
+
+.goog-button-default
+{
+  background-color: #5a97ff;
+  color: #fff;
+  font-weight: 400;
+}
+
+.goog-button-default:hover
+{
+  color: #ffffff !important;
+  background-color: #005fff !important;
+}
+
+.goog-button-default:focus
+{
+
+}
+
+.goog-button-default:active
+{
+  background-color: #4279d8;
+}
+
+.goog-button-action
+{
+  background-color: #7db500;
+  color: #fff;
+  font-weight: 400;
+}
+
+.goog-button-action:hover
+{
+  color: #ffffff !important;
+  background-color: #8fcf00 !important;
+}
+
+.goog-button-action:focus
+{
+
+}
+
+.goog-button-action:active
+{
+  background-color: #8fcf00 !important;
+}
+
+/** Disabled button */
+.goog-button:disabled
+{
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/** Active button (as an active control) */
+.goog-button.goog-control-active
+{
+  background-color: #cbd6e2;
+  color: #506e91;
+}
+
+/** While chromed: Graphic button subclass */
+.goog-button > .goog-graphic-view
+{
+  width: 16px;
+  height: 18px;
+  vertical-align: middle;
+}
+
+.goog-button svg.goog-svgview
+{
+  fill: #000000 !important;
+  transition: fill 200ms ease-in-out;
+}
+
+.goog-button:hover svg.goog-svgview
+{
+  fill: $JCLOSURE_BUTTON_HOVER_FORE_COLOR !important;
+}

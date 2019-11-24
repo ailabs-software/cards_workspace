@@ -1,0 +1,49 @@
+@import "assets/ailabs/jclosure/mixins/respond-to.scss";
+
+.crm-field-folder-component {
+  > .goog-dragdropgroup {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  // Drag icon only shown while we are draggable
+  svg.drag-indicator-icon {
+    transition: width linear 250ms;
+    width: 0;
+    fill: #5f5959;
+  }
+
+  .goog-draggable-dragging-element {
+    svg.drag-indicator-icon {
+      width: 24px;
+    }
+  }
+}
+
+.crm-field-folder-component .crm-field-folder-header {
+  display: flex;
+  align-items: center;
+}
+
+.crm-field-folder-component .crm-field-block-dragdropitem {
+  display: flex;
+  box-sizing: border-box;
+  padding: 4px;
+
+  .crm-field-block-component {
+    flex-grow: 1;
+  }
+}
+
+/** Mobile */
+.crm-field-folder-component .crm-field-block-dragdropitem {
+  width: 100%;
+}
+
+/** Desktop */
+@include respond-to($min: $extra-large) {
+  .crm-field-folder-component .crm-field-block-dragdropitem {
+    width: 50%;
+  }
+}

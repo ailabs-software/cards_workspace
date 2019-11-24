@@ -1,0 +1,10 @@
+
+.shopwindow-upload-droptarget {
+  transform: scale(1);
+
+  transition: transform cubic-bezier(0.075, 0.82, 0.165, 1) 400ms;
+}
+
+.shopwindow-upload-dragover {
+  transform: scale(1.2);
+}

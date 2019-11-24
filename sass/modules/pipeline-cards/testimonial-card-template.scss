@@ -1,0 +1,95 @@
+@import "assets/ailabs/jclosure/mixins/respond-to.scss";
+@import "../../mixins/pipeline-cards/image-ring-mixin.scss";
+@import "../../mixins/pipeline-cards/templates/content-card.scss";
+
+.htmlweb-testimonial-card-template {
+  @include content-card;
+
+  position: relative;
+  margin-top: 3.6vw !important;
+
+  .testimonial-card-image-holder {
+    height: 2.5vw;
+    margin-bottom: 2em;
+  }
+
+  .testimonial-card-image-circle {
+    @include image-ring-mixin;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    background-color: #ffffff;
+  }
+
+  figure {
+    border-radius: 50%;
+  }
+
+  .testimonial-card-textarea {
+    text-align: center;
+    padding: 0 1em 0.5em 1em;
+  }
+
+  blockquote {
+    padding-left: 0.5em;
+    margin: 0.5em 0.5em 1em 0;
+    border-left: 5px solid #eeeeee;
+    font-weight: bold;
+    font-style: italic;
+  }
+
+  // Mobilize size improve.
+  &.content-card {
+    margin-top: 58px !important;
+  }
+
+  .testimonial-card-image-circle {
+    width: 100px;
+  }
+    
+  blockquote {
+    margin-top: 56px;
+  }
+
+  @include respond-to($min: $medium) {
+    .testimonial-card-image-circle {
+      width: 130px;
+    }
+  }
+
+  @include respond-to($max: $medium) {
+    // Add space above so doesn't touch above.
+    margin-top: 48px !important;
+  }
+}
+
+.htmlemail-testimonial-card-template {
+  @include content-card;
+
+  table {
+    border-spacing: 0;
+  }
+
+  .testimonial-textarea-box {
+    font-weight: bold;
+    font-style: italic;
+  }
+
+  table.testimonial-photo-cont {
+    &,
+    td,
+    div {
+      border-radius: 50%;
+    }
+
+    div {
+      overflow: hidden;
+    }
+  }
+
+  .testimonial-card-company {
+    padding: 10px;
+  }
+}

@@ -1,0 +1,22 @@
+@import "../../mixins/pipeline-cards/templates/carousel-card-base.scss";
+
+/* Module: Default carousel card template. */
+
+div.carousel-card-template
+{
+  @include carousel-card-base();
+
+  .carousel-text-area {
+    background-color: #fff;
+  }
+
+  .content-card-headline {
+    color: #212224;
+  }
+
+  .article-excerpt {
+    color: #5a5a59;
+    line-height: 1.2;
+    font-size: 0.8em;
+  }
+}

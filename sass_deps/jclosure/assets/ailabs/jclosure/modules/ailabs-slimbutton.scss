@@ -1,0 +1,8 @@
+@import "../mixins/goog-jack-box";
+
+.ailabs-slimbutton
+{
+  @include goog-jack-box;
+
+  padding: 5px 10px;
+}

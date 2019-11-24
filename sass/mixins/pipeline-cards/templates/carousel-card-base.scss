@@ -1,0 +1,47 @@
+@import "./content-card.scss";
+
+$carousel_item_size: 240px;
+
+@mixin carousel-card-base
+{
+  @include content-card;
+
+  figure {
+    margin-bottom: 0 !important; // TODO get rid of dg3 css code setting this, then remove this.
+  }
+
+  /** Style for carousel card item. */
+  display: inline-block;
+  width: $carousel_item_size;
+  vertical-align: top;
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(0,0,0,.2);
+  height: $carousel_item_size;
+  white-space: normal;
+  margin-top: 15px !important;
+  margin-left: 5px !important;
+
+  position: relative;
+  background-color: #ffffff;
+  
+  a.carousel-card-link {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .carousel-text-area {
+    width: 100%;
+    height: 100%;
+    padding: 4px 8px;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+
+  .content-card-headline {
+    margin: 8px 0 !important;
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}

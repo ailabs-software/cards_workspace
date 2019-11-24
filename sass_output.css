@@ -1,0 +1,1831 @@
+/** @fileoverview Header file for user-defined theme variables so that IDE's analyzer can resolve theme variable names.
+   Also serves as good documentation.
+   
+   Is overriden by user-defined theme. */
+/** @fileoverview
+   It is up to the consumer of zooming-image to define padding-bottom suitable.
+   Use with PageThumbnail to do this for you.
+
+Use with PolyfillTouchHover.
+
+Example markup:
+<figure class="zooming-image" data-hover-target="1">
+  <div class="zooming-image-inner" style="background-image: url($IMAGE_URL);"></div>
+</figure>
+
+ */
+/* Place within :hover or equivalent */
+figure.zooming-image {
+  /* Image at to of card */
+  /* Any ancestor which is a data-hover-target will cause animation to run */
+  /* Any ancestor which is a data-hover-target will cause animation to run */
+  margin: 0; }
+  figure.zooming-image {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 0; }
+  figure.zooming-image div.zooming-image-inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    /* Animation */
+    transition: transform 0.4s ease 0s; }
+  .has-touch-hover figure.zooming-image.zooming-image-enabled div.zooming-image-inner {
+    transform: scale(1.16, 1.16); }
+  figure.zooming-image.zooming-image-enabled:hover div.zooming-image-inner {
+    transform: scale(1.16, 1.16); }
+  figure.zooming-image > .zooming-image-inner > * {
+    height: 100%; }
+
+/** DOCUMENTATION: 
+    The DOM structure @responsive-card is applied to is as follows:
+    Match element -- Used for spacing and size, should have no visible border.
+    Inner element with actual visible border -- referred to as `card-box` */
+/** Designed to read from site theme to acquire font. */
+/* Mixin. */
+/** Version for HTMLEmail */
+.htmlemail-alternate-card-template {
+  /* margin & padding */
+  margin: 30px 0 0 0;
+  padding: 0 15px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #e7e7e6;
+  border-radius: 3px;
+  background-color: #fff;
+  transition-duration: 0.3s;
+  transition-property: box-shadow, transform;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+  margin: auto !important;
+  padding: 0;
+  max-width: 500px;
+  /* Content avatar */
+  /* Headline */
+  /* Article excerpt */ }
+  .htmlemail-alternate-card-template div.card-box {
+    /* box sizing border-box */
+    box-sizing: border-box;
+    padding: 20px; }
+  .htmlemail-alternate-card-template:hover {
+    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5); }
+  .htmlemail-alternate-card-template img.htmlemail-mediacomponent-image {
+    width: 100%; }
+  .htmlemail-alternate-card-template div.card-box {
+    border-radius: 3px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.09); }
+  .htmlemail-alternate-card-template img.content-avatar {
+    border-radius: 50%;
+    width: 36px;
+    height: 36px; }
+  .htmlemail-alternate-card-template a.content-card-anchor {
+    color: inherit;
+    text-decoration: none; }
+  .htmlemail-alternate-card-template div.article-excerpt {
+    font-weight: 400; }
+  .htmlemail-alternate-card-template a.readmore-anchor {
+    color: rgba(0, 0, 0, 0.44);
+    font-weight: 400;
+    text-decoration: none; }
+  .htmlemail-alternate-card-template div.card-item-separator {
+    height: 1px;
+    border-color: #ededed;
+    border-width: 1px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    border-style: solid; }
+
+/** Version for HTMLWeb. */
+.htmlweb-alternate-card-template {
+  /* margin & padding */
+  margin: 30px 0 0 0;
+  padding: 0 15px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #e7e7e6;
+  border-radius: 3px;
+  background-color: #fff;
+  transition-duration: 0.3s;
+  transition-property: box-shadow, transform;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+  margin: auto !important;
+  padding: 0;
+  max-width: 500px;
+  /* Content avatar */
+  /* Headline */
+  /* Article excerpt */
+  max-width: 800px;
+  /* Alternate even */
+  padding: 0 10px;
+  margin: 0; }
+  .htmlweb-alternate-card-template div.card-box {
+    /* box sizing border-box */
+    box-sizing: border-box;
+    padding: 20px; }
+  .htmlweb-alternate-card-template:hover {
+    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5); }
+  .htmlweb-alternate-card-template img.htmlemail-mediacomponent-image {
+    width: 100%; }
+  .htmlweb-alternate-card-template div.card-box {
+    border-radius: 3px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.09); }
+  .htmlweb-alternate-card-template img.content-avatar {
+    border-radius: 50%;
+    width: 36px;
+    height: 36px; }
+  .htmlweb-alternate-card-template a.content-card-anchor {
+    color: inherit;
+    text-decoration: none; }
+  .htmlweb-alternate-card-template div.article-excerpt {
+    font-weight: 400; }
+  .htmlweb-alternate-card-template a.readmore-anchor {
+    color: rgba(0, 0, 0, 0.44);
+    font-weight: 400;
+    text-decoration: none; }
+  .htmlweb-alternate-card-template div.card-item-separator {
+    height: 1px;
+    border-color: #ededed;
+    border-width: 1px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    border-style: solid; }
+  .htmlweb-alternate-card-template .pusher-layout {
+    display: flex;
+    flex-direction: row;
+    align-items: center; }
+  *:nth-child(even) > .htmlweb-alternate-card-template > .pusher-layout {
+    flex-direction: row-reverse; }
+  .htmlweb-alternate-card-template .pusher-layout > * {
+    width: 50%; }
+  .htmlweb-alternate-card-template figure.zooming-image {
+    padding-bottom: 66%; }
+  @media screen and (min-width: 0px) and (max-width: 600px) {
+    .htmlweb-alternate-card-template.alignment-text-left figure.zooming-image {
+      margin: 40px 0 40px 0; } }
+  @media screen and (min-width: 0px) and (max-width: 600px) {
+    .htmlweb-alternate-card-template.alignment-text-right figure.zooming-image {
+      margin: 8px 0 40px 0; } }
+  .htmlweb-alternate-card-template h3 {
+    font-weight: bold !important; }
+  .htmlweb-alternate-card-template div.push-right {
+    padding: 0 20px; }
+  .htmlweb-alternate-card-template div.zooming-image-inner {
+    margin-top: 10px; }
+  .htmlweb-alternate-card-template div.card-box {
+    box-shadow: none !important;
+    border-width: 0 !important; }
+
+/** Must align media query value. */
+@media screen and (min-width: 0px) and (max-width: 599px) {
+  div.htmlweb-alternate-card-template .push-left {
+    padding: 0 20px; }
+
+  div.htmlweb-alternate-card-template .pusher-layout {
+    flex-direction: column !important; }
+    div.htmlweb-alternate-card-template .pusher-layout > * {
+      width: 100% !important; } }
+/** DOCUMENTATION: 
+    The DOM structure @responsive-card is applied to is as follows:
+    Match element -- Used for spacing and size, should have no visible border.
+    Inner element with actual visible border -- referred to as `card-box` */
+/** Designed to read from site theme to acquire font. */
+/* Mixin. */
+/* Module: Default carousel card template. */
+div.carousel-card-template {
+  /* margin & padding */
+  margin: 30px 0 0 0;
+  padding: 0 15px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #e7e7e6;
+  border-radius: 3px;
+  background-color: #fff;
+  transition-duration: 0.3s;
+  transition-property: box-shadow, transform;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+  margin: auto !important;
+  padding: 0;
+  max-width: 500px;
+  /* Content avatar */
+  /* Headline */
+  /* Article excerpt */
+  /** Style for carousel card item. */
+  display: inline-block;
+  width: 240px;
+  vertical-align: top;
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  height: 240px;
+  white-space: normal;
+  margin-top: 15px !important;
+  margin-left: 5px !important;
+  position: relative;
+  background-color: #ffffff; }
+  div.carousel-card-template div.card-box {
+    /* box sizing border-box */
+    box-sizing: border-box;
+    padding: 20px; }
+  div.carousel-card-template:hover {
+    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5); }
+  div.carousel-card-template img.htmlemail-mediacomponent-image {
+    width: 100%; }
+  div.carousel-card-template div.card-box {
+    border-radius: 3px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.09); }
+  div.carousel-card-template img.content-avatar {
+    border-radius: 50%;
+    width: 36px;
+    height: 36px; }
+  div.carousel-card-template a.content-card-anchor {
+    color: inherit;
+    text-decoration: none; }
+  div.carousel-card-template div.article-excerpt {
+    font-weight: 400; }
+  div.carousel-card-template a.readmore-anchor {
+    color: rgba(0, 0, 0, 0.44);
+    font-weight: 400;
+    text-decoration: none; }
+  div.carousel-card-template div.card-item-separator {
+    height: 1px;
+    border-color: #ededed;
+    border-width: 1px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    border-style: solid; }
+  div.carousel-card-template figure {
+    margin-bottom: 0 !important; }
+  div.carousel-card-template a.carousel-card-link {
+    text-decoration: none;
+    color: inherit; }
+  div.carousel-card-template .carousel-text-area {
+    width: 100%;
+    height: 100%;
+    padding: 4px 8px;
+    overflow: hidden;
+    box-sizing: border-box; }
+  div.carousel-card-template .content-card-headline {
+    margin: 8px 0 !important;
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden; }
+  div.carousel-card-template .carousel-text-area {
+    background-color: #fff; }
+  div.carousel-card-template .content-card-headline {
+    color: #212224; }
+  div.carousel-card-template .article-excerpt {
+    color: #5a5a59;
+    line-height: 1.2;
+    font-size: 0.8em; }
+
+/** DOCUMENTATION: 
+    The DOM structure @responsive-card is applied to is as follows:
+    Match element -- Used for spacing and size, should have no visible border.
+    Inner element with actual visible border -- referred to as `card-box` */
+/** Designed to read from site theme to acquire font. */
+/* Mixin. */
+/* Module: Color carousel card template. */
+div.color-carousel-card-template {
+  /* margin & padding */
+  margin: 30px 0 0 0;
+  padding: 0 15px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #e7e7e6;
+  border-radius: 3px;
+  background-color: #fff;
+  transition-duration: 0.3s;
+  transition-property: box-shadow, transform;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+  margin: auto !important;
+  padding: 0;
+  max-width: 500px;
+  /* Content avatar */
+  /* Headline */
+  /* Article excerpt */
+  /** Style for carousel card item. */
+  display: inline-block;
+  width: 240px;
+  vertical-align: top;
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  height: 240px;
+  white-space: normal;
+  margin-top: 15px !important;
+  margin-left: 5px !important;
+  position: relative;
+  background-color: #ffffff; }
+  div.color-carousel-card-template div.card-box {
+    /* box sizing border-box */
+    box-sizing: border-box;
+    padding: 20px; }
+  div.color-carousel-card-template:hover {
+    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5); }
+  div.color-carousel-card-template img.htmlemail-mediacomponent-image {
+    width: 100%; }
+  div.color-carousel-card-template div.card-box {
+    border-radius: 3px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.09); }
+  div.color-carousel-card-template img.content-avatar {
+    border-radius: 50%;
+    width: 36px;
+    height: 36px; }
+  div.color-carousel-card-template a.content-card-anchor {
+    color: inherit;
+    text-decoration: none; }
+  div.color-carousel-card-template div.article-excerpt {
+    font-weight: 400; }
+  div.color-carousel-card-template a.readmore-anchor {
+    color: rgba(0, 0, 0, 0.44);
+    font-weight: 400;
+    text-decoration: none; }
+  div.color-carousel-card-template div.card-item-separator {
+    height: 1px;
+    border-color: #ededed;
+    border-width: 1px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    border-style: solid; }
+  div.color-carousel-card-template figure {
+    margin-bottom: 0 !important; }
+  div.color-carousel-card-template a.carousel-card-link {
+    text-decoration: none;
+    color: inherit; }
+  div.color-carousel-card-template .carousel-text-area {
+    width: 100%;
+    height: 100%;
+    padding: 4px 8px;
+    overflow: hidden;
+    box-sizing: border-box; }
+  div.color-carousel-card-template .content-card-headline {
+    margin: 8px 0 !important;
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden; }
+  div.color-carousel-card-template div.content-card-headline {
+    color: #fff;
+    text-shadow: 2px 2px #212224;
+    font-weight: bold; }
+  div.color-carousel-card-template div.article-excerpt {
+    color: #fff;
+    text-shadow: 2px 2px #212224; }
+
+/** DOCUMENTATION: 
+    The DOM structure @responsive-card is applied to is as follows:
+    Match element -- Used for spacing and size, should have no visible border.
+    Inner element with actual visible border -- referred to as `card-box` */
+/** Designed to read from site theme to acquire font. */
+/* Mixin. */
+/** Common to HTMLEmail and HTMLWeb */
+/** For HTMLWeb only */
+.htmlweb-coupon-card-template {
+  /* margin & padding */
+  margin: 30px 0 0 0;
+  padding: 0 15px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #e7e7e6;
+  border-radius: 3px;
+  background-color: #fff;
+  transition-duration: 0.3s;
+  transition-property: box-shadow, transform;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+  margin: auto !important;
+  padding: 0;
+  max-width: 500px;
+  /* Content avatar */
+  /* Headline */
+  /* Article excerpt */
+  /** Title text */
+  /** Spacing */
+  /** For countdown */
+  /** Social */
+  /** Redeem decorator UI */ }
+  .htmlweb-coupon-card-template div.card-box {
+    /* box sizing border-box */
+    box-sizing: border-box;
+    padding: 20px; }
+  .htmlweb-coupon-card-template:hover {
+    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5); }
+  .htmlweb-coupon-card-template img.htmlemail-mediacomponent-image {
+    width: 100%; }
+  .htmlweb-coupon-card-template div.card-box {
+    border-radius: 3px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.09); }
+  .htmlweb-coupon-card-template img.content-avatar {
+    border-radius: 50%;
+    width: 36px;
+    height: 36px; }
+  .htmlweb-coupon-card-template a.content-card-anchor {
+    color: inherit;
+    text-decoration: none; }
+  .htmlweb-coupon-card-template div.article-excerpt {
+    font-weight: 400; }
+  .htmlweb-coupon-card-template a.readmore-anchor {
+    color: rgba(0, 0, 0, 0.44);
+    font-weight: 400;
+    text-decoration: none; }
+  .htmlweb-coupon-card-template div.card-item-separator {
+    height: 1px;
+    border-color: #ededed;
+    border-width: 1px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    border-style: solid; }
+  .htmlweb-coupon-card-template {
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.1);
+    border-bottom-left-radius: 23px;
+    border-bottom-right-radius: 23px; }
+  .htmlweb-coupon-card-template .coupon-heading-area {
+    text-align: center; }
+  .htmlweb-coupon-card-template .coupon-image-area {
+    position: relative;
+    line-height: 0; }
+  .htmlweb-coupon-card-template .promotion-expiry-box {
+    margin: 15px 0;
+    text-align: center; }
+  .htmlweb-coupon-card-template .promotion-countdown-component {
+    padding: 22px 0; }
+  .htmlweb-coupon-card-template .coupon-paragraph {
+    text-align: center; }
+  .htmlweb-coupon-card-template .content-card-headline {
+    margin: 0;
+    padding: 20px;
+    text-align: center; }
+  .htmlweb-coupon-card-template .inner-text-area {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 15px 20px;
+    overflow: hidden;
+    text-align: center;
+    border-bottom-left-radius: 23px;
+    border-bottom-right-radius: 23px;
+    background-color: #FCFDFE; }
+  .htmlweb-coupon-card-template .promotion-countdown-component,
+  .htmlweb-coupon-card-template .redeem-ui-success-msg,
+  .htmlweb-coupon-card-template .redeem-ui-error-msg {
+    margin: 0.5em 0; }
+  .htmlweb-coupon-card-template .countdown-component {
+    font-weight: bold; }
+  .htmlweb-coupon-card-template .social-widiget {
+    padding: 20px 0; }
+  .htmlweb-coupon-card-template .redeem-ui-placeholder {
+    height: 0;
+    overflow: hidden;
+    margin: 10px 0; }
+  .htmlweb-coupon-card-template .redeem-ui-error-msg {
+    font-weight: bold;
+    color: red; }
+  .htmlweb-coupon-card-template input.goog-input {
+    font-size: 1.5em !important;
+    min-height: 1.7em; }
+  .htmlweb-coupon-card-template .sign-up-ui {
+    margin-top: 20px;
+    margin-bottom: 12px; }
+  .htmlweb-coupon-card-template .promotion-blowout-ui-holder {
+    position: absolute;
+    top: -0.5em;
+    left: 0px; }
+  .htmlweb-coupon-card-template .promotion-blowout-ui .promotion-blowout-ui-price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+  .htmlweb-coupon-card-template .promotion-blowout-ui, .htmlweb-coupon-card-template .promotion-blowout-ui:before, .htmlweb-coupon-card-template .promotion-blowout-ui:after, .htmlweb-coupon-card-template .promotion-blowout-ui .promotion-blowout-ui-price, .htmlweb-coupon-card-template .promotion-blowout-ui .promotion-blowout-ui-price:before, .htmlweb-coupon-card-template .promotion-blowout-ui .promotion-blowout-ui-price:after {
+    height: 6.5em;
+    width: 6.5em;
+    background-color: #ffff00;
+    background-size: 6.5em; }
+  .htmlweb-coupon-card-template .promotion-blowout-ui:before, .htmlweb-coupon-card-template .promotion-blowout-ui:after, .htmlweb-coupon-card-template .promotion-blowout-ui .promotion-blowout-ui-price:before, .htmlweb-coupon-card-template .promotion-blowout-ui .promotion-blowout-ui-price:after {
+    content: "";
+    position: absolute; }
+  .htmlweb-coupon-card-template .promotion-blowout-ui {
+    position: relative;
+    /* Context */
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg); }
+  .htmlweb-coupon-card-template .promotion-blowout-ui:before {
+    top: 0;
+    left: 0;
+    -webkit-transform: rotate(-30deg);
+    -moz-transform: rotate(-30deg);
+    -ms-transform: rotate(-30deg);
+    -o-transform: rotate(-30deg);
+    transform: rotate(-30deg); }
+  .htmlweb-coupon-card-template .promotion-blowout-ui:after {
+    top: 0;
+    left: 0;
+    -webkit-transform: rotate(-15deg);
+    -moz-transform: rotate(-15deg);
+    -ms-transform: rotate(-15deg);
+    -o-transform: rotate(-15deg);
+    transform: rotate(-15deg); }
+  .htmlweb-coupon-card-template .promotion-blowout-ui .promotion-blowout-ui-price {
+    padding: .5em 0em;
+    height: 5.5em;
+    /* height minus padding */
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    z-index: 1;
+    /* important so the text shows up */ }
+  .htmlweb-coupon-card-template .promotion-blowout-ui .promotion-blowout-ui-price:before {
+    top: 0;
+    left: 0;
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    -o-transform: rotate(60deg);
+    transform: rotate(60deg); }
+  .htmlweb-coupon-card-template .promotion-blowout-ui .promotion-blowout-ui-price:after {
+    top: 0;
+    left: 0;
+    -webkit-transform: rotate(75deg);
+    -moz-transform: rotate(75deg);
+    -ms-transform: rotate(75deg);
+    -o-transform: rotate(75deg);
+    transform: rotate(75deg); }
+  .htmlweb-coupon-card-template .promotion-blowout-ui .promotion-blowout-ui-price span {
+    position: relative;
+    z-index: 100;
+    display: block;
+    text-align: center;
+    color: #FE3D5C;
+    font: 1.8em/1.4em Sans-Serif;
+    text-transform: uppercase; }
+  .htmlweb-coupon-card-template .promotion-blowout-ui .promotion-blowout-ui-price span.promotion-blowout-ui-number {
+    font-weight: bold;
+    color: #000000; }
+
+/** For HTMLEmail only */
+.htmlemail-coupon-card-template {
+  /* margin & padding */
+  margin: 30px 0 0 0;
+  padding: 0 15px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #e7e7e6;
+  border-radius: 3px;
+  background-color: #fff;
+  transition-duration: 0.3s;
+  transition-property: box-shadow, transform;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+  margin: auto !important;
+  padding: 0;
+  max-width: 500px;
+  /* Content avatar */
+  /* Headline */
+  /* Article excerpt */
+  /** Title text */
+  /** Spacing */
+  /** For countdown */
+  /** Social */ }
+  .htmlemail-coupon-card-template div.card-box {
+    /* box sizing border-box */
+    box-sizing: border-box;
+    padding: 20px; }
+  .htmlemail-coupon-card-template:hover {
+    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5); }
+  .htmlemail-coupon-card-template img.htmlemail-mediacomponent-image {
+    width: 100%; }
+  .htmlemail-coupon-card-template div.card-box {
+    border-radius: 3px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.09); }
+  .htmlemail-coupon-card-template img.content-avatar {
+    border-radius: 50%;
+    width: 36px;
+    height: 36px; }
+  .htmlemail-coupon-card-template a.content-card-anchor {
+    color: inherit;
+    text-decoration: none; }
+  .htmlemail-coupon-card-template div.article-excerpt {
+    font-weight: 400; }
+  .htmlemail-coupon-card-template a.readmore-anchor {
+    color: rgba(0, 0, 0, 0.44);
+    font-weight: 400;
+    text-decoration: none; }
+  .htmlemail-coupon-card-template div.card-item-separator {
+    height: 1px;
+    border-color: #ededed;
+    border-width: 1px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    border-style: solid; }
+  .htmlemail-coupon-card-template {
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.1);
+    border-bottom-left-radius: 23px;
+    border-bottom-right-radius: 23px; }
+  .htmlemail-coupon-card-template .coupon-heading-area {
+    text-align: center; }
+  .htmlemail-coupon-card-template .coupon-image-area {
+    position: relative;
+    line-height: 0; }
+  .htmlemail-coupon-card-template .promotion-expiry-box {
+    margin: 15px 0;
+    text-align: center; }
+  .htmlemail-coupon-card-template .promotion-countdown-component {
+    padding: 22px 0; }
+  .htmlemail-coupon-card-template .coupon-paragraph {
+    text-align: center; }
+  .htmlemail-coupon-card-template .content-card-headline {
+    margin: 0;
+    padding: 20px;
+    text-align: center; }
+  .htmlemail-coupon-card-template .inner-text-area {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 15px 20px;
+    overflow: hidden;
+    text-align: center;
+    border-bottom-left-radius: 23px;
+    border-bottom-right-radius: 23px;
+    background-color: #FCFDFE; }
+  .htmlemail-coupon-card-template .promotion-countdown-component,
+  .htmlemail-coupon-card-template .redeem-ui-success-msg,
+  .htmlemail-coupon-card-template .redeem-ui-error-msg {
+    margin: 0.5em 0; }
+  .htmlemail-coupon-card-template .countdown-component {
+    font-weight: bold; }
+  .htmlemail-coupon-card-template .social-widiget {
+    padding: 20px 0; }
+  .htmlemail-coupon-card-template .see-time-remaining-button-box {
+    padding: 20px 0; }
+  .htmlemail-coupon-card-template table.redeem-ui-table {
+    width: 100%; }
+  .htmlemail-coupon-card-template .htmlemail-button-spacer {
+    margin: 15px; }
+
+/** DOCUMENTATION: 
+    The DOM structure @responsive-card is applied to is as follows:
+    Match element -- Used for spacing and size, should have no visible border.
+    Inner element with actual visible border -- referred to as `card-box` */
+/** DOCUMENTATION: 
+    The DOM structure @responsive-card is applied to is as follows:
+    Match element -- Used for spacing and size, should have no visible border.
+    Inner element with actual visible border -- referred to as `card-box` */
+/** Designed to read from site theme to acquire font. */
+/* Mixin. */
+/** Specific to default-card: Line up buttons with flex box. */
+.htmlweb-default-card-template {
+  /* margin & padding */
+  margin: 30px 0 0 0;
+  padding: 0 15px;
+  /* Blogpost avatar */
+  /* General font */
+  /* Article excerpt */
+  /* margin & padding */
+  margin: 30px 0 0 0;
+  padding: 0 15px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #e7e7e6;
+  border-radius: 3px;
+  background-color: #fff;
+  transition-duration: 0.3s;
+  transition-property: box-shadow, transform;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+  margin: auto !important;
+  padding: 0;
+  max-width: 500px;
+  /* Content avatar */
+  /* Headline */
+  /* Article excerpt */
+  display: flex; }
+  .htmlweb-default-card-template div.card-box {
+    /* box sizing border-box */
+    box-sizing: border-box;
+    padding: 20px; }
+  .htmlweb-default-card-template div.card-box {
+    border-radius: 3px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.09);
+    background-color: #ffffff; }
+  .htmlweb-default-card-template div.blogpost-metainfo {
+    padding-left: 10px; }
+  .htmlweb-default-card-template img.blogpost-avatar {
+    border-radius: 50%;
+    width: 36px;
+    height: 36px; }
+  .htmlweb-default-card-template a.blogpost-card-anchor {
+    color: inherit;
+    text-decoration: none; }
+  .htmlweb-default-card-template div.article-excerpt {
+    font-weight: 400; }
+  .htmlweb-default-card-template a.readmore-anchor {
+    color: rgba(0, 0, 0, 0.44);
+    font-weight: 400;
+    line-height: 17px;
+    text-decoration: none; }
+  .htmlweb-default-card-template div.card-box {
+    /* box sizing border-box */
+    box-sizing: border-box;
+    padding: 20px; }
+  .htmlweb-default-card-template:hover {
+    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5); }
+  .htmlweb-default-card-template img.htmlemail-mediacomponent-image {
+    width: 100%; }
+  .htmlweb-default-card-template div.card-box {
+    border-radius: 3px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.09); }
+  .htmlweb-default-card-template img.content-avatar {
+    border-radius: 50%;
+    width: 36px;
+    height: 36px; }
+  .htmlweb-default-card-template a.content-card-anchor {
+    color: inherit;
+    text-decoration: none; }
+  .htmlweb-default-card-template div.article-excerpt {
+    font-weight: 400; }
+  .htmlweb-default-card-template a.readmore-anchor {
+    color: rgba(0, 0, 0, 0.44);
+    font-weight: 400;
+    text-decoration: none; }
+  .htmlweb-default-card-template div.card-item-separator {
+    height: 1px;
+    border-color: #ededed;
+    border-width: 1px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    border-style: solid; }
+  .htmlweb-default-card-template .card-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%; }
+  .htmlweb-default-card-template .decoration-ailabs-touch-hover-decorator {
+    display: flex;
+    flex-grow: 1; }
+  .htmlweb-default-card-template a.blogpost-card-anchor {
+    flex-grow: 1; }
+  .htmlweb-default-card-template figure {
+    margin-bottom: 10px; }
+  .htmlweb-default-card-template .elementquery-cols-3 .web-grid-layout-cell:nth-child(3n+1):last-child figure {
+    padding-bottom: 30% !important; }
+
+.htmlemail-default-card-template {
+  /* margin & padding */
+  margin: 30px 0 0 0;
+  padding: 0 15px;
+  /* Blogpost avatar */
+  /* General font */
+  /* Article excerpt */
+  /* margin & padding */
+  margin: 30px 0 0 0;
+  padding: 0 15px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #e7e7e6;
+  border-radius: 3px;
+  background-color: #fff;
+  transition-duration: 0.3s;
+  transition-property: box-shadow, transform;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+  margin: auto !important;
+  padding: 0;
+  max-width: 500px;
+  /* Content avatar */
+  /* Headline */
+  /* Article excerpt */ }
+  .htmlemail-default-card-template div.card-box {
+    /* box sizing border-box */
+    box-sizing: border-box;
+    padding: 20px; }
+  .htmlemail-default-card-template div.card-box {
+    border-radius: 3px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.09);
+    background-color: #ffffff; }
+  .htmlemail-default-card-template div.blogpost-metainfo {
+    padding-left: 10px; }
+  .htmlemail-default-card-template img.blogpost-avatar {
+    border-radius: 50%;
+    width: 36px;
+    height: 36px; }
+  .htmlemail-default-card-template a.blogpost-card-anchor {
+    color: inherit;
+    text-decoration: none; }
+  .htmlemail-default-card-template div.article-excerpt {
+    font-weight: 400; }
+  .htmlemail-default-card-template a.readmore-anchor {
+    color: rgba(0, 0, 0, 0.44);
+    font-weight: 400;
+    line-height: 17px;
+    text-decoration: none; }
+  .htmlemail-default-card-template div.card-box {
+    /* box sizing border-box */
+    box-sizing: border-box;
+    padding: 20px; }
+  .htmlemail-default-card-template:hover {
+    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5); }
+  .htmlemail-default-card-template img.htmlemail-mediacomponent-image {
+    width: 100%; }
+  .htmlemail-default-card-template div.card-box {
+    border-radius: 3px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.09); }
+  .htmlemail-default-card-template img.content-avatar {
+    border-radius: 50%;
+    width: 36px;
+    height: 36px; }
+  .htmlemail-default-card-template a.content-card-anchor {
+    color: inherit;
+    text-decoration: none; }
+  .htmlemail-default-card-template div.article-excerpt {
+    font-weight: 400; }
+  .htmlemail-default-card-template a.readmore-anchor {
+    color: rgba(0, 0, 0, 0.44);
+    font-weight: 400;
+    text-decoration: none; }
+  .htmlemail-default-card-template div.card-item-separator {
+    height: 1px;
+    border-color: #ededed;
+    border-width: 1px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    border-style: solid; }
+  .htmlemail-default-card-template table.card-box {
+    border-radius: 3px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+    border: 1px solid #e8e8e8;
+    box-sizing: border-box;
+    border-collapse: collapse;
+    border-spacing: 0; }
+
+/** DOCUMENTATION: 
+    The DOM structure @responsive-card is applied to is as follows:
+    Match element -- Used for spacing and size, should have no visible border.
+    Inner element with actual visible border -- referred to as `card-box` */
+/** Designed to read from site theme to acquire font. */
+/* Mixin. */
+.ellas-unicorn-card-template {
+  /* margin & padding */
+  margin: 30px 0 0 0;
+  padding: 0 15px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #e7e7e6;
+  border-radius: 3px;
+  background-color: #fff;
+  transition-duration: 0.3s;
+  transition-property: box-shadow, transform;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+  margin: auto !important;
+  padding: 0;
+  max-width: 500px;
+  /* Content avatar */
+  /* Headline */
+  /* Article excerpt */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2vw !important;
+  /** When not stacked */
+  /** When stacked */ }
+  .ellas-unicorn-card-template div.card-box {
+    /* box sizing border-box */
+    box-sizing: border-box;
+    padding: 20px; }
+  .ellas-unicorn-card-template:hover {
+    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5); }
+  .ellas-unicorn-card-template img.htmlemail-mediacomponent-image {
+    width: 100%; }
+  .ellas-unicorn-card-template div.card-box {
+    border-radius: 3px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.09); }
+  .ellas-unicorn-card-template img.content-avatar {
+    border-radius: 50%;
+    width: 36px;
+    height: 36px; }
+  .ellas-unicorn-card-template a.content-card-anchor {
+    color: inherit;
+    text-decoration: none; }
+  .ellas-unicorn-card-template div.article-excerpt {
+    font-weight: 400; }
+  .ellas-unicorn-card-template a.readmore-anchor {
+    color: rgba(0, 0, 0, 0.44);
+    font-weight: 400;
+    text-decoration: none; }
+  .ellas-unicorn-card-template div.card-item-separator {
+    height: 1px;
+    border-color: #ededed;
+    border-width: 1px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    border-style: solid; }
+  .ellas-unicorn-card-template.alignment-text-right {
+    flex-direction: row; }
+  .ellas-unicorn-card-template.alignment-text-left {
+    flex-direction: row-reverse; }
+  .ellas-unicorn-card-template.stacked-alignment-text-bottom {
+    flex-wrap: wrap; }
+  .ellas-unicorn-card-template.stacked-alignment-text-top {
+    flex-wrap: wrap-reverse; }
+  .ellas-unicorn-card-template > div {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 1vw 2vw;
+    flex-grow: 1;
+    flex-basis: 500px; }
+  .ellas-unicorn-card-template .content-card-headline {
+    color: #ff69b4; }
+
+/** DOCUMENTATION: 
+    The DOM structure @responsive-card is applied to is as follows:
+    Match element -- Used for spacing and size, should have no visible border.
+    Inner element with actual visible border -- referred to as `card-box` */
+/** Designed to read from site theme to acquire font. */
+/* Mixin. */
+/* Module. */
+.gallery-card-template {
+  /* margin & padding */
+  margin: 30px 0 0 0;
+  padding: 0 15px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #e7e7e6;
+  border-radius: 3px;
+  background-color: #fff;
+  transition-duration: 0.3s;
+  transition-property: box-shadow, transform;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+  margin: auto !important;
+  padding: 0;
+  max-width: 500px;
+  /* Content avatar */
+  /* Headline */
+  /* Article excerpt */
+  /** Content card */
+  /* Background buddy */
+  /* Button buddy */
+  /* Social buddy */
+  /** Sass class */ }
+  .gallery-card-template div.card-box {
+    /* box sizing border-box */
+    box-sizing: border-box;
+    padding: 20px; }
+  .gallery-card-template:hover {
+    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5); }
+  .gallery-card-template img.htmlemail-mediacomponent-image {
+    width: 100%; }
+  .gallery-card-template div.card-box {
+    border-radius: 3px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.09); }
+  .gallery-card-template img.content-avatar {
+    border-radius: 50%;
+    width: 36px;
+    height: 36px; }
+  .gallery-card-template a.content-card-anchor {
+    color: inherit;
+    text-decoration: none; }
+  .gallery-card-template div.article-excerpt {
+    font-weight: 400; }
+  .gallery-card-template a.readmore-anchor {
+    color: rgba(0, 0, 0, 0.44);
+    font-weight: 400;
+    text-decoration: none; }
+  .gallery-card-template div.card-item-separator {
+    height: 1px;
+    border-color: #ededed;
+    border-width: 1px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    border-style: solid; }
+  .gallery-card-template div.gallery-card-box {
+    margin: 0 0 15px 0;
+    padding: 0 0 80% 0;
+    height: 0 !important;
+    position: relative; }
+    .gallery-card-template div.gallery-card-box .decoration-ailabs-touch-hover-decorator {
+      height: initial !important; }
+    .gallery-card-template div.gallery-card-box figure.zooming-image {
+      margin: 0; }
+    .gallery-card-template div.gallery-card-box div.gallery-text-cover {
+      pointer-events: none;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      padding: 0 15%;
+      /* Text buddy */
+      text-align: center;
+      color: #fff; }
+  .gallery-card-template .content-card-headline {
+    color: #fff; }
+  .gallery-card-template div.gallery-text-cover {
+    background-color: rgba(0, 0, 0, 0.38); }
+  .gallery-card-template > .has-touch-hover div.gallery-text-cover {
+    animation: gallery-cover-animation 1.4s; }
+  .gallery-card-template div.button-area {
+    position: absolute;
+    left: 50%;
+    bottom: 24%;
+    transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0);
+    -moz-transform: translate(-50%, 0); }
+  .gallery-card-template div.gallery-social-area {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    -webkit-transform: translate(-50%, 50%);
+    -moz-transform: translate(-50%, 50%);
+    transition: opacity 700ms;
+    opacity: 0; }
+  .gallery-card-template .has-touch-hover div.gallery-social-area {
+    opacity: 1; }
+  .gallery-card-template div.gallery-content-roller {
+    height: 50%;
+    overflow: hidden; }
+    .gallery-card-template div.gallery-content-roller div.gallery-content-panel {
+      height: 100%;
+      overflow: hidden;
+      position: relative;
+      transition: 800ms linear;
+      opacity: 1; }
+    .gallery-card-template div.gallery-content-roller div.gallery-content-panel:nth-child(2) {
+      opacity: 0; }
+    .gallery-card-template div.gallery-content-roller div.gallery-content-inside {
+      top: 50%;
+      position: absolute;
+      transform: translate(0, -50%);
+      -webkit-transform: translate(0, -50%);
+      -moz-transform: translate(0, -50%);
+      text-align: center;
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical; }
+      .gallery-card-template div.gallery-content-roller div.gallery-content-inside > * {
+        overflow: hidden; }
+  .gallery-card-template > .has-touch-hover div.gallery-content-panel {
+    transform: translate(0, -100%);
+    -webkit-transform: translate(0, -100%);
+    -moz-transform: translate(0, -100%); }
+  .gallery-card-template > .has-touch-hover div.gallery-content-panel:nth-child(1) {
+    opacity: 0; }
+  .gallery-card-template > .has-touch-hover div.gallery-content-panel:nth-child(2) {
+    opacity: 1 !important; }
+
+/* Animation */
+@keyframes gallery-cover-animation {
+  0% {
+    background-color: rgba(0, 0, 0, 0.38); }
+  50% {
+    background-color: transparent; }
+  100% {
+    background-color: rgba(0, 0, 0, 0.38); } }
+.elementquery-cols-3 .web-grid-layout-cell:nth-child(3n+1):last-child .gallery-card-box,
+.elementquery-cols-3 .web-grid-layout-cell:nth-child(3n+1):last-child .gallery-card-box figure.zooming-image {
+  padding-bottom: 30% !important; }
+
+/** DOCUMENTATION: 
+    The DOM structure @responsive-card is applied to is as follows:
+    Match element -- Used for spacing and size, should have no visible border.
+    Inner element with actual visible border -- referred to as `card-box` */
+/** Designed to read from site theme to acquire font. */
+/* Mixin. */
+.offer-card-template {
+  /* margin & padding */
+  margin: 30px 0 0 0;
+  padding: 0 15px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #e7e7e6;
+  border-radius: 3px;
+  background-color: #fff;
+  transition-duration: 0.3s;
+  transition-property: box-shadow, transform;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+  margin: auto !important;
+  padding: 0;
+  max-width: 500px;
+  /* Content avatar */
+  /* Headline */
+  /* Article excerpt */
+  transform: translate3d(0, 0, 0);
+  margin: 0 !important;
+  padding: 0 !important;
+  border-top-left-radius: 23px;
+  border-top-right-radius: 23px; }
+  .offer-card-template div.card-box {
+    /* box sizing border-box */
+    box-sizing: border-box;
+    padding: 20px; }
+  .offer-card-template:hover {
+    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5); }
+  .offer-card-template img.htmlemail-mediacomponent-image {
+    width: 100%; }
+  .offer-card-template div.card-box {
+    border-radius: 3px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.09); }
+  .offer-card-template img.content-avatar {
+    border-radius: 50%;
+    width: 36px;
+    height: 36px; }
+  .offer-card-template a.content-card-anchor {
+    color: inherit;
+    text-decoration: none; }
+  .offer-card-template div.article-excerpt {
+    font-weight: 400; }
+  .offer-card-template a.readmore-anchor {
+    color: rgba(0, 0, 0, 0.44);
+    font-weight: 400;
+    text-decoration: none; }
+  .offer-card-template div.card-item-separator {
+    height: 1px;
+    border-color: #ededed;
+    border-width: 1px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    border-style: solid; }
+  .offer-card-template table.offer-card-outer-table {
+    border-top-left-radius: 23px;
+    border-top-right-radius: 23px;
+    overflow: hidden;
+    width: 100%; }
+  .offer-card-template table.offer-card-inner-table {
+    border-bottom-left-radius: 23px;
+    border-bottom-right-radius: 23px;
+    overflow: hidden;
+    padding: 10px;
+    background-color: #FCFDFE;
+    width: 100%;
+    border-collapse: initial; }
+  .offer-card-template figure.zooming-image {
+    border-top-left-radius: 23px;
+    border-top-right-radius: 23px; }
+  .offer-card-template .content-card-subheading {
+    padding: 4px 0 0 0;
+    color: #999999; }
+  .offer-card-template .content-card-price {
+    padding: 4px 0 0 0;
+    font-weight: normal;
+    color: #858585; }
+  .offer-card-template span.regular-price {
+    text-decoration: line-through;
+    padding: 0 5px 0 0; }
+  .offer-card-template span.canonical-price {
+    color: green;
+    font-weight: bold; }
+
+.elementquery-cols-3 .web-grid-layout-cell:nth-child(3n+1):last-child .offer-card-template img.contentcard-img {
+  height: 30vh !important;
+  object-fit: cover; }
+
+/** DOCUMENTATION: 
+    The DOM structure @responsive-card is applied to is as follows:
+    Match element -- Used for spacing and size, should have no visible border.
+    Inner element with actual visible border -- referred to as `card-box` */
+/** Designed to read from site theme to acquire font. */
+/* Mixin. */
+/* Module. */
+.htmlemail-profile-card-template {
+  /* margin & padding */
+  margin: 30px 0 0 0;
+  padding: 0 15px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #e7e7e6;
+  border-radius: 3px;
+  background-color: #fff;
+  transition-duration: 0.3s;
+  transition-property: box-shadow, transform;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+  margin: auto !important;
+  padding: 0;
+  max-width: 500px;
+  /* Content avatar */
+  /* Headline */
+  /* Article excerpt */ }
+  .htmlemail-profile-card-template div.card-box {
+    /* box sizing border-box */
+    box-sizing: border-box;
+    padding: 20px; }
+  .htmlemail-profile-card-template:hover {
+    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5); }
+  .htmlemail-profile-card-template img.htmlemail-mediacomponent-image {
+    width: 100%; }
+  .htmlemail-profile-card-template div.card-box {
+    border-radius: 3px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.09); }
+  .htmlemail-profile-card-template img.content-avatar {
+    border-radius: 50%;
+    width: 36px;
+    height: 36px; }
+  .htmlemail-profile-card-template a.content-card-anchor {
+    color: inherit;
+    text-decoration: none; }
+  .htmlemail-profile-card-template div.article-excerpt {
+    font-weight: 400; }
+  .htmlemail-profile-card-template a.readmore-anchor {
+    color: rgba(0, 0, 0, 0.44);
+    font-weight: 400;
+    text-decoration: none; }
+  .htmlemail-profile-card-template div.card-item-separator {
+    height: 1px;
+    border-color: #ededed;
+    border-width: 1px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    border-style: solid; }
+  .htmlemail-profile-card-template .profile-card-text-box {
+    padding: 4px 0; }
+  .htmlemail-profile-card-template .content-card-subheading {
+    font-weight: normal;
+    margin-bottom: 12px; }
+
+.htmlweb-profile-card-template {
+  /* margin & padding */
+  margin: 30px 0 0 0;
+  padding: 0 15px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #e7e7e6;
+  border-radius: 3px;
+  background-color: #fff;
+  transition-duration: 0.3s;
+  transition-property: box-shadow, transform;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+  margin: auto !important;
+  padding: 0;
+  max-width: 500px;
+  /* Content avatar */
+  /* Headline */
+  /* Article excerpt */
+  display: flex;
+  flex-grow: 1;
+  /** Make buttons line up vertically with flex box. */ }
+  .htmlweb-profile-card-template div.card-box {
+    /* box sizing border-box */
+    box-sizing: border-box;
+    padding: 20px; }
+  .htmlweb-profile-card-template:hover {
+    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5); }
+  .htmlweb-profile-card-template img.htmlemail-mediacomponent-image {
+    width: 100%; }
+  .htmlweb-profile-card-template div.card-box {
+    border-radius: 3px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.09); }
+  .htmlweb-profile-card-template img.content-avatar {
+    border-radius: 50%;
+    width: 36px;
+    height: 36px; }
+  .htmlweb-profile-card-template a.content-card-anchor {
+    color: inherit;
+    text-decoration: none; }
+  .htmlweb-profile-card-template div.article-excerpt {
+    font-weight: 400; }
+  .htmlweb-profile-card-template a.readmore-anchor {
+    color: rgba(0, 0, 0, 0.44);
+    font-weight: 400;
+    text-decoration: none; }
+  .htmlweb-profile-card-template div.card-item-separator {
+    height: 1px;
+    border-color: #ededed;
+    border-width: 1px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    border-style: solid; }
+  .htmlweb-profile-card-template .profile-card-text-box {
+    padding: 4px 0; }
+  .htmlweb-profile-card-template .content-card-subheading {
+    font-weight: normal;
+    margin-bottom: 12px; }
+  .htmlweb-profile-card-template .profile-card-image-box {
+    border: 1px solid #dadada;
+    padding: 5px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    margin: auto;
+    width: 70%; }
+  .htmlweb-profile-card-template .zooming-image-inner {
+    border-radius: 50%;
+    overflow: hidden;
+    transform: translate3d(0, 0, 0); }
+  .htmlweb-profile-card-template div.card-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%; }
+  .htmlweb-profile-card-template div.card-box-content-area {
+    flex-grow: 1; }
+
+.elementquery-cols-2 .web-grid-layout-cell:nth-child(2n+1):last-child .htmlweb-profile-card-template .profile-card-image-box {
+  width: 30%;
+  margin-right: 20px; }
+.elementquery-cols-2 .web-grid-layout-cell:nth-child(2n+1):last-child .htmlweb-profile-card-template .profile-card-text-box {
+  width: 80%; }
+.elementquery-cols-2 .web-grid-layout-cell:nth-child(2n+1):last-child .card-box-content-area {
+  display: flex;
+  flex-direction: row; }
+
+.elementquery-cols-3 .web-grid-layout-cell:nth-child(3n+1):last-child .htmlweb-profile-card-template .profile-card-image-box {
+  width: 30%;
+  margin-right: 20px; }
+.elementquery-cols-3 .web-grid-layout-cell:nth-child(3n+1):last-child .htmlweb-profile-card-template .profile-card-text-box {
+  width: 80%; }
+.elementquery-cols-3 .web-grid-layout-cell:nth-child(3n+1):last-child .card-box-content-area {
+  display: flex;
+  flex-direction: row; }
+
+/** DOCUMENTATION: 
+    The DOM structure @responsive-card is applied to is as follows:
+    Match element -- Used for spacing and size, should have no visible border.
+    Inner element with actual visible border -- referred to as `card-box` */
+/** Designed to read from site theme to acquire font. */
+/* Mixin. */
+.htmlweb-testimonial-card-template {
+  /* margin & padding */
+  margin: 30px 0 0 0;
+  padding: 0 15px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #e7e7e6;
+  border-radius: 3px;
+  background-color: #fff;
+  transition-duration: 0.3s;
+  transition-property: box-shadow, transform;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+  margin: auto !important;
+  padding: 0;
+  max-width: 500px;
+  /* Content avatar */
+  /* Headline */
+  /* Article excerpt */
+  position: relative;
+  margin-top: 3.6vw !important; }
+  .htmlweb-testimonial-card-template div.card-box {
+    /* box sizing border-box */
+    box-sizing: border-box;
+    padding: 20px; }
+  .htmlweb-testimonial-card-template:hover {
+    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5); }
+  .htmlweb-testimonial-card-template img.htmlemail-mediacomponent-image {
+    width: 100%; }
+  .htmlweb-testimonial-card-template div.card-box {
+    border-radius: 3px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.09); }
+  .htmlweb-testimonial-card-template img.content-avatar {
+    border-radius: 50%;
+    width: 36px;
+    height: 36px; }
+  .htmlweb-testimonial-card-template a.content-card-anchor {
+    color: inherit;
+    text-decoration: none; }
+  .htmlweb-testimonial-card-template div.article-excerpt {
+    font-weight: 400; }
+  .htmlweb-testimonial-card-template a.readmore-anchor {
+    color: rgba(0, 0, 0, 0.44);
+    font-weight: 400;
+    text-decoration: none; }
+  .htmlweb-testimonial-card-template div.card-item-separator {
+    height: 1px;
+    border-color: #ededed;
+    border-width: 1px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    border-style: solid; }
+  .htmlweb-testimonial-card-template .testimonial-card-image-holder {
+    height: 2.5vw;
+    margin-bottom: 2em; }
+  .htmlweb-testimonial-card-template .testimonial-card-image-circle {
+    border: 1px solid #dadada;
+    padding: 5px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    background-color: #ffffff; }
+  .htmlweb-testimonial-card-template figure {
+    border-radius: 50%; }
+  .htmlweb-testimonial-card-template .testimonial-card-textarea {
+    text-align: center;
+    padding: 0 1em 0.5em 1em; }
+  .htmlweb-testimonial-card-template blockquote {
+    padding-left: 0.5em;
+    margin: 0.5em 0.5em 1em 0;
+    border-left: 5px solid #eeeeee;
+    font-weight: bold;
+    font-style: italic; }
+  .htmlweb-testimonial-card-template.content-card {
+    margin-top: 58px !important; }
+  .htmlweb-testimonial-card-template .testimonial-card-image-circle {
+    width: 100px; }
+  .htmlweb-testimonial-card-template blockquote {
+    margin-top: 56px; }
+  @media screen and (min-width: 961px) {
+    .htmlweb-testimonial-card-template .testimonial-card-image-circle {
+      width: 130px; } }
+  @media screen and (min-width: 0px) and (max-width: 960px) {
+    .htmlweb-testimonial-card-template {
+      margin-top: 48px !important; } }
+
+.htmlemail-testimonial-card-template {
+  /* margin & padding */
+  margin: 30px 0 0 0;
+  padding: 0 15px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #e7e7e6;
+  border-radius: 3px;
+  background-color: #fff;
+  transition-duration: 0.3s;
+  transition-property: box-shadow, transform;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+  margin: auto !important;
+  padding: 0;
+  max-width: 500px;
+  /* Content avatar */
+  /* Headline */
+  /* Article excerpt */ }
+  .htmlemail-testimonial-card-template div.card-box {
+    /* box sizing border-box */
+    box-sizing: border-box;
+    padding: 20px; }
+  .htmlemail-testimonial-card-template:hover {
+    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5); }
+  .htmlemail-testimonial-card-template img.htmlemail-mediacomponent-image {
+    width: 100%; }
+  .htmlemail-testimonial-card-template div.card-box {
+    border-radius: 3px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.09); }
+  .htmlemail-testimonial-card-template img.content-avatar {
+    border-radius: 50%;
+    width: 36px;
+    height: 36px; }
+  .htmlemail-testimonial-card-template a.content-card-anchor {
+    color: inherit;
+    text-decoration: none; }
+  .htmlemail-testimonial-card-template div.article-excerpt {
+    font-weight: 400; }
+  .htmlemail-testimonial-card-template a.readmore-anchor {
+    color: rgba(0, 0, 0, 0.44);
+    font-weight: 400;
+    text-decoration: none; }
+  .htmlemail-testimonial-card-template div.card-item-separator {
+    height: 1px;
+    border-color: #ededed;
+    border-width: 1px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    border-style: solid; }
+  .htmlemail-testimonial-card-template table {
+    border-spacing: 0; }
+  .htmlemail-testimonial-card-template .testimonial-textarea-box {
+    font-weight: bold;
+    font-style: italic; }
+  .htmlemail-testimonial-card-template table.testimonial-photo-cont,
+  .htmlemail-testimonial-card-template table.testimonial-photo-cont td,
+  .htmlemail-testimonial-card-template table.testimonial-photo-cont div {
+    border-radius: 50%; }
+  .htmlemail-testimonial-card-template table.testimonial-photo-cont div {
+    overflow: hidden; }
+  .htmlemail-testimonial-card-template .testimonial-card-company {
+    padding: 10px; }
+
+/** DOCUMENTATION: 
+    The DOM structure @responsive-card is applied to is as follows:
+    Match element -- Used for spacing and size, should have no visible border.
+    Inner element with actual visible border -- referred to as `card-box` */
+/** Designed to read from site theme to acquire font. */
+/* Mixin. */
+.htmlemail-video-card-template {
+  /* margin & padding */
+  margin: 30px 0 0 0;
+  padding: 0 15px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #e7e7e6;
+  border-radius: 3px;
+  background-color: #fff;
+  transition-duration: 0.3s;
+  transition-property: box-shadow, transform;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+  margin: auto !important;
+  padding: 0;
+  max-width: 500px;
+  /* Content avatar */
+  /* Headline */
+  /* Article excerpt */ }
+  .htmlemail-video-card-template div.card-box {
+    /* box sizing border-box */
+    box-sizing: border-box;
+    padding: 20px; }
+  .htmlemail-video-card-template:hover {
+    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5); }
+  .htmlemail-video-card-template img.htmlemail-mediacomponent-image {
+    width: 100%; }
+  .htmlemail-video-card-template div.card-box {
+    border-radius: 3px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.09); }
+  .htmlemail-video-card-template img.content-avatar {
+    border-radius: 50%;
+    width: 36px;
+    height: 36px; }
+  .htmlemail-video-card-template a.content-card-anchor {
+    color: inherit;
+    text-decoration: none; }
+  .htmlemail-video-card-template div.article-excerpt {
+    font-weight: 400; }
+  .htmlemail-video-card-template a.readmore-anchor {
+    color: rgba(0, 0, 0, 0.44);
+    font-weight: 400;
+    text-decoration: none; }
+  .htmlemail-video-card-template div.card-item-separator {
+    height: 1px;
+    border-color: #ededed;
+    border-width: 1px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    border-style: solid; }
+  .htmlemail-video-card-template table.outer-ring {
+    border-spacing: 0;
+    border-width: 0; }
+    .htmlemail-video-card-template table.outer-ring td {
+      border-radius: 50%; }
+  .htmlemail-video-card-template div.inner-ring {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden; }
+
+.htmlweb-video-card-template {
+  /* margin & padding */
+  margin: 30px 0 0 0;
+  padding: 0 15px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #e7e7e6;
+  border-radius: 3px;
+  background-color: #fff;
+  transition-duration: 0.3s;
+  transition-property: box-shadow, transform;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+  margin: auto !important;
+  padding: 0;
+  max-width: 500px;
+  /* Content avatar */
+  /* Headline */
+  /* Article excerpt */
+  display: flex;
+  background-color: #fcfcfc;
+  padding: 5px 5px 15px 5px; }
+  .htmlweb-video-card-template div.card-box {
+    /* box sizing border-box */
+    box-sizing: border-box;
+    padding: 20px; }
+  .htmlweb-video-card-template:hover {
+    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5); }
+  .htmlweb-video-card-template img.htmlemail-mediacomponent-image {
+    width: 100%; }
+  .htmlweb-video-card-template div.card-box {
+    border-radius: 3px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.09); }
+  .htmlweb-video-card-template img.content-avatar {
+    border-radius: 50%;
+    width: 36px;
+    height: 36px; }
+  .htmlweb-video-card-template a.content-card-anchor {
+    color: inherit;
+    text-decoration: none; }
+  .htmlweb-video-card-template div.article-excerpt {
+    font-weight: 400; }
+  .htmlweb-video-card-template a.readmore-anchor {
+    color: rgba(0, 0, 0, 0.44);
+    font-weight: 400;
+    text-decoration: none; }
+  .htmlweb-video-card-template div.card-item-separator {
+    height: 1px;
+    border-color: #ededed;
+    border-width: 1px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    border-style: solid; }
+  .htmlweb-video-card-template .video-card-template-inner {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    /** Secondary image style */ }
+    .htmlweb-video-card-template .video-card-template-inner .video-card-linernotes {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      padding: 1.5em;
+      text-align: left; }
+      @media screen and (min-width: 0px) and (max-width: 960px) {
+        .htmlweb-video-card-template .video-card-template-inner .video-card-linernotes {
+          flex-direction: column; } }
+    .htmlweb-video-card-template .video-card-template-inner .video-card-title {
+      word-break: break-word; }
+    .htmlweb-video-card-template .video-card-template-inner .video-card-subheading {
+      font-style: italic;
+      font-weight: 300; }
+    .htmlweb-video-card-template .video-card-template-inner .video-card-textarea {
+      max-width: 300px; }
+    .htmlweb-video-card-template .video-card-template-inner .video-card-linernotes > .secondary-image {
+      border: 1px solid #dadada;
+      padding: 5px;
+      border-radius: 50%;
+      overflow: hidden;
+      position: relative;
+      margin-right: 12px !important;
+      margin-bottom: 12px !important;
+      min-width: 70px;
+      width: 70px;
+      height: 70px; }
+      @media screen and (min-width: 0px) and (max-width: 960px) {
+        .htmlweb-video-card-template .video-card-template-inner .video-card-linernotes > .secondary-image {
+          margin-right: 0 !important; } }
+    .htmlweb-video-card-template .video-card-template-inner .video-card-linernotes > .secondary-image > .media-component {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      transform: translate3d(0, 0, 0); }
+
+/** DOCUMENTATION: 
+    The DOM structure @responsive-card is applied to is as follows:
+    Match element -- Used for spacing and size, should have no visible border.
+    Inner element with actual visible border -- referred to as `card-box` */
+/** Designed to read from site theme to acquire font. */
+/* Mixin. */
+/** Version for HTMLEmail */
+.htmlemail-slider-card-template {
+  /* margin & padding */
+  margin: 30px 0 0 0;
+  padding: 0 15px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #e7e7e6;
+  border-radius: 3px;
+  background-color: #fff;
+  transition-duration: 0.3s;
+  transition-property: box-shadow, transform;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+  margin: auto !important;
+  padding: 0;
+  max-width: 500px;
+  /* Content avatar */
+  /* Headline */
+  /* Article excerpt */ }
+  .htmlemail-slider-card-template div.card-box {
+    /* box sizing border-box */
+    box-sizing: border-box;
+    padding: 20px; }
+  .htmlemail-slider-card-template:hover {
+    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5); }
+  .htmlemail-slider-card-template img.htmlemail-mediacomponent-image {
+    width: 100%; }
+  .htmlemail-slider-card-template div.card-box {
+    border-radius: 3px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.09); }
+  .htmlemail-slider-card-template img.content-avatar {
+    border-radius: 50%;
+    width: 36px;
+    height: 36px; }
+  .htmlemail-slider-card-template a.content-card-anchor {
+    color: inherit;
+    text-decoration: none; }
+  .htmlemail-slider-card-template div.article-excerpt {
+    font-weight: 400; }
+  .htmlemail-slider-card-template a.readmore-anchor {
+    color: rgba(0, 0, 0, 0.44);
+    font-weight: 400;
+    text-decoration: none; }
+  .htmlemail-slider-card-template div.card-item-separator {
+    height: 1px;
+    border-color: #ededed;
+    border-width: 1px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    border-style: solid; }
+
+/** Version for HTMLWeb. */
+.htmlweb-slider-card-template {
+  /* margin & padding */
+  margin: 30px 0 0 0;
+  padding: 0 15px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #e7e7e6;
+  border-radius: 3px;
+  background-color: #fff;
+  transition-duration: 0.3s;
+  transition-property: box-shadow, transform;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+  margin: auto !important;
+  padding: 0;
+  max-width: 500px;
+  /* Content avatar */
+  /* Headline */
+  /* Article excerpt */
+  max-width: 800px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0; }
+  .htmlweb-slider-card-template div.card-box {
+    /* box sizing border-box */
+    box-sizing: border-box;
+    padding: 20px; }
+  .htmlweb-slider-card-template:hover {
+    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5); }
+  .htmlweb-slider-card-template img.htmlemail-mediacomponent-image {
+    width: 100%; }
+  .htmlweb-slider-card-template div.card-box {
+    border-radius: 3px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.09); }
+  .htmlweb-slider-card-template img.content-avatar {
+    border-radius: 50%;
+    width: 36px;
+    height: 36px; }
+  .htmlweb-slider-card-template a.content-card-anchor {
+    color: inherit;
+    text-decoration: none; }
+  .htmlweb-slider-card-template div.article-excerpt {
+    font-weight: 400; }
+  .htmlweb-slider-card-template a.readmore-anchor {
+    color: rgba(0, 0, 0, 0.44);
+    font-weight: 400;
+    text-decoration: none; }
+  .htmlweb-slider-card-template div.card-item-separator {
+    height: 1px;
+    border-color: #ededed;
+    border-width: 1px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    border-style: solid; }
+  .htmlweb-slider-card-template > * {
+    width: 50%; }
+  .htmlweb-slider-card-template figure.zooming-image {
+    padding-bottom: 66%; }
+  .htmlweb-slider-card-template h3 {
+    font-weight: bold !important; }
+  .htmlweb-slider-card-template div.zooming-image-inner {
+    margin-top: 10px; }
+  .htmlweb-slider-card-template div.card-box {
+    box-shadow: none !important;
+    border-width: 0 !important; }
+
+/** Smaller on mobile/tablet/etc */
+@media (max-device-width: 960px) {
+  .htmlweb-slider-card-template {
+    max-width: 500px;
+    font-size: 0.6em !important; }
+    .htmlweb-slider-card-template .card-box {
+      padding: 10px !important; }
+    .htmlweb-slider-card-template .button-component {
+      border-width: 1px !important;
+      padding: 5px 12px !important;
+      font-size: 2em !important;
+      width: 100% !important;
+      box-sizing: border-box !important; } }
+@media (max-device-width: 600px) {
+  .htmlweb-slider-card-template {
+    max-width: 500px;
+    font-size: 0.5em !important; }
+    .htmlweb-slider-card-template .card-box {
+      padding: 10px !important; }
+    .htmlweb-slider-card-template .button-component {
+      border-width: 1px !important;
+      padding: 5px 12px !important;
+      font-size: 2em !important;
+      width: 100% !important;
+      box-sizing: border-box !important; } }

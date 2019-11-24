@@ -1,0 +1,14 @@
+
+/** In ContentEditor for pipeline. Restricts width if necessary. */
+
+.pipeline-card-previewer {
+  margin: auto;
+  max-width: 700px;
+  text-align: left;
+
+  iframe {
+    width: 100%;
+    min-height: 300px; // Minimise change in size while loading
+    border: none;
+  }
+}

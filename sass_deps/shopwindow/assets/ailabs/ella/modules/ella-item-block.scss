@@ -1,0 +1,7 @@
+@import "../mixins/ella-item-block.scss";
+
+.ella-item-block
+{
+  @include ella-item-block;
+}
+

@@ -1,0 +1,17 @@
+/** Checkbox section group */
+.checkbox-section-guard-header {
+  display: flex;
+  flex-direction: row;
+  font-weight: bold !important;
+}
+
+.checkbox-section-guard-status-label {
+  margin: 8px 8px 8px 4px !important;
+  float: right;
+  color: red;
+}
+
+.checkbox-section-guard-status-label.on {
+  /** Green Light by Ella "Lorde" Yelich-O'Connor */
+  color: green;
+}

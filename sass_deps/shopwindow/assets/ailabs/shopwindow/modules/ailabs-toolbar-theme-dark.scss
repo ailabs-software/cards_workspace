@@ -1,0 +1,21 @@
+$TOOLBAR_BG_COLOR: #3e3e3e;
+
+.goog-toolbar.ailabs-toolbar-theme-dark {
+  background-color: #$TOOLBAR_BG_COLOR;
+
+  .goog-toolbar-range-slider-container {
+    background-color: $TOOLBAR_BG_COLOR;
+  }
+
+  .goog-toolbar-button {
+    width: 22px;
+  }
+
+  .goog-toolbar-button.goog-control-active {
+    background-color: #797979;
+  }
+
+  svg {
+    fill: #ffffff;
+  }
+}

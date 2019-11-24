@@ -1,0 +1,13 @@
+@import "assets/ailabs/jclosure/mixins/respond-to.scss";
+
+@mixin ella-item-block
+{
+  padding: 4px;
+  margin: 4px;
+
+  @include respond-to($min: $medium) {
+    /* More padding and margin on desktop */
+    padding: 24px;
+    margin: 24px;
+  }
+}

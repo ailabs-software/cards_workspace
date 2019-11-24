@@ -1,0 +1,76 @@
+/** base, common css regardless of thenme */
+.ailabs-collapsible > .ailabs-collapsible-header {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+
+  > * {
+    display: inline-block;
+  }
+
+  .ailabs-collapsible-icon {
+    width: 28px;
+    height: 20px;
+    -webkit-mask: url(/www/swassets/material-arrow-right.svg) 50% 50%;
+    mask: url(/www/swassets/material-arrow-right.svg) 50% 50%;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    background-color: #000000;
+
+    transition: transform cubic-bezier(0.075, 0.82, 0.165, 1) 360ms;
+  }
+
+  .ailabs-collapsible-icon.ailabs-collapsible-icon-expanded {
+    transform: rotate(90deg)
+  }
+}
+
+.ailabs-collapsible-body {
+  padding: 5px 0;
+  overflow: hidden;
+}
+
+/** Default theme: lorde */
+.ailabs-collapsible.theme-lorde {
+  & {
+    padding: 3px 0;
+  }
+
+  & > .ailabs-collapsible-header {
+    padding: 4px 4px;
+    background-color: #eee;
+  }
+
+  .ailabs-collapsible-icon {
+    margin-right: 4px;
+  }
+}
+
+/** Custom theme: ella */
+.ailabs-collapsible.theme-ella {
+  & {
+    border: 4px solid #fafafa;
+    box-shadow: 0 1px 5px 0 rgba(45, 62, 80, 0.12);
+    margin: 10px 0;
+    padding: 5px 4px;
+  }
+
+  .ailabs-collapsible:hover {
+    box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  .ailabs-collapsible-header {
+    padding: 4px 4px;
+  }
+
+  .ailabs-collapsible-icon {
+    margin-right: 10px;
+  }
+
+  .ailabs-collapsible-header > .goog-text-label {
+    font-size: 18px;
+    font-weight: bold;
+  }
+}
+

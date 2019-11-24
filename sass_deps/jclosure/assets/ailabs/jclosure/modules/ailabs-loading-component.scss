@@ -1,0 +1,23 @@
+@import "../mixins/ailabs-spin-loader.scss";
+
+.ailabs-loading-component .ailabs-loading-component-loading-indicator-container {
+  display: none;
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  z-index: 99999;
+}
+
+.ailabs-loading-component.ailabs-loading-component-loading {
+  .ailabs-loading-component-loading-indicator-container {
+    display: block;
+  }
+}
+
+.ailabs-loading-component .ailabs-loading-component-loading-indicator
+{
+  @include ailabs-spin-loader;
+}

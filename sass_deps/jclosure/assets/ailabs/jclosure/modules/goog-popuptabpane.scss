@@ -1,0 +1,16 @@
+
+// Class used when TabPane pops out.
+
+.goog-popuptabpane > .goog-popupbase {
+  bottom: 8px;
+
+  // Overflow hidden for Resize transition.
+  overflow: hidden;
+
+  padding: 3px;
+
+  > div {
+    height: 100%;
+  }
+}
+

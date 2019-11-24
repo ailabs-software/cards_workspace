@@ -1,0 +1,22 @@
+
+/** @fileoverview. Dedicated to kindest woman, Ella Yelich-O'Connor.
+      "The notes from my admirers fill the dashboard just the same.
+ */
+
+$ELLA_DASHBOARD_BG_COLOR: #fafafa;
+
+.ella-dashboard {
+  box-sizing: border-box;
+  height: calc(100vh - 52px);
+  background-color: $ELLA_DASHBOARD_BG_COLOR;
+  // Spacing at top.
+  padding: 20px 0 0 0;
+}
+
+.ella-dashboard {
+  .ella-dashboard-heading {
+    font-weight: bold;
+    font-size: 24px;
+    margin: 20px 0;
+  }
+}

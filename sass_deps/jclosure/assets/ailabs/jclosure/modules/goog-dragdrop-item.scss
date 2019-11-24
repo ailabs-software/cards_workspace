@@ -1,0 +1,27 @@
+
+.goog-dragdropitem
+{
+  /** Not redundant because while we set user-select: none on document during dragging, it is necessary to prevent text selection before dragStart
+     due to hystersis setting potentially delaying drag response long enough that browser would select text */
+  user-select: none;
+}
+
+.goog-dragdropitem-dragging
+{
+  opacity: 0;
+  pointer-events: none; // No pointer events, so CLICK cannot fire while dragging.
+}
+
+.goog-dragdropitem-ghost
+{
+  box-sizing: border-box;
+  z-index: 2147483647; // Higher than z-index than PopupBase.
+  pointer-events: none; // No pointer events, so CLICK cannot fire while dragging.
+  transition: none !important;
+  opacity: 0 !important;
+}
+
+.goog-dragdropitem-ghost-dragging
+{
+  opacity: 0.82 !important;
+}

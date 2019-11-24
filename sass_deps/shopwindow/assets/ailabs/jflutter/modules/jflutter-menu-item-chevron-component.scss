@@ -1,0 +1,14 @@
+
+/** @fileoverview Style for menu item chevron component */
+
+.jflutter-menu-item-chevron-component {
+  width: 12px;
+  height: 12px;
+
+  transition: transform 150ms linear;
+
+  /** Display up when open */
+  &.is-open {
+    transform: rotate(180deg);
+  }
+}

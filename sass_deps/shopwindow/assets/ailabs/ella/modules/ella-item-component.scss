@@ -1,0 +1,9 @@
+@import "../mixins/ella-item-block.scss";
+@import "../mixins/ella-item-component.scss";
+
+/** @fileoverview A generic class */
+.ella-item-component
+{
+  @include ella-item-block;
+  @include ella-item-component;
+}

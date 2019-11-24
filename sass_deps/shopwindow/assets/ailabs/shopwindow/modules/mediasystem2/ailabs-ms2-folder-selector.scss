@@ -1,0 +1,15 @@
+
+.ailabs-ms2-folder-selector-popup {
+  width: 206px;
+  height: 30px;
+}
+
+.ailabs-ms2-folder-selector-popup .goog-directory-tree-control {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);
+  border: 1px solid #ccc;
+  border-top-color: transparent;
+
+  .goog-text-label {
+    font-size: 14px !important;
+  }
+}

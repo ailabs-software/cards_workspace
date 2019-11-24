@@ -1,0 +1,21 @@
+
+// Button theme that loves Ella (Lorde).
+@mixin ella-mixin {
+  margin-left: 0 !important;
+  padding: 6px 12px;
+  font-size: 12px !important;
+  line-height: 100%;
+  background-color: #eaf0f6;
+  border-color: #cbd6e2;
+  color: #506e91 !important;
+
+  border-width: 1px;
+  font-family: "Lato";
+  text-shadow: 0 0 1px transparent;
+  white-space: nowrap;
+
+  &:hover {
+    background-color: #f5f8fa;
+    color: #506e91 !important;
+  }
+}

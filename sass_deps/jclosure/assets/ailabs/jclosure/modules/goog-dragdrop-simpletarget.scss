@@ -1,0 +1,16 @@
+
+/** @todo Remove 2 from name once GWT jclosure is gone. */
+
+.goog-dragdrop-simpletarget2
+{
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  transition: border-color, background-color linear 200ms;
+}
+
+.goog-dragdrop-simpletarget2.active
+{
+  border-color: #f58220;
+  background-color: rgba(245, 130, 32, 0.28);
+}

@@ -1,0 +1,29 @@
+
+.goog-popupbase.shopwindowshared-progress-watcher {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Lato";
+
+  /** Theme */
+  box-shadow: 0 0 10px rgba(0,0,0,.4);
+  background: #fff;
+  border: 0;
+  outline: 0;
+  padding: 12px;
+
+  > .goog-text-label {
+    min-width: 36px;
+    display: inline-block;
+    text-align: right;
+    line-height: 18px;
+    margin-left: 20px;
+    /** Font */
+    color: #33475b;
+    font-weight: 600;
+    font-size: 16px;
+  }
+}

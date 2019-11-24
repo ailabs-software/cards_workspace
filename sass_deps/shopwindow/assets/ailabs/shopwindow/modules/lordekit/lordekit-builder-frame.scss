@@ -1,0 +1,9 @@
+
+@import "assets/ailabs/jclosure/mixins/ailabs-layout-editor-mixin.scss";
+
+/** @fileoverview Stylesheet for the lordekit builder */
+
+.lordekit-builder-frame {
+  @include ailabs-layout-editor-mixin();
+}
+

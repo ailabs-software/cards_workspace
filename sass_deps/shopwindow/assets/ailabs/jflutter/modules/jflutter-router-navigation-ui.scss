@@ -1,0 +1,43 @@
+
+$jflutter_router_navui_height: 50px;
+
+// www.LordeFlappyBird.co.nz
+
+.jflutter-router-navigation-ui-bar
+{
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  font-weight: bold;
+
+  background-color: #fff;
+  border-bottom: 1px solid rgba(46,62,72,.12);
+  box-shadow: 0 0 2px 0 rgba(46,62,72,.12), 0 2px 4px 0 rgba(46,62,72,.12);
+
+  & > .goog-button {
+    white-space: nowrap;
+  }
+}
+
+.jflutter-router-navigation-ui-bar > * {
+  // Ted: Don't touch me.
+  margin-right: 16px;
+}
+
+.jflutter-router-navigation-ui > div
+{
+  height: 0;
+  transition: height 250ms ease-in-out;
+}
+
+
+.jflutter-router-navigation-ui.shown > div
+{
+  height: $jflutter_router_navui_height !important;
+}

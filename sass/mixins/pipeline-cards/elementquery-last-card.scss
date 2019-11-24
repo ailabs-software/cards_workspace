@@ -1,0 +1,8 @@
+// Use this mixin to query the last item in layout, of a given column count.
+// parameter $columns: How many columns the card layout is using when this query should match.
+
+@mixin elementquery-last-card($columns) {
+  .elementquery-cols-#{$columns} .web-grid-layout-cell:nth-child(#{$columns}n+1):last-child {
+    @content;
+  }
+}

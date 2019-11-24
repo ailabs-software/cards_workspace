@@ -1,0 +1,79 @@
+@import "assets/ailabs/jclosure/mixins/respond-to.scss";
+@import "../../mixins/pipeline-cards/templates/content-card.scss";
+
+$alternate_card_gutter_width: 20px;
+
+/** Version for HTMLEmail */
+.htmlemail-slider-card-template {
+  @include content-card;
+}
+
+/** Version for HTMLWeb. */
+.htmlweb-slider-card-template
+{
+  @include content-card;
+
+  // Override max-width.
+  max-width: 800px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0;
+
+  > * {
+    width: 50%;
+  }
+
+  figure.zooming-image {
+    padding-bottom: 66%;
+  }
+
+  h3 {
+    font-weight: bold !important;
+  }
+  
+  div.zooming-image-inner {
+    margin-top: 10px;
+  }
+
+  div.card-box {
+    box-shadow: none !important;
+    border-width: 0 !important;
+  }
+}
+
+// Mixin used to resize
+@mixin slider-card-template-sizing($fontsize, $cardbox-padding, $fontsize-button) {
+  .htmlweb-slider-card-template {
+    max-width: 500px;
+
+    // Smaller text
+    font-size: $fontsize !important;
+
+    // Less padding around text column
+    .card-box {
+      padding: $cardbox-padding !important;
+    }
+
+    // Smaller button padding
+    .button-component {
+      border-width: 1px !important;
+      padding: 5px 12px !important;
+      font-size: $fontsize-button !important;
+      // Go full width on mobile.
+      width: 100% !important;
+      box-sizing: border-box !important;
+    }
+  }
+}
+
+/** Smaller on mobile/tablet/etc */
+@media (max-device-width: $medium) {
+  @include slider-card-template-sizing($fontsize: 0.6em, $cardbox-padding: 10px, $fontsize-button: 2em);
+}
+
+@media (max-device-width: $small) {
+  @include slider-card-template-sizing($fontsize: 0.5em, $cardbox-padding: 10px, $fontsize-button: 2em);
+}
+

@@ -1,0 +1,45 @@
+
+$BUTTONGROUP_BORDER_RADIUS: 5px;
+$BUTTONGROUP_BORDER_WIDTH: 1px;
+
+/** Margin is consistent with margin of goog-button */
+.goog-buttongroup
+{
+  display: flex;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+/** Buttons have no margin within goog-buttongroup */
+.goog-buttongroup > .goog-button
+{
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  border-radius: 0;
+  border-left-width: 0;
+}
+
+/** Class for horizontal (default) direction */
+.goog-buttongroup-horizontal-direction {
+  flex-direction: row;
+
+  /* First button has radius on left */
+  > .goog-button:first-child
+  {
+    border-top-left-radius: $BUTTONGROUP_BORDER_RADIUS;
+    border-bottom-left-radius: $BUTTONGROUP_BORDER_RADIUS;
+    border-left-width: $BUTTONGROUP_BORDER_WIDTH;
+  }
+
+  /* Last button has radius on right */
+  > .goog-button:last-child
+  {
+    border-top-right-radius: $BUTTONGROUP_BORDER_RADIUS;
+    border-bottom-right-radius: $BUTTONGROUP_BORDER_RADIUS;
+  }
+}
+
+/** Class for vertical direction */
+.goog-buttongroup-vertical-direction {
+  flex-direction: column;
+}

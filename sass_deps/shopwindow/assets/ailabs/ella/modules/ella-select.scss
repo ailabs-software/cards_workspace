@@ -1,0 +1,7 @@
+@import "../mixins/ella-mixin.scss";
+
+// SelectInput theme that loves Ella
+select.goog-input.ella-select {
+  @include ella-mixin();
+  min-width: 110px;
+}

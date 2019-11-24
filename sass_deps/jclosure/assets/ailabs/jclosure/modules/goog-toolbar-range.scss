@@ -1,0 +1,36 @@
+
+.goog-toolbar-range {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  padding: 4px;
+
+  .goog-text-label {
+    min-width: 36px;
+  }
+
+  .goog-toolbar-range-slider-container {
+    display: none;
+    position: absolute;
+    width: 200px;
+    transform: translate(-4px, 20px);
+    padding: 0 10px;
+  }
+
+  &:hover,
+  &.goog-toolbar-range-stay-open {
+    .goog-toolbar-range-slider-container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .goog-text-label {
+        margin: 0;
+      }
+
+      .goog-slider-number-input {
+        flex-grow: 1;
+      }
+    }
+  }
+}

@@ -1,0 +1,175 @@
+
+div.error-msg
+{
+  padding: 6px 0 0 0;
+  font-weight: 700; 
+}
+
+body.authn-screen .goog-button
+{
+  font-size: 16px;
+  padding: 9px 32px;
+}
+
+/* Input container */
+div.login-field-cont
+{
+  padding: 6px 0;
+}
+
+/* Anchors */
+a.authn-link
+{
+  color: #fff;
+}
+
+/* Domain logo image */
+img.authn-domainlogo
+{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+div.authn-logo-caption
+{
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 60px;
+}
+
+/* Select user menu */
+ul.selectuser-menu
+{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+li.selectuser-menuitem
+{
+  padding: 3px 6px;
+}
+
+li.selectuser-menuitem:hover
+{
+  background-color: rgba(41, 70, 97, 0.02);
+}
+
+a.selectuser-menuitem-anchor
+{
+  position: relative;
+  display: block;
+  height: 60px;
+  
+  text-decoration: none;
+}
+
+li.selectuser-menuitem img.authn-domainlogo
+{
+  width: 60px;
+  height: 60px;
+}
+
+div.selectuser-menuitem-caption
+{
+  text-align: left;
+  padding-left: 76px;
+}
+
+div.selectuser-menuitem-title
+{
+  font-size: 22px;
+  color: #d9d9d9;
+  // Prevent excessive overflow
+  max-width: 300px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+div.selectuser-menuitem-subtitle
+{
+  font-size: 16px;
+  color: #d9d9d9;
+}
+
+span.selectuser-menuitem-chevron
+{
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 18px;
+}
+
+span.selectuser-menuitem-chevron svg
+{
+  fill: #e8e8e8;
+  transform: scale(1);
+}
+
+a.selectuser-menuitem-anchor:hover span.selectuser-menuitem-chevron svg
+{
+  transition: transform ease-in-out 300ms;
+  transform: scale(2);
+}
+
+a.selectuser-menuitem-anchor img.authn-domainlogo
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Domain logo animation */
+a.selectuser-menuitem-anchor img.authn-domainlogo,
+div.current-user img.authn-domainlogo
+{
+  transition: transform ease-in-out 400ms;
+  transform: scale(1);
+}
+
+a.selectuser-menuitem-anchor:hover img.authn-domainlogo,
+div.current-user:hover img.authn-domainlogo
+{
+  transform: scale(1.4);
+  z-index: 1;
+}
+
+/* Current User display */
+div.current-user img.authn-domainlogo
+{
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+div.current-user > div
+{
+  margin: 3px 0;
+}
+
+div.current-domain-caption
+{
+  margin-top: 10px;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 21px;
+}
+
+/* Switch accounts UI */
+div.authn-switchaccounts-ui
+{
+  padding: 18px 0;
+}
+
+/* Forgot password link */
+div.forgot-passwd-cont
+{
+  text-align: right;
+}
+
+div.forgot-passwd-cont a
+{
+  font-size: 13px;
+}

@@ -1,0 +1,7 @@
+@import "assets/ailabs/jclosure/mixins/goog-texteditor-content.scss";
+
+.ailabs-layoutcell-node.blocktype-TextBlock
+{
+  // In case a text variable in used, it will be properly styled so it is a symbolised to the user when shown in builder when not in edit.
+  @include goog-texteditor-content();
+}

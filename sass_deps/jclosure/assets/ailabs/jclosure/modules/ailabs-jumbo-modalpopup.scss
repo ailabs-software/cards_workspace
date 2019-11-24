@@ -1,0 +1,15 @@
+
+/** @fileoverview Add class to make a modalpopup takeover the screen */
+
+.goog-modalpopup.ailabs-jumbo-modalpopup {
+  max-width: calc(100% - 50px);
+  max-height: calc(100% - 50px);
+  width: calc(100% - 50px);
+  height: calc(100% - 50px);
+
+  // Larger close button
+  .goog-modalpopup-title-close {
+    transform: scale(1.7);
+    margin-top: 2px;
+  }
+}

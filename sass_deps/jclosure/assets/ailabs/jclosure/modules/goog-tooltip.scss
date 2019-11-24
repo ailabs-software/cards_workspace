@@ -1,0 +1,13 @@
+
+.goog-tooltip
+{
+  position: absolute;
+
+  background: infobackground;
+  color: infotext;
+  border: 1px solid infotext;
+  padding: 1px;
+  font: menu;
+
+  z-index: 2147483647;
+}

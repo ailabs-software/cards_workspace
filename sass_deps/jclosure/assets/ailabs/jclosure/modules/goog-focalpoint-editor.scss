@@ -1,0 +1,58 @@
+/** ailabs.jclosure.ui.editor.FocalpointEditor */
+
+@mixin fadein-transition
+{
+  opacity: 0;
+  transition: opacity 800ms linear;
+}
+
+.goog-focalpoint-dot
+{
+  position: absolute;
+  /* Keeps centered, adjusted for width */
+  margin-left: -8px;
+  margin-top: -8px;
+  width: 16px;
+  height: 16px;
+  /* THEME */
+  border: 3px solid rgba(255, 255, 255, .8);
+  background: rgba(0,0,0,.2);
+  border-radius: 50%;
+  cursor: move;
+  pointer-events: auto;
+}
+
+/* Show model */
+.goog-focalpoint-editor label.goog-text-label
+{
+  position: absolute;
+  right: 6px;
+  bottom: 6px;
+  color: #fff;
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 0 2px;
+  font-size: 12px;
+  @include fadein-transition;
+  opacity: 0;
+}
+
+.goog-focalpoint-editor:hover label.goog-text-label
+{
+  opacity: 1;
+}
+
+/** ailabs.jclosure.ui.editor.FocalpointEditorUI */
+.goog-focalpoint-editor-ui
+{
+  position: relative;
+  user-select: none;
+}
+
+.goog-focalpoint-editor-ui img
+{
+  max-width: 50vw;
+  max-height: 40vh;
+  width: auto;
+  height: auto;
+}

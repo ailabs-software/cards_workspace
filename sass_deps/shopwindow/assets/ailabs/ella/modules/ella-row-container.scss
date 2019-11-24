@@ -1,0 +1,12 @@
+@import "../mixins/ella-flex-container-mixin.scss";
+
+/** @fileoverview See README_CARDS_AND_CONTAINERS.txt.
+
+      Card must configure its minimum width (flex-basis)!
+ */
+
+.ella-row-container {
+  @include ella-flex-component-mixin();
+
+  flex-direction: column;
+}

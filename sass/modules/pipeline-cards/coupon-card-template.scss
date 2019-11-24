@@ -1,0 +1,234 @@
+@import "assets/ailabs/jclosure/mixins/respond-to.scss";
+@import "../../mixins/pipeline-cards/elementquery-last-card.scss";
+@import "../../mixins/pipeline-cards/templates/content-card.scss";
+
+/** Common to HTMLEmail and HTMLWeb */
+@mixin coupon-card-template {
+  @include content-card;
+
+  & {
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.1);
+
+    border-bottom-left-radius: 23px;
+    border-bottom-right-radius: 23px;
+  }
+
+  .coupon-heading-area {
+    text-align: center;
+  }
+
+  .coupon-image-area {
+    position: relative;
+    line-height: 0;
+  }
+
+  .promotion-expiry-box {
+    margin: 15px 0;
+    text-align: center;
+  }
+
+  .promotion-countdown-component {
+    padding: 22px 0;
+  }
+
+  .coupon-paragraph {
+    text-align: center;
+  }
+
+  /** Title text */
+  .content-card-headline {
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .inner-text-area {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 15px 20px;
+    overflow: hidden;
+
+    text-align: center;
+
+    border-bottom-left-radius: 23px;
+    border-bottom-right-radius: 23px;
+
+    background-color: #FCFDFE;
+  }
+
+  /** Spacing */
+  .promotion-countdown-component,
+  .redeem-ui-success-msg,
+  .redeem-ui-error-msg {
+    margin: 0.5em 0;
+  }
+
+  /** For countdown */
+  .countdown-component {
+    font-weight: bold;
+  }
+
+  /** Social */
+  .social-widiget {
+    padding: 20px 0;
+  }
+}
+
+/** For HTMLWeb only */
+.htmlweb-coupon-card-template {
+  @include coupon-card-template;
+
+  .redeem-ui-placeholder {
+    height: 0; // Initial height.
+    overflow: hidden;
+    margin: 10px 0;
+  }
+
+  /** Redeem decorator UI */
+  .redeem-ui-error-msg {
+    font-weight: bold;
+    color: red;
+  }
+
+  input.goog-input {
+    font-size: 1.5em !important;
+    min-height: 1.7em;
+  }
+
+  .sign-up-ui {
+    margin-top: 20px;
+    margin-bottom: 12px;
+  }
+
+  // Blow out UI
+  .promotion-blowout-ui-holder {
+    position: absolute;
+    top: -0.5em;
+    left: 0px;
+  }
+
+  .promotion-blowout-ui {
+
+    .promotion-blowout-ui-price {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &,
+    &:before,
+    &:after,
+    & .promotion-blowout-ui-price,
+    & .promotion-blowout-ui-price:before,
+    & .promotion-blowout-ui-price:after {
+      height: 6.5em;
+      width: 6.5em;
+      background-color: #ffff00;
+      background-size: 6.5em;
+    }
+
+    &:before,
+    &:after,
+    & .promotion-blowout-ui-price:before,
+    & .promotion-blowout-ui-price:after {
+      content: "";
+      position: absolute;
+    }
+
+    & {
+      position: relative; /* Context */
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+    }
+
+    &:before {
+      top: 0;
+      left: 0;
+      -webkit-transform: rotate(-30deg);
+      -moz-transform: rotate(-30deg);
+      -ms-transform: rotate(-30deg);
+      -o-transform: rotate(-30deg);
+      transform: rotate(-30deg);
+    }
+
+    &:after {
+      top: 0;
+      left: 0;
+      -webkit-transform: rotate(-15deg);
+      -moz-transform: rotate(-15deg);
+      -ms-transform: rotate(-15deg);
+      -o-transform: rotate(-15deg);
+      transform: rotate(-15deg);
+    }
+
+    & .promotion-blowout-ui-price {
+      padding: .5em 0em;
+      height: 5.5em; /* height minus padding */
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+      z-index: 1; /* important so the text shows up */
+    }
+
+    & .promotion-blowout-ui-price:before {
+      top: 0;
+      left: 0;
+      -webkit-transform: rotate(60deg);
+      -moz-transform: rotate(60deg);
+      -ms-transform: rotate(60deg);
+      -o-transform: rotate(60deg);
+      transform: rotate(60deg);
+    }
+
+    & .promotion-blowout-ui-price:after {
+      top: 0;
+      left: 0;
+      -webkit-transform: rotate(75deg);
+      -moz-transform: rotate(75deg);
+      -ms-transform: rotate(75deg);
+      -o-transform: rotate(75deg);
+      transform: rotate(75deg);
+    }
+
+    & .promotion-blowout-ui-price span {
+      position: relative;
+      z-index: 100;
+      display: block;
+      text-align: center;
+      color: #FE3D5C;
+      font: 1.8em/1.4em Sans-Serif;
+      text-transform: uppercase;
+    }
+
+    & .promotion-blowout-ui-price span.promotion-blowout-ui-number {
+      font-weight: bold;
+      color: #000000;
+    }
+  }
+}
+
+/** For HTMLEmail only */
+.htmlemail-coupon-card-template {
+  @include coupon-card-template;
+
+  .see-time-remaining-button-box {
+    padding: 20px 0;
+  }
+
+  table.redeem-ui-table {
+    width: 100%;
+  }
+
+  .htmlemail-button-spacer {
+    margin: 15px;
+  }
+}

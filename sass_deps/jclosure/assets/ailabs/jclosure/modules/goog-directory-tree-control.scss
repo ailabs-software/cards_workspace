@@ -1,0 +1,61 @@
+
+/** Controls entire tree */
+.goog-directory-tree-control {
+  background-color: #fff;
+  border: 2px inset;
+  padding: 4px;
+  cursor: default;
+}
+
+.goog-directory-tree-control > .goog-selectable-container {
+  height: 100%;
+}
+
+/** Is a node in the tree */
+.goog-directory-tree-node {
+  cursor: default;
+}
+
+.goog-directory-tree-node-item {
+  display: flex;
+  padding: 6px 3px;
+}
+
+/** Hide count label during edit */
+.goog-directory-tree-node-item-editing {
+  & > .goog-text-label {
+    display: none;
+  }
+}
+
+.goog-directory-tree-node-item-faded-appearance {
+  opacity: 0.30;
+}
+
+.goog-directory-tree-node-item-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  background-image: url(/www/swassets/folder-expanded-icon.svg);
+}
+
+.goog-directory-tree-node-item > .goog-text-label {
+  line-height: 16px;
+}
+
+.goog-directory-tree-node-item > input.goog-input {
+  width: 0 !important;
+  flex-grow: 1;
+  border: 0 !important;
+  background-color: transparent !important;
+  padding: 0 !important;
+  height: auto !important;
+  min-height: auto !important;
+  font-size: 14px !important;
+  line-height: 14px !important;
+}
+
+.goog-directory-tree-node-item-count-label {
+  padding-left: 4px;
+}
+

@@ -1,0 +1,10 @@
+
+/** @fileoverview CRM person menu item */
+
+.crm-person-menuitem {
+  > a > .right-column {
+    display: flex;
+    flex-direction: column;
+    padding: 0 6px;
+  }
+}

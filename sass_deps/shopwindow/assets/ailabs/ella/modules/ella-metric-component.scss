@@ -1,0 +1,43 @@
+
+/** @fileoverview Themes for ella-metric-component */
+
+// Common
+.ella-metric-component > * {
+  word-wrap: break-word;
+}
+
+// The normal theme.
+.ella-metric-component.theme-normal {
+
+}
+
+.ella-metric-component.theme-inline {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+// The huge theme
+.ella-metric-component.theme-huge {
+  display: flex;
+  flex-direction: column-reverse;
+  margin: 0 4px;
+
+  > * {
+    text-align: center;
+    margin: 0 !important;
+  }
+
+  dt {
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 120%;
+    text-transform: uppercase;
+  }
+
+  dd {
+    font-size: 26px;
+    line-height: 120%;
+    font-weight: bold;
+  }
+}

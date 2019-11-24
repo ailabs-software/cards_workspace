@@ -1,0 +1,68 @@
+@import "../../mixins/pipeline-cards/elementquery-last-card.scss";
+@import "../../mixins/pipeline-cards/templates/content-card.scss";
+
+.offer-card-template {
+  @include content-card;
+
+  $border_radius: 23px;
+
+  transform: translate3d(0, 0, 0);
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  border-top-left-radius: $border_radius;
+  border-top-right-radius: $border_radius;
+
+  table.offer-card-outer-table {
+    border-top-left-radius: $border_radius;
+    border-top-right-radius: $border_radius;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  table.offer-card-inner-table {
+    border-bottom-left-radius: $border_radius;
+    border-bottom-right-radius: $border_radius;
+    overflow: hidden;
+    padding: 10px;
+    background-color: #FCFDFE;
+    width: 100%;
+    border-collapse: initial;
+  }
+
+  figure.zooming-image {
+    border-top-left-radius: $border_radius;
+    border-top-right-radius: $border_radius;
+  }
+
+  .content-card-subheading {
+    padding: 4px 0 0 0;
+    color: #999999;
+  }
+
+  .content-card-price {
+    padding: 4px 0 0 0;
+    font-weight: normal;
+    color: #858585;
+  }
+
+  span.regular-price {
+    text-decoration: line-through;
+    padding: 0 5px 0 0;
+  }
+
+  span.canonical-price {
+    color: green;
+    font-weight: bold;
+  }
+}
+
+// When appearing in a 3-column layout, we must change media ratio responsively.
+// EXPLAIN: Only matches last child if it is the only one on the row, in a 3 column layout.
+@include elementquery-last-card(3) {
+  .offer-card-template img.contentcard-img {
+    height: 30vh !important;
+    object-fit: cover;
+  }
+}

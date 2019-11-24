@@ -1,0 +1,25 @@
+
+// Class for ui.texteditor, DefaultEditor.
+
+.goog-editor {
+  padding: 4px;
+}
+
+// This class is more opinionated by the style of goog-editorfield as well.
+
+.goog-editor .goog-editorfield
+{
+  & {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #d9d9d9;
+    border-radius: 0;
+    padding: 4px 6px;
+  }
+
+  &:hover,
+  &:focus
+  {
+    border-color: #4d90fe;
+  }
+}

@@ -1,0 +1,5 @@
+
+/** Menus get a higher z-index than normal popupbase popups, so never behind a dialog. */
+.goog-popupbase.goog-rolemenu-popup {
+  z-index: 2147483647;
+}

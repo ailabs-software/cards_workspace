@@ -1,0 +1,12 @@
+
+/** @fileoverview User log out button */
+
+.authn-user-logout-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .user-name-label {
+    margin-right: 6px;
+  }
+}

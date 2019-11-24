@@ -1,0 +1,71 @@
+@import "assets/ailabs/shopwindow/mixins/shadowed-box-border-mixin.scss";
+@import "../generic-card.scss";
+
+/** Designed to read from site theme to acquire font. */
+
+/* Mixin. */
+@mixin content-card
+{
+  @include generic-card;
+  @include shadowed-box-border-mixin; // All cards get this border.
+
+  margin: auto !important;
+  padding: 0;
+
+  // A typical max-width setting. Subclass my override.
+  max-width: 500px;
+
+  img.htmlemail-mediacomponent-image {
+    width: 100%;
+  }
+
+  div.card-box
+  {
+    border-radius: 3px;
+    box-shadow: 0 1px 4px rgba(0,0,0,.04);
+    border: 1px solid rgba(0,0,0,.09);
+  }
+
+  /* Content avatar */
+  img.content-avatar
+  {
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+  }
+
+  a.content-card-anchor
+  {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  /* Headline */
+  .content-card-headline,
+  .content-card-subheading
+  {
+
+  }
+
+  /* Article excerpt */
+  div.article-excerpt
+  {
+    font-weight: 400;
+  }
+
+  a.readmore-anchor
+  {
+    color: rgba(0,0,0,.44);
+    font-weight: 400;
+    text-decoration: none;
+  }
+
+  div.card-item-separator {
+    height: 1px;
+    border-color: #ededed;
+    border-width: 1px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    border-style: solid;
+  }
+}

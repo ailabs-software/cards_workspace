@@ -1,0 +1,45 @@
+
+.cms-menubuilder {
+  .ailabs-searchable-repeater {
+    height: calc(100vh - 150px);
+  }
+}
+
+.cms-menubuilder-navigationinfo-card
+{
+  & {
+    width: 400px;
+  }
+
+  .route-info-label {
+    padding-left: 8px;
+    font-family: Monaco, Menlo, Consolas, 'Courier New', monospace;
+    font-size: 12px;
+  }
+
+  .route-info-homepage {
+    color: green;
+  }
+
+  .route-info-notpublished {
+    color: maroon;
+  }
+}
+
+/** Drag drop css */
+.cms-menuitem-editor
+{
+  .goog-dragdropgroup {
+    margin-left: 24px;
+  }
+
+  .cms-menubuilder-navigationinfo-card {
+    position: relative;
+
+    .goog-iconbutton { 
+      position: absolute;
+      top: 5px;
+      right: 5px;
+    }
+  }
+}

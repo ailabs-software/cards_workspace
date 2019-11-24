@@ -1,0 +1,18 @@
+
+
+/** @fileoverview See README_CARDS_AND_CONTAINERS.txt.
+
+   A generic flex container setting spacing.
+
+ */
+
+@mixin ella-flex-component-mixin {
+  display: flex;
+  flex-wrap: wrap;
+
+  /** Flex children */
+  > * {
+    margin: 12px;
+    box-sizing: border-box;
+  }
+}

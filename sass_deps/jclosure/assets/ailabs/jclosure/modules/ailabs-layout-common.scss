@@ -1,0 +1,91 @@
+
+/** This class is used in editor, but may also be used in renderer. */
+
+/** constants */
+$gutter_width: 10px;
+$gutter_width_half: 5px;
+
+/** Any layout node */
+div.ailabs-layout-node
+{
+  box-sizing: border-box;
+}
+
+/** Layout table is a flex container */
+div.ailabs-layouttable-node
+{
+  display: flex;
+  flex-direction: column;
+}
+
+/** Layout container table is centred on margin */
+div.ailabs-layout-container-table-node {
+  margin: auto;
+}
+
+/** Row is a flex box. */
+div.ailabs-layoutrow-node
+{
+  display: flex;
+  /** Needed for flex equal height */
+  align-self: stretch;
+}
+
+/** Layout column  */
+div.ailabs-layoutcolumn-node
+{
+  /** Columns use grid display so cell alignment works */
+  display: grid;
+
+  /** Needed for gutters, border effect in builder. */
+  box-sizing: border-box;
+}
+
+div.ailabs-layoutcolumn-node-gutter
+{
+  padding: $gutter_width_half;
+}
+
+div.ailabs-layoutcolumn-node-gutter:first-child {
+  padding-left: $gutter_width;
+}
+
+div.ailabs-layoutcolumn-node-gutter:last-child {
+  padding-right: $gutter_width;
+}
+
+/** Cell content element is position relative to hold and child layouts nicely. */
+div.ailabs-layoutcell-node {
+  overflow: hidden;
+  word-wrap: break-word;
+  /** Required to keep the overflow hidden even when transforms occur within the block */
+  transform: translate3d(0, 0, 0);
+}
+
+/** Sizing helping class */
+.ailabs-layout-width-sizing {
+  // Nodes which have width set it as max-width, requiring this class to be set.
+  // Rendering width in this manner prevents width from exceeding the width of a parent.
+  width: 100%;
+}
+
+/** Aspect-based sizing helping classes */
+
+// Do not exceed 90% of viewport height.
+.ailabs-layoutdocument-limit-aspect-sizing-enabled {
+  div.ailabs-layout-aspect-sizing-limit-height {
+    & > .ailabs-aspect-sizing-object {
+      max-height: 90vh;
+    }
+  }
+}
+
+div.ailabs-layout-aspect-sizing-height {
+  position: relative;
+  line-height: 0; // Cannot gap below the sizing SVG.
+
+  & > .ailabs-aspect-sizing-object {
+    width: 100%;
+    height: auto;
+  }
+}

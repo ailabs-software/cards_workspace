@@ -1,0 +1,12 @@
+@import "assets/ailabs/jclosure/mixins/input-width-mixin.scss";
+
+.goog-selection-box
+{
+  @include input-width-mixin();
+
+  min-height: 32px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+  background-color: #fff;
+}

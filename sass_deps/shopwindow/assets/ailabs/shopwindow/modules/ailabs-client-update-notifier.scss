@@ -1,0 +1,22 @@
+
+.ailabs-client-update-notifier {
+  background-color: #fff;
+  overflow: hidden;
+  transition: height 500ms ease-in-out;
+  text-align: center;
+}
+
+.ailabs-client-update-notifier-content {
+  display: inline-block;
+  margin: 18px 0;
+  padding: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #ffa500;
+  box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.ailabs-client-update-notifier-content a {
+  text-decoration: underline;
+}

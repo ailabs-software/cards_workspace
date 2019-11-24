@@ -1,0 +1,10 @@
+@import "assets/ailabs/jclosure/mixins/respond-to.scss";
+
+.ailabs-device-size-preview-box {
+  &.size-extra-extra-small { width: $extra-extra-small; }
+  &.size-extra-small { width: $extra-small; }
+  &.size-small { width: $small; }
+  &.size-medium { width: $medium; }
+  &.size-large { width: $large; }
+  &.size-desktop { width: 100%; }
+}

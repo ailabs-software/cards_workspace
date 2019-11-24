@@ -1,0 +1,27 @@
+
+/** @fileoverview Stylesheet for media library list view */
+
+$_LIST_MEDIA_LIBRARY_VIEW_THUMBNAIL: 100px;
+
+.ailabs-list-media-library-view {
+  padding: 10px;
+
+  table.ailabs-list-media-library-view-table {
+
+    width: 100%;
+
+    border-collapse: separate;
+    border-spacing: 0 10px;
+
+    td {
+      padding: 5px;
+    }
+
+    td.thumbnail-column {
+      width: $_LIST_MEDIA_LIBRARY_VIEW_THUMBNAIL;
+      height: $_LIST_MEDIA_LIBRARY_VIEW_THUMBNAIL;
+      background-color: #cccccc;
+      background-size: cover;
+    }
+  }
+}

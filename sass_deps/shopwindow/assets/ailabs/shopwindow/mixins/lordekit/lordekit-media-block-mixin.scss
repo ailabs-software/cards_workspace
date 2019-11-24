@@ -1,0 +1,18 @@
+
+/** Place on blockcontent- class */
+@mixin lordekit-media-block-mixin
+{
+  > a {
+    height: 100%;
+    text-decoration: none;
+  }
+
+  > a > div {
+    height: 100%;
+  }
+
+  /** For email: Image fills space */
+  .lordekit-presentation-htmlemail & img {
+    width: 100%;
+  }
+}

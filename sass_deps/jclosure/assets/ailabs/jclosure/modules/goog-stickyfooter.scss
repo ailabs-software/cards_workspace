@@ -1,0 +1,13 @@
+
+/** @fileoverview Sticky footer. Increase selector specificity to override PopupBase. */
+
+.goog-popupbase.goog-stickyfooter
+{
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding: 4px;
+
+  transform-origin: bottom;
+}

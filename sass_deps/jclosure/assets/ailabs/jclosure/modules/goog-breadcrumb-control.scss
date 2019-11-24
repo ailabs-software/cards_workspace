@@ -1,0 +1,43 @@
+@import "../constants.scss";
+
+.goog-breadcrumb-control {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 6px;
+
+  > .goog-breadcrumb-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    padding: 0 6px;
+
+    > .goog-breadcrumb-item-label {
+      text-decoration: underline;
+      /** Text changes colour on hover */
+      &:hover {
+        color: $JCLOSURE_BUTTON_HOVER_FORE_COLOR;
+      }
+    }
+
+    > .goog-svgview {
+      width: 24px;
+      height: 24px;
+      margin-left: 12px;
+      fill: rgba(195, 178, 178, 0.9333333333);
+    }
+
+    /** If is last item, hide svg-view */
+    &:nth-last-child(1) > .goog-svgview {
+      display: none;
+    }
+  }
+
+  /** Trail highlight, while have mouse */
+  .goog-breadcrumb-item.breadcrumb-trail-highlighted {
+    > .goog-svgview {
+      fill: $JCLOSURE_BUTTON_HOVER_FORE_COLOR;
+    }
+  }
+}

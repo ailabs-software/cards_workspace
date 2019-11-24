@@ -1,0 +1,20 @@
+
+.goog-money-input {
+
+  display: flex;
+  align-items: baseline;
+  
+  > input:nth-child(1) {
+    width: 74px;
+  }
+
+  > span {
+    font-weight: bold;
+    font-size: 18px;
+    padding: 0 4px;
+  }
+
+  > input:nth-child(3) {
+    width: 52px;
+  }
+}

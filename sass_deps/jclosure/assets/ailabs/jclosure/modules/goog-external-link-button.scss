@@ -1,0 +1,13 @@
+
+.goog-external-link-button {
+  cursor: pointer;
+  color: #0088cc;
+  font-family: inherit !important;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  padding: 2px 0px;
+}
+

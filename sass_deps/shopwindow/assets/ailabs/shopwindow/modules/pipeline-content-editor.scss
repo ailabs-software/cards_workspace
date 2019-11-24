@@ -1,0 +1,16 @@
+
+.full-pipeline-content-editor {
+  margin-bottom: 80px;
+}
+
+.pipeline-content-editor {
+  
+  .pipeline-property-editor-container {
+    border: 2px solid transparent;
+    padding: 3px;
+  }
+
+  .pipeline-property-editor-container.pipeline-supported-by-template {
+    border-color: orange; 
+  }
+}

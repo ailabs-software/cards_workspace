@@ -1,0 +1,12 @@
+
+.ailabs-publish-sender-display {
+  font-family: sans-serif;
+  color: #555;
+  font-size: 12px;
+
+  .ailabs-publish-sender-display-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 6px;
+  }
+}

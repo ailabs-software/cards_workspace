@@ -1,0 +1,22 @@
+@import "assets/ailabs/shopwindowshared/mixins/melodrama-button-mixin.scss";
+
+.lordekit-widgets-tray {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: stretch;
+  justify-content: center;
+
+  justify-content: space-around;
+  column-gap: normal;
+  row-gap: 30px;
+  padding: 20px;
+}
+
+div.lordekit-widgets-tray-dragdropitem-button {
+  @include melodrama-square-button-mixin;
+  // Height matches width
+  width: 75px;
+  height: 75px;
+  // Proper cursor.
+  cursor: -webkit-grab;
+}

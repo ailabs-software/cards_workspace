@@ -1,0 +1,160 @@
+@import "../../mixins/mediasystem2/ailabs-media-library-tile-item-border.scss";
+
+$gutter_width: 8px;
+
+/** generic class, ailabs-media-library-tile-item */
+.ailabs-media-library-tile-item {
+  box-sizing: border-box;
+  padding: $gutter_width;
+
+  // Replace default selection style from ISelectable.
+  .ailabs-media-library-tile-item-border {
+    // Include mixin.
+    @include ailabs-media-library-tile-item-border;
+    // Absolutely positioned to contain controls div.
+    position: relative;
+    // Other rules.
+    border: 3px solid #fff;
+    border-radius: 4px;
+  }
+
+  &.goog-selectable-item-selected,
+  &:hover {
+    .ailabs-media-library-tile-item-border {
+      border-color: #f58220;
+    }
+  }
+}
+
+/** specific class, for createaction */
+.ailabs-media-library-createactionitem {
+  min-height: 100%;
+  > .ailabs-media-library-tile-item-border {
+    text-align: center;
+    padding: 5px;
+    font-weight: bold;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .ailabs-media-library-tile-item-svgview-container {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .goog-svgview {
+      width: 60px;
+      height: 60px;
+    }
+  }
+}
+
+/** specific class, ailabs-media-library-mediaitem */
+
+.ailabs-media-library-mediaitem-imagecomponent {
+  position: relative;
+
+   > svg {
+     max-width: none;
+     width: 100%;
+     height: auto;
+   }
+
+  > .ailabs-media-library-mediaitem-image {
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .ailabs-media-library-mediaitem-icon-box {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    padding: 2px;
+    width: 16px;
+    height: 16px;
+    background-color: rgba(255, 255, 255, 0.5);
+
+    > .goog-svgview {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+/** other css */
+
+.ailabs-media-library-mediaitem-image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #f7f7f7;
+}
+
+/** Title component below image in tile item */
+.ailabs-media-library-mediaitem-titlecomponent {
+  display: flex;
+  flex-direction: row;
+  padding: 2px;
+  box-sizing: border-box;
+  height: 24px;
+
+  .ailabs-powerled {
+    height: 20px;
+  }
+
+  .ailabs-media-library-mediaitem-titlecomponent-title {
+    flex-grow: 1;
+    position: relative;
+    height: 20px;
+    margin: 0 4px;
+  }
+
+  .ailabs-media-library-mediaitem-titlecomponent-title-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
+.ailabs-media-library-mediaitem-controlscomponent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 4px;
+  background-color: #ffffff;
+
+  /** Left controls */
+  .left-controls-layout {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-grow: 1;
+  }
+
+  /** Hidden when not hovering over item */
+  opacity: 0;
+  transition: opacity linear .3s;
+  .ailabs-media-library-tile-item:hover & {
+    opacity: 1;
+  }
+}

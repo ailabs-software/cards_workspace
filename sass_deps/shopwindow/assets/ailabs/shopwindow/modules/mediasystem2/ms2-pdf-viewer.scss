@@ -1,0 +1,170 @@
+@import "assets/ailabs/jclosure/mixins/respond-to.scss";
+
+body {
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch;
+  background-color: #9e9e9e !important;
+}
+
+body.ms2-pdfpage-inside {
+  -ms-overflow-style: none;
+
+  #page-container {
+    background-color: #9e9e9e;
+    background-image: none !important;
+  }
+}
+
+.ms2-pdf-viewer-contentelement {
+  position: fixed;
+  top: 48px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  box-sizing: border-box;
+}
+
+.ms2-pdf-viewer-pagescontainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+}
+
+.ms2-pdf-viewer-page {
+  width: 100%;
+  border: 0;
+  margin: auto;
+  box-sizing: border-box;
+
+  > iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+}
+
+/** While loading, show nice page background. */
+.ms2-pdf-viewer-page.ailabs-loading-component-loading {
+  background-color: rgba(255, 255, 255, 0.6);
+  border-top: 10px solid #9e9e9e;
+  border-bottom: 10px solid #9e9e9e;
+
+  iframe {
+    opacity: 0;
+  }
+}
+
+/* Toolbar control */
+.ms2-pdf-viewer-toolbar
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  background-color:rgba(50, 54, 57,0.9);
+  height: 48px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+                    0 1px 5px 0 rgba(0, 0, 0, 0.12),
+                    0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  color: rgb(241, 241, 241);
+  font-size: 18px;
+
+  width: 100%;
+
+  z-index: 99999999;
+
+  font-family: sans-serif;
+}
+
+.ms2-pdf-viewer-toolbar
+{
+  .pdf-toolbar-title
+  {
+    padding: 14px;
+    font-size: 18px;
+  }
+
+  .pdf-toolbar-count
+  {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .pdf-button-print
+  {
+    position: absolute;
+    right: 100px;
+  }
+
+  .pdf-button-common
+  {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-size: 100% 100%;
+
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+
+    cursor: pointer;
+
+    opacity: 0.70;
+
+    transition: opacity 300ms linear;
+  }
+
+  a.pdf-button-common:hover
+  {
+    opacity: 1;
+  }
+
+  a.pdf-button-print
+  {
+    background-image: url(/dg5_platform/static/assets/ailabs/shopwindow/assets/ms2_player_icons/ms2-pdfviewer-icon-print.svg);
+    right: 100px;
+  }
+
+  a.pdf-button-download
+  {
+    background-image: url(/dg5_platform/static/assets/ailabs/shopwindow/assets/ms2_player_icons/ms2-pdfviewer-icon-download.svg);
+    right: 150px;
+  }
+
+  /** Mobilize PdfViewer toolbar */
+  @include respond-to($max: $large) {
+    &,
+    div.pdf-toolbar-title
+    {
+      font-size: 36px !important;
+    }
+
+    &
+    {
+      height: 68px !important;
+    }
+
+    .pdf-button-common
+    {
+      width: 48px !important;
+      height: 48px !important;
+    }
+
+    .pdf-button-print
+    {
+      right: 80px !important;
+    }
+
+    .pdf-toolbar-count
+    {
+      display: none;
+    }
+  }
+}
+

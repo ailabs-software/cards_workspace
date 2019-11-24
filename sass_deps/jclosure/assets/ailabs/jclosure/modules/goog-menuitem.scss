@@ -1,0 +1,67 @@
+
+/* MenuItem */
+.goog-menuitem {
+  position: relative;
+}
+
+.goog-menuitem > a {
+  display: flex !important;
+  flex-direction: row;
+  padding: 6px 20px !important;
+  text-decoration: none !important;
+  font-size: 14px;
+  line-height: 16px;
+  white-space: nowrap;
+  /** Color */
+  color: #26292c !important;
+  > .goog-svgview {
+    fill: #26292c;
+  }
+}
+
+.goog-menuitem:hover > a {
+  /** Blue background */
+  background-color: #3498db;
+
+  /** White color on hover */
+  color: #ffffff !important;
+
+  > .goog-svgview {
+    fill: #ffffff;
+  }
+}
+
+/* Limit menu width */
+.goog-menuitem > a {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/** Spacing of glyph */
+.goog-menuitem > a > .goog-svgview {
+  width: 14px;
+  margin-right: 10px;
+}
+
+/* CheckedMenuItem */
+.goog-checked-menuitem a {
+  /* Additional spacing to make space for tick */
+  padding-left: 30px;
+}
+
+.goog-checked-menuitem.goog-checked {
+  background-color: #f3f5f6;
+}
+
+/* Checkbox inside menu */
+.goog-checked-menuitem .menu-check-icon {
+  display: none;
+  position: absolute;
+  top: 5px !important;
+  left: 6px !important;
+  color: #26292c;
+}
+
+.goog-checked-menuitem.goog-checked .menu-check-icon {
+  display: block;
+}

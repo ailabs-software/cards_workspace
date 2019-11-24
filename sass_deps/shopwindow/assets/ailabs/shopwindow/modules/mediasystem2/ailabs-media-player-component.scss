@@ -1,0 +1,19 @@
+
+.ailabs-media-player-component
+{
+  & > .decoration-ailabs-media-player {
+    height: 100%;
+    position: relative;
+
+    > iframe {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border: 0;
+    }
+  }
+}
+
+

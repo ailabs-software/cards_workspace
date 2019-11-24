@@ -1,0 +1,8 @@
+@import "assets/ailabs/shopwindow/mixins/lordekit/lordekit-media-block-mixin.scss";
+
+.lordekit-blockcontent-component.blockcontent-component-MediaBlock
+{
+  @include lordekit-media-block-mixin;
+}
+
+

@@ -1,0 +1,8 @@
+
+/** @fileoverview Width mixin for inputs and input-like controls */
+
+@mixin input-width-mixin
+{
+  max-width: 260px;
+  width: 100% !important;
+}

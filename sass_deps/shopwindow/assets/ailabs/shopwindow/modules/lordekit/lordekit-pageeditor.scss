@@ -1,0 +1,102 @@
+
+.lordekit-pageeditor
+{
+  display: flex;
+  flex-direction: column;
+}
+
+.lordekit-pageeditor > *
+{
+  display: flex;
+}
+
+.lordekit-pageeditor-topcontrols-layout {
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+
+  .goog-chrome-model-saving-indicator {
+    width: 100%;
+    max-width: 420px;
+  }
+}
+
+.lordekit-pageeditor-workspace
+{
+  position: relative;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.lordekit-pageeditor-workspace > .goog-iframebox
+{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,0);
+
+  height: 100%;
+  box-sizing: border-box;
+
+  background-color: #fff;
+}
+
+.lordekit-pageeditor-selection-control-bar
+{
+  .goog-text-label
+  {
+    padding: 5px;
+  }
+
+  > * {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  > .lordekit-fragment-ui
+  {
+    width: 230px;
+  }
+
+  > .goog-button
+  {
+    width: initial;
+  }
+}
+
+.lordekit-pageeditor-block-editing-controls-bar {
+  height: 0; // Hidden while not editing.
+  overflow: hidden;
+  padding: 0 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.lordekit-pageeditor-iseditingblock {
+  /** Selection control bar becomes hidden */
+  .lordekit-pageeditor-selection-control-bar {
+    display: none;
+  }
+  /** Block editor controls container becomes shown */
+  .lordekit-pageeditor-block-editing-controls-bar {
+    height: auto;
+  }
+}
+
+/** Inside the builder iframe */
+body.lordekit-builder-frame
+{
+  padding: 0;
+  margin: 0;
+  /** No side scrolling */
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  /** Iframes which appear inside blocks cannot accept pointer events as this breaks the builder. */
+  .ailabs-layoutcell-node > .lordekit-blockcontent {
+     pointer-events: none;
+  }
+}
+

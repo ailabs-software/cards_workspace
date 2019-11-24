@@ -1,0 +1,39 @@
+@import "assets/ailabs/jclosure/mixins/respond-to.scss";
+@import "assets/ailabs/ella/mixins/ella-flex-container-mixin.scss";
+
+/** @fileoverview See README_CARDS_AND_CONTAINERS.txt.
+
+      Card must configure its minimum width (flex-basis)!
+ */
+
+.ella-grid-container {
+  @include ella-flex-component-mixin();
+
+  flex-direction: row;
+
+  @include respond-to($min: $medium) {
+    /* More padding and margin on desktop */
+    margin: 12px 24px;
+  }
+
+  /** Flex children */
+  > * {
+    width: calc(33.33% - 24px);
+  }
+
+  /** Optional responsive class. Has some assumptions about the proper size of the card, may not always be suitable. */
+  &.ella-grid-container-responsive {
+    /** Mobilise grid container sizing to stack when small */
+    @include respond-to($max: $extra-large) {
+      & > * {
+        width: calc(50% - 24px);
+      }
+    }
+
+    @include respond-to($max: $large) {
+      & > * {
+        width: 100%;
+      }
+    }
+  }
+}

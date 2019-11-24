@@ -1,0 +1,27 @@
+$SLIDE_BG_COLOR: #000000;
+
+.ms2document-slider-gallery-component {
+  & > .decoration-ailabs-fullsize {
+    height: 100%;
+  } 
+}
+
+.ms2document-slider-gallery-component-contentelem {
+  
+  background-color: $SLIDE_BG_COLOR;
+
+  &,
+  & > .decoration-ailabs-slider-mask {
+    height: 100%;
+  }
+
+  .ms2document-slider-gallery-component-slide {
+    background-color: $SLIDE_BG_COLOR;
+  }
+
+  .ms2document-slider-gallery-component-slide > div {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+}

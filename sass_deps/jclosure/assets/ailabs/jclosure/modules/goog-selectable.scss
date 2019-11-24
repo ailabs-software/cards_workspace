@@ -1,0 +1,84 @@
+
+
+$border_width: 3px;
+/** Width to the power of two */
+$border_width_pow2: 9px;
+/** Displayed width */
+$border_edge: 2px;
+
+.goog-selectable-container
+{
+  outline: none;
+}
+
+.goog-selectable-marquee
+{
+  position: fixed;
+}
+
+.goog-selectable-marquee-holder
+{
+  position: relative;
+  overflow: hidden;
+}
+
+.goog-selectable-marquee-edge
+{
+  position: absolute;
+}
+
+.goog-selectable-marquee-edge:nth-child(1)
+{
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: $border_edge;
+}
+
+.goog-selectable-marquee-edge:nth-child(2)
+{
+  top: 0;
+  right: 0;
+  width: $border_edge;
+  height: 100%;
+}
+
+.goog-selectable-marquee-edge:nth-child(3)
+{
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: $border_edge;
+}
+
+.goog-selectable-marquee-edge:nth-child(4)
+{
+  top: 0;
+  left: 0;
+  width: $border_edge;
+  height: 100%;
+}
+
+.goog-selectable-marquee-edge
+{
+  background-size: $border_width_pow2 $border_width_pow2;
+  background-image: linear-gradient(
+        45deg, 
+        #6bb0ff  25%, 
+        transparent 25%, 
+        transparent 50%, 
+        #6bb0ff  50%, 
+        #6bb0ff  75%, 
+        transparent 75%, 
+        transparent
+    ); 
+ 
+  animation: ants 10s linear infinite forwards;
+  animation-play-state: running;
+}
+
+@keyframes ants {
+  100% {
+    background-position: -50%;
+  }
+}

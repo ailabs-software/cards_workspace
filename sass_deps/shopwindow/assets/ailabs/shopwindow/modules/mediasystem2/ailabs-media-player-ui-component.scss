@@ -1,0 +1,14 @@
+
+.ailabs-media-player-ui-component {
+  & {
+    position: relative;
+  }
+
+  .ailabs-media-player-component {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}

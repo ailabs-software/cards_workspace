@@ -1,0 +1,101 @@
+@import "assets/ailabs/ella/modules/ella-dashboard.scss";
+
+$SPECIFIC_VIEW_SIDE_PADDING: 40px;
+$SPECIFIC_VIEW_MAXWIDTH: 1380px;
+
+/** Home view */
+.ailabs-media-analytics-dashboard-home .goog-repeater {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start
+}
+
+.ailabs-media-analytics-card {
+  & {
+    flex-direction: column;
+    cursor: pointer;
+  }
+
+  .ailabs-media-player-ui-component {
+    padding-bottom: 50%;
+    margin: 10px 0;
+  }
+
+  .goog-shadowbutton {
+    width: 138px;
+  }
+}
+
+/** Specific view */
+.ailabs-media-analytics-dashboard-specific {
+
+  & {
+    max-width: $SPECIFIC_VIEW_MAXWIDTH;
+    margin: auto;
+    padding: 10px;
+  }
+
+  /** Style fixed position pane. */
+  .ailabs-fixed-position-pane-content-element {
+    padding: 0 $SPECIFIC_VIEW_SIDE_PADDING;
+    background-color: $ELLA_DASHBOARD_BG_COLOR;
+  }
+
+  .ailabs-fixed-position-pane-content-element .goog-grid-layout {
+    max-width: $SPECIFIC_VIEW_MAXWIDTH - ($SPECIFIC_VIEW_SIDE_PADDING * 2);
+    margin: auto;
+  }
+
+  /** When scrolled, show nice border */
+  .ailabs-fixed-position-pane.active > div {
+    box-shadow: 0 0 28px rgba(0,0,0,.22);
+    z-index: 1;
+    left: 0;
+  }
+
+  .ailabs-media-player-ui-component {
+    padding-bottom: 50%;
+  }
+
+  .ailabs-media-analytics-dashboard-interactors-view {
+    padding: 0 $SPECIFIC_VIEW_SIDE_PADDING;
+  }
+
+  .ailabs-media-analytics-dashboard-interactors-view .goog-grid-layout {
+    background-color: #efecec;
+    line-height: 0;
+    td {
+      line-height: 1;
+    }
+  }
+
+  .ailabs-media-analytics-dashboard-interactor-view {
+    margin: 0 0 8px 0;
+  }
+
+  .ailabs-media-analytics-dashboard-interactor-view {
+    .crm-minipersoncard {
+      font-weight: bold;
+      padding: 0;
+    }
+    
+    .goog-flex-layout {
+      padding: 0;
+      align-items: center;
+    }
+
+    .location-name-label {
+      margin-right: 6px;
+    }
+  }
+
+  .ailabs-media-analytics-dashboard-interactor-view .media-interaction-heat-mapper {
+    width: 100%;
+    height: 80px;
+  }
+
+  /** Link button spacing. */
+  .ailabs-media-analytics-dashboard-interactor-view .goog-basebutton {
+    margin-right: 3px;
+  }
+}

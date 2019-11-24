@@ -1,0 +1,13 @@
+@import "assets/ailabs/shopwindow/mixins/shadowed-box-border-mixin.scss";
+
+.crm-subobject-fieldcontrol {
+  padding: 0 0 0 6px;
+}
+
+.crm-subobject-fieldcontrol-child {
+  @include shadowed-box-border-mixin;
+  border: 3px solid #F58220;
+  border-radius: 7px;
+  margin: 8px 0;
+  padding: 6px;
+}

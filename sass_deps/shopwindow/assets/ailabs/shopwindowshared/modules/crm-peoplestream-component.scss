@@ -1,0 +1,11 @@
+
+.crm-peoplestream-component {
+  display: flex;
+  flex-direction: column;
+
+  > button {
+    align-self: center;
+    margin-bottom: 10px !important;
+  }
+}
+

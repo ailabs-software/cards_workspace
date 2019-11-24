@@ -1,0 +1,37 @@
+
+/** @fileoverview Style for shopwindow app logo */
+
+$SW_LOGO_SIZE: 42px;
+
+@keyframes shopwindow-app-logo-animate
+{
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+// logo
+.shopwindow-app-logo-component {
+  width: $SW_LOGO_SIZE;
+  height: $SW_LOGO_SIZE;
+  position: relative;
+
+  > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  // logo colour
+  svg {
+    fill: #ff9933;
+  }
+
+  // img
+  img {
+    animation: shopwindow-app-logo-animate 4s;
+    animation-delay: 10s;
+    animation-fill-mode: forwards;
+  }
+}

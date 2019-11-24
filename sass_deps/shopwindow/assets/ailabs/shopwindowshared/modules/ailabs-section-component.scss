@@ -1,0 +1,15 @@
+
+/** Section class */
+.ailabs-section-component {
+  border: 2px solid #f58220;
+  border-radius: 4px;
+  margin: 6px 2px;
+  padding: 4px;
+  box-sizing: border-box;
+  width: 100%;
+
+  .section-label {
+    font-weight: bold;
+  }
+}
+

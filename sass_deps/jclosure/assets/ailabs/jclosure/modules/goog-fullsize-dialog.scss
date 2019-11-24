@@ -1,0 +1,25 @@
+
+.goog-fullsize-dialog {
+  display: flex;
+  flex-direction: column;
+}
+
+.goog-fullsize-dialog-topbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.goog-fullsize-dialog-topbar-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.goog-fullsize-dialog-content {
+  height: 0;
+  flex-grow: 1;
+  overflow: auto;
+}

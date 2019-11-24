@@ -1,0 +1,18 @@
+
+.ailabs-card-box
+{
+  border-radius: 2px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #dee3e4;
+  transition: border-color 250ms ease-in-out;
+  margin: 6px;
+  padding: 2px 4px;
+  background-color: #fdfdfd;
+  box-sizing: border-box;
+
+  &:hover
+  {
+    border-color: #abb1b2;
+  }
+}

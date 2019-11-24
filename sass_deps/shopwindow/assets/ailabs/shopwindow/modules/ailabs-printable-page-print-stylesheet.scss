@@ -1,0 +1,8 @@
+
+/** @fileoverview A print stylesheet for printable pages. */
+
+@media print {
+  @page {
+    margin: 0;  /* this affects the margin in the printer settings */
+  }
+}

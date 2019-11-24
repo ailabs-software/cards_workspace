@@ -1,0 +1,17 @@
+
+.contentanalytics-linkinteraction-stats-card {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+
+  .ella-metric-component {
+    margin: 5px 0;
+
+    dd {
+      font-size: 18px;
+    }
+  }
+}
