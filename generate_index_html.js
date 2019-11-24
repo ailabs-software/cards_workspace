@@ -25,6 +25,11 @@ out += "<div class=\"lordekit-content lordekit-global-theme pipeline-embed-conta
 out += "<div class=\"tiled-container tiled-container-q\">\n";
 out += '<div decorate="L0" component="ailabs-tiled-container-decorator" class="decoration-ailabs-tiled-container-decorator web-grid-layout">\n';
 
+function isFullWidth(name)
+{
+  return name == "alternate_card.html" || name == "slider_card.html";
+}
+
 for (var i=0; i < cardHtmlFiles.length; i++)
 {
   var cardHtmlFile = cardHtmlFiles[i];
@@ -39,7 +44,11 @@ for (var i=0; i < cardHtmlFiles.length; i++)
 
   out += "<!-- card: " + cardHtmlFile + " -->\n";
 
-  out += '<div class="web-grid-layout-cell">\n';
+  out += '<div class="web-grid-layout-cell"';
+  if ( isFullWidth(cardHtmlFile) ) {
+    out += ' style="min-width: 100%"';
+  }
+  out += '>\n';
 
   out += cardHtml;
   out += "\n";
