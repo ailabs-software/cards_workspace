@@ -33,7 +33,7 @@ for (var i=0; i < cardHtmlFiles.length; i++)
   // Parse to DOM.
   var dom = new JSDOM(cardHtml);
 
-  var cardElement = dom.window.document.querySelector(".web-grid-layout-cell");
+  var cardElement = dom.window.document.querySelector(".pipeline-embed-container");
 
   var cardHtml = cardElement.innerHTML;
 

@@ -27,7 +27,7 @@ async function fetchCard(cardName)
 {
   console.log("Fetching card: " + cardName);
 
-  var url = "https://george.shopwindow.io/pipeline/serve_pipeline_card_preview?card=62f1c625-5ea0-4cb0-8d07-0746d93a4c78&presentation=web&template=" + cardName;
+  var url = "https://george.shopwindow.io/pipeline/serve_pipeline_card_preview?card=62f1c625-5ea0-4cb0-8d07-0746d93a4c78&presentation=web&container=none&template=" + cardName;
 
   var html = await ( await fetch(url) ).text();
 
