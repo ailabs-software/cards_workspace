@@ -1,6 +1,12 @@
+// Edit this file if you want to experiment with a different theme.
 
 // Default global theme variables from Shopwindow Setup -> Global Theme
 // These can be edited by user.
+
+// WHERE THESE ARE USED:
+// 1) Directly available to any Sass unit which wants to read the theme directly.
+// 2) Also mapped to selectors by global_theme_stylesheet.scss, which provides default theming for common selectors like p/h1/h2.
+
 $theme_anchor_colour: #0000ff;
 $theme_global_text_fontfamily: "Roboto", sans-serif;
 $theme_global_text_colour: #282626;

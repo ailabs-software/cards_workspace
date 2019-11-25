@@ -1,5 +1,7 @@
 const fs = require("fs");
 const fetch = require("node-fetch");
+const jsdom = require("jsdom");
+const { JSDOM } = jsdom;
 const pretty = require("pretty");
 
 var cards = 
@@ -30,6 +32,18 @@ async function fetchCard(cardName)
   var url = "https://yourcompany.shopwindow.io/pipeline/serve_pipeline_card_preview?card=04ca7b5d-75c1-4867-b1bb-904719908488&presentation=web&container=none&template=" + cardName;
 
   var html = await ( await fetch(url) ).text();
+
+  // Parse to DOM.
+  var dom = new JSDOM(html);
+
+  // Strip out style tag for global style so reads from here.
+  var styleElement = dom.window.document.querySelector("head > style");
+  styleElement.parentElement.removeChild(styleElement);
+
+  // Add style tag.
+  dom.window.document.head.innerHTML += '<link rel="stylesheet" type="text/css" href="../global_theme_stylesheet_output.css"/>';
+
+  html = "<!DOCTYPE html>\n" + dom.window.document.documentElement.outerHTML;
 
   // Format
   html = pretty(html);

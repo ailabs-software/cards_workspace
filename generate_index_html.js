@@ -12,7 +12,7 @@ out += "<html>\n";
 out += "<head>\n";
 out += '<meta charset="utf-8"/>\n';
 out += '<!-- This is just from the global theme -->\n';
-out += '<link rel="stylesheet" type="text/css" href="index.css"/>\n';
+out += '<link rel="stylesheet" type="text/css" href="global_theme_stylesheet_output.css"/>\n';
 out += '<link rel="stylesheet" type="text/css" href="https://system.shopwindow.io/dg5_platform/static/dist/ShopwindowServer-server-ASSETSOUT/out.css?v=1574564583543" />\n';
 out += '<link rel="stylesheet" type="text/css" href="https://system.shopwindow.io/dg5_platform/static/dist/PipelineEmbedClient-client-ASSETSOUT/out.css?v=1574564583543" />\n';
 out += '<link rel="stylesheet" type="text/css" href="https://system.shopwindow.io/dg5_platform/static/www/lordekit-static/lordekit-responsive-typography/out/web_stylesheet.css" />\n';

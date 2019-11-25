@@ -1,0 +1,79 @@
+@import "./global_theme_variables.scss";
+
+// Provides mapping of theme variables to common selectors
+
+a {
+  color: $theme_anchor_colour;
+}
+
+.lordekit-global-theme {
+  font-family: $theme_global_text_fontfamily;
+}
+
+.lordekit-global-theme {
+  color: $theme_global_text_colour;
+}
+
+p {
+  font-size: $theme_p_text_fontsize;
+}
+
+p {
+  line-height: $theme_p_text_lineheight;
+}
+
+h1 {
+  font-size: $theme_h1_text_fontsize;
+}
+
+h1 {
+  line-height: $theme_h1_text_lineheight;
+}
+
+h2 {
+  font-size: $theme_h2_text_fontsize;
+}
+
+h2 {
+  line-height: $theme_h2_text_lineheight;
+}
+
+h3 {
+  font-size: $theme_h3_text_fontsize;
+}
+
+h3 {
+  line-height: $theme_h3_text_lineheight;
+}
+
+h4 {
+  font-size: $theme_h4_text_fontsize;
+}
+
+h4 {
+  line-height: $theme_h4_text_lineheight;
+}
+
+h5 {
+  font-size: $theme_h5_text_fontsize;
+}
+
+h5 {
+  line-height: $theme_h5_text_lineheight;
+}
+
+h6 {
+  font-size: $theme_h6_text_fontsize;
+}
+
+h6 {
+  line-height: $theme_h6_text_lineheight;
+}
+
+blockquote {
+  font-size: $theme_blockquote_text_fontsize;
+}
+
+blockquote {
+  line-height: $theme_blockquote_text_lineheight;
+}
