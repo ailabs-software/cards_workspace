@@ -13,11 +13,11 @@ out += "<head>\n";
 out += '<meta charset="utf-8"/>\n';
 out += '<!-- This is just from the global theme -->\n';
 out += '<link rel="stylesheet" type="text/css" href="index.css"/>\n';
-out += '<link rel="stylesheet" type="text/css" href="https://george.shopwindow.io/dg5_platform/static/dist/ShopwindowServer-server-ASSETSOUT/out.css?v=1574564583543" />\n';
-out += '<link rel="stylesheet" type="text/css" href="https://george.shopwindow.io/dg5_platform/static/dist/PipelineEmbedClient-client-ASSETSOUT/out.css?v=1574564583543" />\n';
-out += '<link rel="stylesheet" type="text/css" href="https://system-dev.shopwindow.io/dg5_platform/static/www/lordekit-static/lordekit-responsive-typography/out/web_stylesheet.css" />\n';
+out += '<link rel="stylesheet" type="text/css" href="https://system.shopwindow.io/dg5_platform/static/dist/ShopwindowServer-server-ASSETSOUT/out.css?v=1574564583543" />\n';
+out += '<link rel="stylesheet" type="text/css" href="https://system.shopwindow.io/dg5_platform/static/dist/PipelineEmbedClient-client-ASSETSOUT/out.css?v=1574564583543" />\n';
+out += '<link rel="stylesheet" type="text/css" href="https://system.shopwindow.io/dg5_platform/static/www/lordekit-static/lordekit-responsive-typography/out/web_stylesheet.css" />\n';
 out += '<link rel="stylesheet" type="text/css" href="sass_output.css" />\n';
-out += '<link rel="stylesheet" type="text/css" href="https://lordefoundry-dev.safetyhandler.com/fontfoundry2/css/Roboto" />\n';
+out += '<link rel="stylesheet" type="text/css" href="https://lordefoundry.safetyhandler.com/fontfoundry2/css/Roboto" />\n';
 out += "</head>\n";
 out += "</body>\n";
 
@@ -60,7 +60,7 @@ out += "</div>\n";
 out += "</div>\n";
 out += "</div>\n";
 
-out += '<script type="text/javascript" src="https://george.shopwindow.io/dg5_platform/static/build/mainEntryPoint_PipelineEmbedClient_client.dart.js?v=1574564583543"></script>\n';
+out += '<script type="text/javascript" src="https://system.shopwindow.io/dg5_platform/static/build/mainEntryPoint_PipelineEmbedClient_client.dart.js?v=1574564583543"></script>\n';
 out += '<script type="text/javascript">\n';
 out += 'JSINTEROP_APPLY_DECORATORS(document.body);\n';
 out += '</script>\n';
